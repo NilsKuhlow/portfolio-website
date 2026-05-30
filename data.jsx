@@ -151,7 +151,7 @@ const PROJECTS = [
       de: ['Analyse der Plattenbau-Geometrie und Randstadtsituation', 'Additive, parasitäre Leichtstruktur', 'Brücken und Dacherschließung als Gemeinschaftsfläche', 'Modellstudien zu Zwischenraum und Blickbeziehung'],
       en: ['Analysis of the prefab geometry and edge-city site', 'Additive, parasitic light structure', 'Bridges and roof access as shared space', 'Model studies of in-between space and views'],
     },
-    role: { de: 'Einzelarbeit', en: 'Solo project' },
+    role: { de: 'Gruppenarbeit', en: 'Group project' },
   },
   {
     id: 'masse-und-hohlraum',
@@ -189,7 +189,7 @@ const PROJECTS = [
       de: ['Buchkörper als Material — Ausschneiden räumlicher Abfolgen', 'Negativräume in Wachs ausgegossen', 'Betonguss in Erde (analog Glockenguss)', 'Belichtung über Oberlicht und gesetzte Öffnungen'],
       en: ['Book bodies as material — cutting spatial sequences', 'Voids cast in wax', 'Concrete cast in earth (after bell-casting)', 'Lighting through skylight and placed openings'],
     },
-    role: { de: 'Einzelarbeit', en: 'Solo project' },
+    role: { de: 'Gruppenarbeit', en: 'Group project' },
   },
   {
     id: 'zu-wasser-lassen',

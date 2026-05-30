@@ -113,8 +113,8 @@ const PROJECTS = [
       en: 'Inside and outside are not opposites — each makes the other possible.',
     },
     capText: {
-      de: 'Fotografische Körperstudien, Stadtplan-Kartierung und perspektivische Zeichnungen: der Stadtraum als Innenraum, gelesen durch Grenzen, Bewegung und Licht.',
-      en: 'Photographic body studies, an urban mapping plan and perspective drawings: the city read as interior — through edges, movement and light.',
+      de: 'Fotografische Körperstudien im Herbstlicht, Fotomontage und Stadtplan-Kartierung: der Stadtraum als Innenraum, gelesen durch Grenzen, Bewegung und Licht.',
+      en: 'Photographic body studies in autumn light, a photomontage and an urban mapping plan: the city read as interior — through edges, movement and light.',
     },
     process: {
       de: ['Textliche und konzeptionelle Raumanalyse', 'Perspektivische Handzeichnungen im Stadtraum', 'Fotografische Körperstudien im Herbstlicht', 'Stadtplan-Kartierung von Grenzen und Öffnungen'],
@@ -122,10 +122,10 @@ const PROJECTS = [
     },
     role: { de: 'Einzelarbeit', en: 'Solo project' },
     gallery: [
-      { src: 'assets/projects/genius-loci/g1.jpg', r: '2/1', wide: true, lbl: { de: 'Kartierung · Grenzen, Öffnungen, Blickachsen', en: 'Mapping · edges, openings, sightlines' } },
-      { src: 'assets/projects/genius-loci/g2.jpg', r: '3/4', lbl: { de: 'Perspektivische Handzeichnungen', en: 'Perspective hand-drawings' } },
-      { src: 'assets/projects/genius-loci/g3.jpg', r: '3/4', lbl: { de: 'Die Bushaltestelle als Innenraum der Stadt', en: 'The bus shelter as an interior of the city' } },
-      { src: 'assets/projects/genius-loci/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Körper als räumliches Maß', en: 'The body as a spatial measure' } },
+      { src: 'assets/projects/genius-loci/g1.jpg', r: '16/9', wide: true, lbl: { de: 'Fotomontage · die Fassade als Wand des Stadtraums', en: 'Photomontage · the façade as the wall of urban space' } },
+      { src: 'assets/projects/genius-loci/g2.jpg', r: '3/4', lbl: { de: 'Im Herbstlicht · der Körper im Stadtraum', en: 'In autumn light · the body in the city' } },
+      { src: 'assets/projects/genius-loci/g3.jpg', r: '3/4', lbl: { de: 'Körper, Objekt und Stadtwand', en: 'Body, object and the city wall' } },
+      { src: 'assets/projects/genius-loci/g4.jpg', r: '2/1', wide: true, lbl: { de: 'Kartierung · Grenzen, Öffnungen, Blickachsen', en: 'Mapping · edges, openings, sightlines' } },
     ],
   },
   {
@@ -296,7 +296,7 @@ const PROJECTS = [
       { src: 'assets/projects/zu-wasser-lassen/g1.jpg', r: '1/1', lbl: { de: 'Konzept · Skizzenmodell 1:20', en: 'Concept · 1:20 sketch model' } },
       { src: 'assets/projects/zu-wasser-lassen/g2.jpg', r: '1/1', lbl: { de: 'Rumpfgerippe aus Pappe', en: 'Cardboard rib frame of the hull' } },
       { src: 'assets/projects/zu-wasser-lassen/g3.jpg', r: '16/9', wide: true, lbl: { de: 'Das fertige Modell vor dem 1:1-Bau', en: 'The finished model before the full-scale build' } },
-      { src: 'assets/projects/zu-wasser-lassen/g4.jpg', r: '1/1', lbl: { de: 'Konstruktion · Fügung und Auftrieb', en: 'Construction · joints and buoyancy' } },
+      { src: 'assets/projects/zu-wasser-lassen/g4.jpg', r: '1/1', lbl: { de: 'Detail · Rumpf aus Pappe', en: 'Detail · the cardboard hull' } },
       { src: 'assets/projects/zu-wasser-lassen/g5.jpg', r: '1/1', lbl: { de: 'Regatta am Strand von Wendorf · das Wappen voraus', en: 'Regatta on the beach at Wendorf · the crest leads the way' } },
     ],
   },

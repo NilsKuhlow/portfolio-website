@@ -32,9 +32,7 @@ const Footer = ({ setRoute, lang }) => {
         <div>
           <div style={lblK}>{t.elsewhere}</div>
           <ul style={linkList}>
-            <li><a className="nk-link" style={linkA} href="#">Instagram</a></li>
-            <li><a style={linkA} href="#"></a></li>
-            <li><a style={linkA} href="#"></a></li>
+            <li><a className="nk-link" style={linkA} href="https://www.instagram.com/nils_klw/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           </ul>
         </div>
         <div>

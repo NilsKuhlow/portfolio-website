@@ -11,20 +11,20 @@ const Home = ({ onOpen, setRoute, lang }) => {
   }));
 
   const NEWS_DE = [
-    { tag: 'Stegreif',         title: 'ZU WASSER LASSEN — REGATTA IN WENDORF',          body: 'Ein schwimmfähiges Boot aus Karton und Pappmaché, vom 1:20-Modell bis zum 1:1-Bau — und am Strand von Wendorf zu Wasser gelassen.', img: 'assets/projects/zu-wasser-lassen/hero.jpg', shape: 'wide' },
+    { tag: 'Stegreif',         title: 'ZU WASSER LASSEN — REGATTA IN WENDORF',          body: 'Ein schwimmfähiges Boot aus Karton und Pappmaché, vom 1:20-Modell bis zum 1:1-Bau und am Strand von Wendorf zu Wasser gelassen.', img: 'assets/projects/zu-wasser-lassen/hero.jpg', shape: 'wide' },
     { tag: 'Installation 1:1', title: 'RANDSTADT — FOLIENTUNNEL IM SCHNEE',             body: 'Ein Folientunnel verdichtet einen Weg in der Randstadt von Wismar: von der Weite in die Enge und zurück ins Freie.', img: 'assets/projects/randstadt-intervention/hero.jpg', shape: 'pano' },
     { tag: 'Guss',             title: 'MASSE UND HOHLRAUM — BETONGUSS IN ERDE',          body: 'Negativräume in Wachs und Beton gegossen, im Verfahren des Glockengusses. Sichtbar bleibt nur der Hohlraum, belichtet über ein Oberlicht.', img: 'assets/projects/masse-und-hohlraum/card.jpg', shape: 'tall' },
-    { tag: 'Raumstudie',       title: 'GENIUS LOCI — INNENRÄUME DER STADT',             body: 'Straßen und Plätze als Innenräume der Stadt, gefasst durch Fassaden, Licht und Bewegung — der Körper als räumliches Maß.', img: 'assets/projects/genius-loci/card.jpg', shape: 'tall' },
+    { tag: 'Raumstudie',       title: 'GENIUS LOCI — INNENRÄUME DER STADT',             body: 'Straßen und Plätze als Innenräume der Stadt, gefasst durch Fassaden, Licht und Bewegung · der Körper als räumliches Maß.', img: 'assets/projects/genius-loci/card.jpg', shape: 'tall' },
     { tag: 'Entwurf',          title: 'RAUM – STRUKTUR – HÜLLE — ÜBER DEM PLATTENBAU',   body: 'Eine leichte, parasitäre Struktur legt sich über ein Plattenbau-Ensemble und verbindet die Dächer zu einer gemeinschaftlichen Fläche.', img: 'assets/projects/raum-struktur-huelle/hero.jpg', shape: 'wide' },
-    { tag: 'Collage',          title: 'TOR ZUR FREIHEIT',                               body: 'Eine digitale Collage über die Schwelle zwischen Alltag und Freiheit — ein Tor, das es nur auf dem Papier gibt.', img: 'assets/projects/weitere-arbeiten/card.jpg', shape: 'tall' },
+    { tag: 'Collage',          title: 'TOR ZUR FREIHEIT',                               body: 'Eine digitale Collage über die Schwelle zwischen Alltag und Freiheit, ein Tor, das es nur auf dem Papier gibt.', img: 'assets/projects/weitere-arbeiten/card.jpg', shape: 'tall' },
   ];
   const NEWS_EN = [
-    { tag: 'Workshop',         title: 'SET AFLOAT — REGATTA AT WENDORF',                body: 'A buoyant boat of cardboard and papier-mâché, from a 1:20 model to a full-size build — and launched on the beach at Wendorf.', img: 'assets/projects/zu-wasser-lassen/hero.jpg', shape: 'wide' },
+    { tag: 'Workshop',         title: 'SET AFLOAT — REGATTA AT WENDORF',                body: 'A buoyant boat of cardboard and papier-mâché, from a 1:20 model to a full-size build and launched on the beach at Wendorf.', img: 'assets/projects/zu-wasser-lassen/hero.jpg', shape: 'wide' },
     { tag: 'Installation 1:1', title: 'EDGE-CITY — A FOIL TUNNEL IN SNOW',              body: 'A foil tunnel condenses a path on the edge of Wismar: from openness into compression and back into the open.', img: 'assets/projects/randstadt-intervention/hero.jpg', shape: 'pano' },
     { tag: 'Casting',          title: 'MASS AND VOID — CONCRETE CAST IN EARTH',         body: 'Voids cast in wax and concrete, after the technique of bell-casting. Only the hollow space remains, lit through a skylight.', img: 'assets/projects/masse-und-hohlraum/card.jpg', shape: 'tall' },
-    { tag: 'Spatial study',    title: 'GENIUS LOCI — INTERIORS OF THE CITY',            body: 'Streets and squares as interiors of the city, held by façades, light and movement — the body as a spatial measure.', img: 'assets/projects/genius-loci/card.jpg', shape: 'tall' },
+    { tag: 'Spatial study',    title: 'GENIUS LOCI — INTERIORS OF THE CITY',            body: 'Streets and squares as interiors of the city, held by façades, light and movement · the body as a spatial measure.', img: 'assets/projects/genius-loci/card.jpg', shape: 'tall' },
     { tag: 'Design',           title: 'SPACE – STRUCTURE – SKIN — OVER THE PREFAB',     body: 'A light, parasitic structure laid over a prefab housing ensemble, joining the roofs into a shared surface.', img: 'assets/projects/raum-struktur-huelle/hero.jpg', shape: 'wide' },
-    { tag: 'Collage',          title: 'GATE TO FREEDOM',                                body: 'A digital collage on the threshold between everyday life and freedom — a gate that exists only on paper.', img: 'assets/projects/weitere-arbeiten/card.jpg', shape: 'tall' },
+    { tag: 'Collage',          title: 'GATE TO FREEDOM',                                body: 'A digital collage on the threshold between everyday life and freedom, a gate that exists only on paper.', img: 'assets/projects/weitere-arbeiten/card.jpg', shape: 'tall' },
   ];
   const NEWS = lang === 'de' ? NEWS_DE : NEWS_EN;
 

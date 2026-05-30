@@ -17,9 +17,9 @@ window.I18N = {
       grid: "Raster",
       index: "Verzeichnis",
       stats: (n, m) => `${n} Projekte
-2025 \u2014 2026
+2025\u20132026
 ${m} angezeigt`,
-      empty: "Nichts entspricht dieser Kombination \u2014 versuchen Sie, den Filter zu erweitern.",
+      empty: "Nichts entspricht dieser Kombination. Versuchen Sie, den Filter zu erweitern.",
       all: "Alle"
     },
     detail: {
@@ -35,10 +35,10 @@ ${m} angezeigt`,
       caption: "Bildunterschrift",
       prev: "\u2190 Vorheriges",
       next: "N\xE4chstes \u2192",
-      bodyP1: "Die Aufgabe gab uns eine Ecke der Stadt und vier Monate. Ich begann damit, den Ort zu unterschiedlichen Tageszeiten abzulaufen \u2014 dieselben sechs Fotografien, aufgenommen \xFCber den November hinweg \u2014 auf der Suche nach einer ruhigen Regel, der das Geb\xE4ude folgen konnte.",
-      bodyP2: "Was entstand, war weniger ein Entwurf als eine Frage, zu der ich immer wieder zur\xFCckkehrte: Wie geh\xF6rt ein kleines Geb\xE4ude zu einem Ort, der bereits zu viel von sich selbst hat? Die Zeichnungen unten sind ein Versuch, sie zu beantworten. Sie sind nicht fertig \u2014 sie sind in Arbeit.",
+      bodyP1: "Die Aufgabe gab uns eine Ecke der Stadt und vier Monate. Ich begann damit, den Ort zu unterschiedlichen Tageszeiten abzulaufen (dieselben sechs Fotografien, aufgenommen \xFCber den November hinweg) auf der Suche nach einer ruhigen Regel, der das Geb\xE4ude folgen konnte.",
+      bodyP2: "Was entstand, war weniger ein Entwurf als eine Frage, zu der ich immer wieder zur\xFCckkehrte: Wie geh\xF6rt ein kleines Geb\xE4ude zu einem Ort, der bereits zu viel von sich selbst hat? Die Zeichnungen unten sind ein Versuch, sie zu beantworten. Sie sind nicht fertig, sie sind noch in Arbeit.",
       pull: "Ich wollte, dass der Raum sich anf\xFChlt, als w\xE4re er schon immer da gewesen, nur knapp au\xDFer Sicht.",
-      capText: "Links \u2014 Schnittmodell, Lindenholz und Messing, 1:50, fotografiert im Nordlicht. Rechts \u2014 Hofstudie, Tusche auf Transparentpapier. Beide entstanden zwischen Januar und M\xE4rz 2026."
+      capText: "Links: Schnittmodell, Lindenholz und Messing, 1:50, fotografiert im Nordlicht. Rechts: Hofstudie, Tusche auf Transparentpapier. Beide entstanden zwischen Januar und M\xE4rz 2026."
     },
     about: {
       eyebrow: "\xDCber mich",
@@ -100,9 +100,9 @@ ${m} angezeigt`,
       grid: "Grid",
       index: "Index",
       stats: (n, m) => `${n} projects
-2025 \u2014 2026
+2025\u20132026
 ${m} shown`,
-      empty: "Nothing matches that combination \u2014 try widening the filter.",
+      empty: "Nothing matches that combination. Try widening the filter.",
       all: "All"
     },
     detail: {
@@ -118,10 +118,10 @@ ${m} shown`,
       caption: "Caption",
       prev: "\u2190 Previous",
       next: "Next \u2192",
-      bodyP1: "The brief gave us a corner of the city and four months. I began by walking the site at different times of the day \u2014 the same six photographs taken across November \u2014 looking for a quiet rule the building could obey.",
-      bodyP2: "What emerged was less a design than a question I kept returning to: how does a small building belong to a place that already has too much of itself? The drawings below are an attempt to answer it. They are not finished \u2014 they are working.",
+      bodyP1: "The brief gave us a corner of the city and four months. I began by walking the site at different times of the day (the same six photographs taken across November) looking for a quiet rule the building could obey.",
+      bodyP2: "What emerged was less a design than a question I kept returning to: how does a small building belong to a place that already has too much of itself? The drawings below are an attempt to answer it. They are not finished, they are still in progress.",
       pull: "I wanted the room to feel like it had always been there, just slightly out of view.",
-      capText: "Left \u2014 section model, basswood and brass, 1:50, photographed in north light. Right \u2014 courtyard study, ink on tracing paper. Both made between January and March 2026."
+      capText: "Left: section model, basswood and brass, 1:50, photographed in north light. Right: courtyard study, ink on tracing paper. Both made between January and March 2026."
     },
     about: {
       eyebrow: "About",
@@ -136,7 +136,7 @@ ${m} shown`,
       openV: "Internship \xB7 summer 2026 \xB7 DE / AT / CH / IT",
       cvBtn: "Download CV (PDF) \u2193",
       lede: "I am Nils Kuhlow, an architecture student at Hochschule Wismar and a trained carpenter. My way into architecture comes from the meeting of hands-on craft, spatial thinking, and a wish to understand places not only by building them, but through their atmosphere.",
-      p1: "I am interested in architecture where construction, material and perception meet. For me, a room is not only plan, function or form, but an interplay of light, proportion, movement, sound and use. I look for designs that are clearly structured and at the same time hold a quiet depth \u2014 spaces precisely thought, yet open to life, change and appropriation.",
+      p1: "I am interested in architecture where construction, material and perception meet. For me, a room is not only plan, function or form, but an interplay of light, proportion, movement, sound and use. I look for designs that are clearly structured and at the same time hold a quiet depth: spaces precisely thought, yet open to life, change and appropriation.",
       p2: "Through my training in timber construction I learnt to grasp architecture from the detail, the material and the act of making. Construction is, to me, not a technical addition but an essential part of architectural expression. This site shows selected projects, studies and investigations from my path so far. It is not only a portfolio but a growing archive of my architectural position: between analysis and intuition, between craft and design, between place, material and person.",
       p3: "",
       sec: { education: "Education & training", skills: "Strengths", languages: "Languages", interests: "Interests" }

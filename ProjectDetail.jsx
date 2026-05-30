@@ -50,7 +50,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
           <div className="nk-fig" style={{ aspectRatio: g.r || '4/3', backgroundImage: `url(${g.src})`, backgroundSize: g.fit || 'cover', backgroundPosition: g.pos || 'center', backgroundRepeat: 'no-repeat', backgroundColor: g.bg || 'var(--paper-2)' }} role="img" aria-label={(g.cap && L(g.cap, lang)) || L(p.t, lang)}></div>
           {(g.lbl || g.cap) && (
             <figcaption className="nk-gcap">
-              {g.lbl && <span className="nk-gcap-k">{L(g.lbl, lang)}{g.cap ? ' — ' : ''}</span>}
+              {g.lbl && <span className="nk-gcap-k">{L(g.lbl, lang)}{g.cap ? ' · ' : ''}</span>}
               {g.cap && L(g.cap, lang)}
             </figcaption>
           )}

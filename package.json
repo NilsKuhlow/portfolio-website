@@ -1,0 +1,14 @@
+{
+  "name": "nils-kuhlow-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio von Nils Kuhlow — statische Seite (React UMD lokal), JSX mit esbuild vorkompiliert.",
+  "scripts": {
+    "build": "esbuild i18n.jsx data.jsx tweaks-panel.jsx Nav.jsx Footer.jsx Home.jsx Projects.jsx ProjectDetail.jsx About.jsx Contact.jsx app.jsx --outdir=build --loader:.jsx=jsx --log-level=warning",
+    "watch": "npm run build -- --watch",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

@@ -37,7 +37,7 @@ const About = ({ lang }) => {
             <div style={lblK}>{t.livesL}</div><div style={lblV}>{t.livesV}</div>
             <div style={lblK}>{t.studiesL}</div><div style={lblV}>{t.studiesV}</div>
             <div style={lblK}>{t.openL}</div><div style={lblV}>{t.openV}</div>
-            <button className="btn nk-cta" onClick={() => alert('CV PDF.')} style={{ marginTop: 8 }}>{t.cvBtn}</button>
+            <a className="btn nk-cta" href="cv.pdf" download="Nils_Kuhlow_Lebenslauf.pdf" style={{ marginTop: 8, display: 'inline-block', textDecoration: 'none' }}>{t.cvBtn}</a>
           </aside>
           <div>
             <span style={eyebrow}>{t.eyebrow}</span>
@@ -66,33 +66,6 @@ const About = ({ lang }) => {
         </div></div>
 
         <div style={cvSection}><div className="nk-stack" style={cvGrid}>
-          <div style={cvHead}>{t.sec.experience}</div>
-          <div>{CV.experience.map((e, i) => (
-            <div key={i} style={i === 0 ? rowFirst : row}>
-              <div style={yr}>{e.y}</div>
-              <div>
-                <h4 style={what}>{L(e.what, lang)}</h4>
-                <div style={where}>{L(e.where, lang)}</div>
-                <p style={detail}>{L(e.detail, lang)}</p>
-              </div>
-            </div>
-          ))}</div>
-        </div></div>
-
-        <div style={cvSection}><div className="nk-stack" style={cvGrid}>
-          <div style={cvHead}>{t.sec.recognition}</div>
-          <div>{CV.recognition.map((e, i) => (
-            <div key={i} style={i === 0 ? rowFirst : row}>
-              <div style={yr}>{e.y}</div>
-              <div>
-                <h4 style={what}>{L(e.what, lang)}</h4>
-                <div style={where}>{L(e.where, lang)}</div>
-              </div>
-            </div>
-          ))}</div>
-        </div></div>
-
-        <div style={cvSection}><div className="nk-stack" style={cvGrid}>
           <div style={cvHead}>{t.sec.skills}</div>
           <ul style={tokenWrap}>{L(CV.skills, lang).map((s, i) => (
             <li key={i} style={token}><span style={dot}>▪</span>{s}</li>
@@ -100,8 +73,8 @@ const About = ({ lang }) => {
         </div></div>
 
         <div style={cvSection}><div className="nk-stack" style={cvGrid}>
-          <div style={cvHead}>{t.sec.software}</div>
-          <ul style={tokenWrap}>{CV.software.map((s, i) => (
+          <div style={cvHead}>{t.sec.interests}</div>
+          <ul style={tokenWrap}>{L(CV.interests, lang).map((s, i) => (
             <li key={i} style={token}><span style={dot}>▪</span>{s}</li>
           ))}</ul>
         </div></div>

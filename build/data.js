@@ -243,47 +243,40 @@ window.L = (v, lang) => v && typeof v === "object" && v[lang] != null ? v[lang] 
 const CV = {
   education: [
     {
-      y: "2025 \u2014",
-      what: { de: "B.A. Architektur, Hochschule Wismar", en: "B.A. Architecture, Hochschule Wismar" },
-      where: { de: "Wismar, Deutschland", en: "Wismar, Germany" },
-      detail: { de: "Grundlagen & erstes Studienjahr. Aktuell 1. Studienjahr, 2. Semester. Notenschnitt 1,4.", en: "Foundations & first studio year. Currently 1st year, 2nd semester. Average 1.4 / 5.0." }
+      y: "2025 \u2014 heute",
+      what: { de: "B.A. Architektur", en: "B.A. Architecture" },
+      where: { de: "Hochschule Wismar", en: "Hochschule Wismar, Germany" },
+      detail: { de: "Architekturstudium seit dem Wintersemester 2025/26; aktuell im ersten Studienjahr (2. Semester).", en: "Architecture studies since winter semester 2025/26; currently first year, second semester." }
     },
     {
-      y: "2024",
-      what: { de: "Abitur \xB7 Allgemeine Hochschulreife", en: "Abitur \xB7 final secondary school exam" },
-      where: "Schwerin",
-      detail: { de: "Leistungsf\xE4cher: Kunst, Mathematik, Englisch. Abschlussnote 1,6.", en: "Major subjects: art, mathematics, English. Final grade 1.6." }
-    }
-  ],
-  experience: [
-    {
-      y: "2024",
-      what: { de: "Praktikum Restaurierung", en: "Restoration internship" },
-      where: { de: "Bauh\xFCtte Stralsund \xB7 6 Wochen", en: "Bauh\xFCtte Stralsund \xB7 6 weeks" },
-      detail: { de: "Mauerwerksrestaurierung eines Backsteingiebels aus dem 14. Jahrhundert. Zeichnung und Dokumentation unter Polier Ulrich Hagen.", en: "Masonry restoration of a 14th-century brick gable. Drawing & documentation under foreman Ulrich Hagen." }
+      y: "2023 \u2014 2025",
+      what: { de: "Ausbildung zum Zimmerer", en: "Apprenticeship as a carpenter (Zimmerer)" },
+      where: { de: "Hamburg", en: "Hamburg, Germany" },
+      detail: { de: "Dreij\xE4hrige Ausbildung im Holzbau, Gesellenabschluss im Juli 2025 \u2014 die Grundlage meines materialnahen Zugangs zur Architektur.", en: "Three-year training in timber construction, journeyman qualification in July 2025 \u2014 the foundation of my material-led approach to architecture." }
     },
     {
-      y: "2023\u201324",
-      what: { de: "Tischlerassistenz (Wochenenden)", en: "Carpentry assistant (weekends)" },
-      where: { de: "Tischlerei Vogt, Schwerin", en: "Tischlerei Vogt, Schwerin" },
-      detail: { de: "Werkstattassistenz im letzten Schuljahr. Tischlerarbeiten, Oberfl\xE4chen und kleine M\xF6bel.", en: "Workshop assistant during last year of school. Joinery, finishing, and small built pieces." }
+      y: "2015 \u2014 2023",
+      what: { de: "Allgemeine Hochschulreife (Abitur)", en: "Abitur (university entrance qualification)" },
+      where: { de: "Gymnasium Eppendorf, Hamburg", en: "Gymnasium Eppendorf, Hamburg" },
+      detail: { de: "", en: "" }
     }
-  ],
-  recognition: [
-    { y: "2025", what: { de: "Seminarfinalist \xB7 Altstadt-Schwelle", en: "Seminar finalist \xB7 Altstadt Threshold" }, where: "Hochschule Wismar" },
-    { y: "2024", what: { de: "Reisestipendium", en: "Independent travel grant" }, where: { de: "Studienstiftung Mecklenburg", en: "Studienstiftung Mecklenburg" } }
   ],
   skills: {
-    de: ["Handzeichnung (Tusche, Bleistift, Kohle)", "Modellbau (Lindenholz, Karton, Gips)", "Bauaufnahme & Photogrammetrie", "Analoge Fotografie", "Aquarell & Collage", "Leichter Holzbau"],
-    en: ["Hand drawing (ink, pencil, charcoal)", "Model-making (basswood, cardboard, plaster)", "Site survey & photogrammetry", "Analogue photography", "Watercolour & collage", "Light timber carpentry"]
+    de: ["Zimmererhandwerk & Holzbau", "Teamf\xE4higkeit", "L\xF6sungsorientierung", "Zuverl\xE4ssigkeit", "Kritikf\xE4higkeit", "Selbstreflexion"],
+    en: ["Carpentry & timber construction", "Teamwork", "Solution-oriented thinking", "Reliability", "Openness to criticism", "Self-reflection"]
   },
-  software: ["Rhino 8", "AutoCAD", "Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator", "VRay (lernend / learning)", "QGIS (Grundlagen / basic)"],
   languages: [
     { l: { de: "Deutsch", en: "German" }, level: { de: "Muttersprache", en: "Native" } },
-    { l: { de: "Englisch", en: "English" }, level: { de: "C1 \xB7 flie\xDFend", en: "C1 \xB7 fluent" } },
-    { l: { de: "Franz\xF6sisch", en: "French" }, level: { de: "B1 \xB7 konversationsf\xE4hig", en: "B1 \xB7 conversational" } },
-    { l: { de: "Italienisch", en: "Italian" }, level: { de: "A2 \xB7 in Arbeit", en: "A2 \xB7 in progress" } }
-  ]
+    { l: { de: "Englisch", en: "English" }, level: { de: "Gute Kenntnisse", en: "Good working knowledge" } }
+  ],
+  interests: {
+    de: ["Handball", "Schach", "Calisthenics", "K\xFCnstlerische Arbeiten"],
+    en: ["Handball", "Chess", "Calisthenics", "Artistic work"]
+  },
+  engagement: {
+    de: "Volleyball-Team Hamburg \u2014 Erarbeitung eines Turnierkonzepts f\xFCr den Verein.",
+    en: "Volleyball team in Hamburg \u2014 developed a tournament concept for the club."
+  }
 };
 window.PROJECTS = PROJECTS;
 window.CV = CV;

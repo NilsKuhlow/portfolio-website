@@ -147,7 +147,7 @@ const Home = ({ onOpen, setRoute, lang }) => {
     );
   };
 
-  return (<><Featured /><Intro /><NewsMosaic /></>);
+  return (<><Featured /><Intro /></>);
 };
 
 window.Home = Home;

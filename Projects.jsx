@@ -35,13 +35,15 @@ const Projects = ({ onOpen, lang }) => {
   const viewToggle = { display: 'flex', border: '1px solid var(--hairline-strong)' };
   const vBtn = (active) => ({ padding: '8px 14px', background: active ? 'var(--fg)' : 'transparent', color: active ? 'var(--bg)' : 'var(--fg)', fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'pointer', border: 0 });
 
-  const grid = { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 };
-  const cardA = { textDecoration: 'none', color: 'inherit', cursor: 'pointer', display: 'block' };
-  const imgEl = (src) => ({ aspectRatio: '4/5', backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'var(--paper-2)', backgroundRepeat: 'no-repeat' });
-  const meta = { paddingTop: 16 };
-  const ttl = { fontFamily: 'var(--font-serif)', fontSize: 22, lineHeight: 1.18, margin: '0 0 4px', letterSpacing: '-0.005em', color: 'var(--fg)' };
-  const sub = { fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-subtle)', letterSpacing: '0.04em' };
-  const tagSpan = { display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: 10, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)', marginTop: 8 };
+  const SHAPES = { spatialsound: 'wide', avatar: 'square', 'genius-loci': 'tall', 'randstadt-intervention': 'wide', 'raum-struktur-huelle': 'tall', 'masse-und-hohlraum': 'pano', 'zu-wasser-lassen': 'tall', 'weitere-arbeiten': 'wide' };
+  const RATIOS = { tall: '3 / 4', wide: '4 / 3', square: '1 / 1', pano: '16 / 9' };
+  const mosaic = { columnCount: 3, columnGap: 32 };
+  const cardWrap = { breakInside: 'avoid', WebkitColumnBreakInside: 'avoid', pageBreakInside: 'avoid', display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 48, cursor: 'pointer' };
+  const mImg = (shape, src) => ({ aspectRatio: RATIOS[shape] || '3 / 4', backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'var(--paper-2)', backgroundRepeat: 'no-repeat' });
+  const mTag = { fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-subtle)', letterSpacing: '0.04em' };
+  const mTtl = { fontFamily: 'var(--font-serif)', fontSize: 23, lineHeight: 1.16, margin: 0, letterSpacing: '-0.005em', color: 'var(--fg)' };
+  const mBody = { fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.55, color: 'var(--fg-muted)', margin: 0 };
+  const teaser = (s) => { if (s.length <= 165) return s; const c = s.slice(0, 165); return c.slice(0, c.lastIndexOf(' ')).trim() + '…'; };
 
   const indexWrap = { borderTop: '1px solid var(--fg)' };
   const row = { display: 'grid', gridTemplateColumns: '60px 1fr 220px 120px 1fr 60px', gap: 24, padding: '20px 0', borderBottom: '1px solid var(--hairline)', alignItems: 'baseline', cursor: 'pointer', transition: 'background 200ms' };
@@ -85,17 +87,19 @@ const Projects = ({ onOpen, lang }) => {
       </div>
 
       {view === 'grid' && (
-        <div className="nk-grid" style={grid}>
-          {list.map(p => (
-            <div role="button" tabIndex={0} key={p.id} className="nk-card" style={cardA} onClick={() => onOpen(p)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(p); } }}>
-              <div className="nk-card-img" role="img" aria-label={L(p.t, lang)} style={imgEl(p.img)}></div>
-              <div style={meta}>
-                <h3 className="nk-card-ttl" style={ttl}>{L(p.t, lang)}</h3>
-                <div style={sub}>{L(p.location, lang)} · {p.year}</div>
-                <div style={tagSpan}>{L(p.tag, lang)} · {L(p.status, lang)}</div>
-              </div>
-            </div>
-          ))}
+        <div className="nk-news" style={mosaic}>
+          {list.map(p => {
+            const shape = SHAPES[p.id] || 'tall';
+            const src = (shape === 'wide' || shape === 'pano') ? (p.hero || p.img) : p.img;
+            return (
+              <article key={p.id} className="nk-card" style={cardWrap} role="button" tabIndex={0} onClick={() => onOpen(p)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(p); } }}>
+                <div className="nk-card-img" role="img" aria-label={L(p.t, lang)} style={mImg(shape, src)}></div>
+                <div style={mTag}>{L(p.tag, lang).toUpperCase()} · {p.year}</div>
+                <h3 className="nk-card-ttl" style={mTtl}>{L(p.t, lang)}</h3>
+                <p style={mBody}>{teaser(L(p.summary, lang))}</p>
+              </article>
+            );
+          })}
         </div>
       )}
 

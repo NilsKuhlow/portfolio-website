@@ -10,8 +10,6 @@ const PROJECTS = [
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/spatial-sound/card.jpg',
     hero: 'assets/projects/spatial-sound/hero.jpg',
-    stripA: 'assets/projects/spatial-sound/a.jpg',
-    stripB: 'assets/projects/spatial-sound/b.jpg',
     kicker: { de: 'EGD II · A02 · Architektur aus Bewegung', en: 'EGD II · A02 · Architecture from Movement' },
     summary: {
       de: 'Wie klingt ein Raum — und wie formt Klang Raum? Scenographic Space übersetzt Klang in Architektur: Aus Feldaufnahmen werden über Analyse, psychoakustische Interpretation und parametrische Generierung räumliche Sequenzen, die Bewegung, Zeit und Atmosphäre unmittelbar erfahrbar machen.',
@@ -38,6 +36,12 @@ const PROJECTS = [
       en: ['Field recordings · sound in space', 'Spectrogram analysis (Python)', 'Psychoacoustic mapping into geometry', 'Parametric space generation & acoustic simulation'],
     },
     role: { de: 'Gruppenarbeit', en: 'Group project' },
+    gallery: [
+      { src: 'assets/projects/spatial-sound/g1.jpg', r: '2/1', wide: true, lbl: { de: 'Analyse · Spektrogramm der Klangaufnahme', en: 'Analysis · spectrogram of the field recording' } },
+      { src: 'assets/projects/spatial-sound/g2.jpg', r: '1/1', lbl: { de: 'Klang in Materie · Zymatik', en: 'Sound in matter · cymatics' } },
+      { src: 'assets/projects/spatial-sound/g3.jpg', r: '1/1', lbl: { de: 'Mein Raum · die fragmentierte weiße Struktur', en: 'My space · the fragmented white structure' } },
+      { src: 'assets/projects/spatial-sound/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Klanggeneriertes Gruppenmodell', en: 'Sound-generated group model' } },
+    ],
   },
   {
     id: 'avatar',
@@ -48,34 +52,39 @@ const PROJECTS = [
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/avatar/card.jpg',
     hero: 'assets/projects/avatar/hero.jpg',
-    stripA: 'assets/projects/avatar/a.jpg',
-    stripB: 'assets/projects/avatar/b.jpg',
+    heroFull: true,
     kicker: { de: 'EGD II · A01', en: 'EGD II · A01' },
     summary: {
-      de: 'Architectural Avatar entwickelt eine architektonische Figur — einen Avatar — als Protagonist und Maß des Raums. Aus fotografischen Körperstudien entsteht eine abstrahierte weiße Gestalt, die in wechselnde räumliche Situationen gesetzt wird: vor Feuer, im projizierten Licht, in der Landschaft. Der Körper wird zum Werkzeug, Architektur zu erproben, bevor sie gebaut ist.',
-      en: 'Architectural Avatar develops an architectural figure — an avatar — as the protagonist and measure of space. From photographic studies of the body, an abstracted white figure emerges and is placed into changing spatial situations: before fire, in projected light, in the landscape. The body becomes a tool for testing architecture before it is built.',
+      de: 'Architectural Avatar macht den eigenen Körper zum architektonischen Protagonisten. Aus fotografischen Haltungsstudien — zeigen, fotografieren, innehalten — entsteht eine abstrahierte weiße Figur, ein Avatar, der als Maßstabsfigur in reale Situationen gesetzt wird: auf den Wohnweg, in den herbstlichen Park, in den Hörsaal. Der Körper wird zum Werkzeug, räumliche Wirkung zu erproben.',
+      en: 'Architectural Avatar turns the body itself into an architectural protagonist. From photographic posture studies — pointing, photographing, pausing — an abstracted white figure emerges, an avatar, set as a scale figure into real situations: a residential path, an autumn park, a lecture hall. The body becomes a tool for testing spatial effect.',
     },
     bodyP1: {
-      de: 'Ausgangspunkt sind fotografische Studien des Körpers in unterschiedlichen Haltungen — Zeigen, Halten, Innehalten. Aus ihnen entsteht ein abstrahierter Avatar, eine reduzierte weiße Figur, die den Menschen nicht abbildet, sondern als Stellvertreter im Raum lesbar macht.',
-      en: 'The starting point is a photographic study of the body in different postures — pointing, holding, pausing. From these an abstracted avatar emerges, a reduced white figure that does not depict the person but stands in for them, legible within space.',
+      de: 'Ausgangspunkt ist der eigene Körper, in unterschiedlichen Haltungen fotografiert — zeigen, fotografieren, stehen, innehalten. Aus diesen Aufnahmen entsteht eine abstrahierte, reduzierte weiße Figur: ein Avatar, der den Menschen nicht abbildet, sondern als Stellvertreter und Maß im Raum lesbar macht.',
+      en: 'The starting point is the body itself, photographed in different postures — pointing, photographing, standing, pausing. From these images an abstracted, reduced white figure emerges: an avatar that does not depict the person but stands in for them, legible as a measure within space.',
     },
     bodyP2: {
-      de: 'Der Avatar wird in verschiedene Szenen montiert — an ein nächtliches Feuer, in einen Raum aus projiziertem Licht, in eine herbstliche Landschaft. Jede Situation prüft ein anderes Verhältnis von Figur und Raum: Nähe und Distanz, Licht und Dunkel, Maßstab und Atmosphäre. So wird der Körper zum Instrument, mit dem sich räumliche Wirkung erproben und lesen lässt.',
-      en: 'The avatar is placed into different scenes — beside a fire at night, into a room of projected light, into an autumn landscape. Each situation tests another relationship between figure and space: nearness and distance, light and dark, scale and atmosphere. The body becomes an instrument for testing and reading spatial effect.',
+      de: 'Als Figur im Modellmaßstab wird der Avatar in wechselnde Situationen gesetzt — auf den Backsteinweg vor dem Wohnhaus, in den herbstlichen Park, in dem ihn sein Urheber selbst fotografiert, und in den Hörsaal. In der „Konstellation" ordnen sich kleine Figuren auf einer Dartscheibe zu einem Maßstabsfeld. Jede Situation prüft ein anderes Verhältnis von Figur und Raum: Nähe und Distanz, Maßstab und Kontext.',
+      en: 'As a model-scale figure the avatar is placed into changing situations — the brick path before the housing block, the autumn park where its own maker photographs it, and the lecture hall. In the "constellation", small figures arrange themselves on a dartboard into a field of scale. Each situation tests another relationship between figure and space: nearness and distance, scale and context.',
     },
     pull: {
       de: 'Der Avatar bildet den Menschen nicht ab — er macht ihn als Maß des Raums lesbar.',
       en: 'The avatar does not depict the person — it makes them legible as the measure of space.',
     },
     capText: {
-      de: 'Der Avatar in wechselnden Situationen — vor dem Feuer, im projizierten Licht, in der Landschaft — sowie die Haltungsstudien, aus denen die Figur entstand.',
-      en: 'The avatar in changing situations — before fire, in projected light, in the landscape — with the posture studies from which the figure emerged.',
+      de: 'Der Avatar in realen Situationen — Wohnweg, herbstlicher Park, Hörsaal — und die fotografischen Haltungsstudien, aus denen die Figur entstand.',
+      en: 'The avatar in real situations — a residential path, an autumn park, a lecture hall — and the photographic posture studies from which the figure emerged.',
     },
     process: {
-      de: ['Fotografische Körper- und Haltungsstudien', 'Abstraktion zur weißen Avatar-Figur', 'Montage in wechselnde Raumsituationen', 'Figur und Raum: Maßstab, Licht, Atmosphäre'],
-      en: ['Photographic body and posture studies', 'Abstraction into the white avatar figure', 'Compositing into changing spatial situations', 'Figure and space: scale, light, atmosphere'],
+      de: ['Fotografische Haltungsstudien des eigenen Körpers', 'Abstraktion zur weißen Avatar-Figur', 'Figur im Modellmaßstab, in reale Szenen gesetzt', 'Konstellation · Maßstabsfeld auf der Dartscheibe'],
+      en: ['Photographic posture studies of the body', 'Abstraction into the white avatar figure', 'Model-scale figure placed into real scenes', 'Constellation · a field of scale on the dartboard'],
     },
     role: { de: 'Einzelarbeit', en: 'Solo project' },
+    gallery: [
+      { src: 'assets/projects/avatar/g1.jpg', r: '16/9', wide: true, lbl: { de: 'Konstellation · Maßstabsfiguren auf der Dartscheibe', en: 'Constellation · scale figures on the dartboard' } },
+      { src: 'assets/projects/avatar/g2.jpg', r: '3/4', lbl: { de: 'Haltungsstudie · Zeigen', en: 'Posture study · pointing' } },
+      { src: 'assets/projects/avatar/g3.jpg', r: '3/4', lbl: { de: 'Haltungsstudie · Fotografieren', en: 'Posture study · photographing' } },
+      { src: 'assets/projects/avatar/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Der Avatar im Hörsaal', en: 'The avatar in the lecture hall' } },
+    ],
   },
   {
     id: 'genius-loci',
@@ -86,8 +95,6 @@ const PROJECTS = [
     status: { de: 'Forschung', en: 'Research' },
     img: 'assets/projects/genius-loci/card.jpg',
     hero: 'assets/projects/genius-loci/hero.jpg',
-    stripA: 'assets/projects/genius-loci/a.jpg',
-    stripB: 'assets/projects/genius-loci/b.jpg',
     kicker: { de: 'EGD1 · Raumanalyse', en: 'EGD1 · Spatial analysis' },
     summary: {
       de: 'Eine Untersuchung über das Verhältnis von Innen und Außen im städtischen Raum. Können Straßen und Plätze als Innenräume der Stadt verstanden werden — gefasst durch Fassaden, Vegetation, Licht und Bewegung? Fotografie und Körper im Stadtraum werden zur Methode, um Grenzen, Übergänge und Atmosphären lesbar zu machen.',
@@ -106,14 +113,20 @@ const PROJECTS = [
       en: 'Inside and outside are not opposites — each makes the other possible.',
     },
     capText: {
-      de: 'Körper im Stadtraum, im Abendlicht fotografiert: Bewegung als Maß für Enge, Weite und Übergang.',
-      en: 'The body in the city, photographed in evening light: movement as a measure of enclosure, distance and threshold.',
+      de: 'Fotografische Körperstudien, Stadtplan-Kartierung und perspektivische Zeichnungen: der Stadtraum als Innenraum, gelesen durch Grenzen, Bewegung und Licht.',
+      en: 'Photographic body studies, an urban mapping plan and perspective drawings: the city read as interior — through edges, movement and light.',
     },
     process: {
-      de: ['Textliche und konzeptionelle Raumanalyse', 'Fotografische Studien im Abendlicht', 'Bewegung und Körper als räumliches Maß', 'Kartierung von Grenzen und Öffnungen'],
-      en: ['Textual and conceptual spatial analysis', 'Photographic studies in evening light', 'Body and movement as a spatial measure', 'Mapping of edges and openings'],
+      de: ['Textliche und konzeptionelle Raumanalyse', 'Perspektivische Handzeichnungen im Stadtraum', 'Fotografische Körperstudien im Herbstlicht', 'Stadtplan-Kartierung von Grenzen und Öffnungen'],
+      en: ['Textual and conceptual spatial analysis', 'Perspective hand-drawings in the urban realm', 'Photographic body studies in autumn light', 'Urban mapping of edges and openings'],
     },
     role: { de: 'Einzelarbeit', en: 'Solo project' },
+    gallery: [
+      { src: 'assets/projects/genius-loci/g1.jpg', r: '2/1', wide: true, lbl: { de: 'Kartierung · Grenzen, Öffnungen, Blickachsen', en: 'Mapping · edges, openings, sightlines' } },
+      { src: 'assets/projects/genius-loci/g2.jpg', r: '3/4', lbl: { de: 'Perspektivische Handzeichnungen', en: 'Perspective hand-drawings' } },
+      { src: 'assets/projects/genius-loci/g3.jpg', r: '3/4', lbl: { de: 'Die Bushaltestelle als Innenraum der Stadt', en: 'The bus shelter as an interior of the city' } },
+      { src: 'assets/projects/genius-loci/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Körper als räumliches Maß', en: 'The body as a spatial measure' } },
+    ],
   },
   {
     id: 'randstadt-intervention',
@@ -124,16 +137,15 @@ const PROJECTS = [
     status: { de: 'Gebaut', en: 'Built' },
     img: 'assets/projects/randstadt-intervention/card.jpg',
     hero: 'assets/projects/randstadt-intervention/hero.jpg',
-    stripA: 'assets/projects/randstadt-intervention/a.jpg',
-    stripB: 'assets/projects/randstadt-intervention/b.jpg',
+    heroFull: true,
     kicker: { de: 'EGD1 · Installation 1:1', en: 'EGD1 · 1:1 installation' },
     summary: {
       de: 'Eine ortsspezifische, performative Rauminstallation im Maßstab 1:1. Mit einfachen Mitteln wird ein bestehender Weg in der Randstadt von Wismar verdichtet und neu gelesen: Ein Folientunnel bündelt Bewegung und Wahrnehmung, führt von der Weite in die Enge — und öffnet sich am Ende in einen natürlich gewachsenen Raum.',
       en: 'A site-specific, performative installation at full scale. With simple means, an existing path on the edge of Wismar is condensed and re-read: a tunnel of foil gathers movement and perception, leading from openness into compression — and opening, at its end, into a space shaped by nature.',
     },
     bodyP1: {
-      de: 'Ein klar gefasster Weg in der Randstadt sollte räumlich interpretiert und intensiviert werden. Mit einfachen Materialien entstand ein gezielter Eingriff, der den Übergang zwischen Offenheit und Enge bewusst inszeniert. Der Weg führt aus dem offenen Stadtraum in einen zunehmend verdichteten Tunnel, der die Bewegung visuell und atmosphärisch bündelt.',
-      en: 'A clearly framed path on the edge of the city was to be interpreted and intensified in spatial terms. With simple materials, a precise intervention stages the shift between openness and constriction. The route leads from open urban space into an increasingly dense tunnel that gathers movement, visually and atmospherically.',
+      de: 'Ein klar gefasster Weg in der Randstadt sollte räumlich interpretiert und intensiviert werden. Mit einfachen Mitteln — transluzenter Folie auf Holzpfählen — entstand ein gezielter Eingriff, der den Übergang zwischen Offenheit und Enge bewusst inszeniert. Der Weg führt aus dem offenen Stadtraum in einen zunehmend verdichteten Tunnel, der die Bewegung visuell und atmosphärisch bündelt.',
+      en: 'A clearly framed path on the edge of the city was to be interpreted and intensified in spatial terms. With simple means — translucent sheeting on timber posts — a precise intervention stages the shift between openness and constriction. The route leads from open urban space into an increasingly dense tunnel that gathers movement, visually and atmospherically.',
     },
     bodyP2: {
       de: 'Am Ende öffnet sich die Struktur in einen natürlich geformten Raum unter einem dichten Blätterdach. Der Wechsel zwischen künstlichem Eingriff und bestehender Natur schärft die Wahrnehmung des Ortes und macht den Weg selbst zum räumlichen Erlebnis.',
@@ -144,14 +156,19 @@ const PROJECTS = [
       en: 'The intervention does not change the place — it changes the way you move through it.',
     },
     capText: {
-      de: 'Folientunnel entlang eines winterlichen Randstadt-Wegs: von der Weite in die Enge und zurück ins Freie unter dem Blätterdach.',
-      en: 'A foil tunnel along a wintry edge-city path: from openness into compression and back into the open beneath the leaves.',
+      de: 'Folientunnel entlang eines winterlichen Randstadt-Wegs: von der Weite in die Enge und zurück ins Freie unter dem Geäst.',
+      en: 'A foil tunnel along a wintry edge-city path: from openness into compression and back into the open beneath the bare branches.',
     },
     process: {
-      de: ['Ortsanalyse eines gefassten Wegs in der Randstadt', 'Eingriff mit einfachen Materialien (Folie)', 'Verdichtung von Bewegung und Wahrnehmung', '1:1-Aufbau und performative Durchwegung'],
-      en: ['Site analysis of a framed edge-city path', 'Intervention with simple materials (foil)', 'Condensing movement and perception', 'Full-scale build and performative walk-through'],
+      de: ['Ortsanalyse eines gefassten Wegs in der Randstadt', 'Eingriff mit transluzenter Folie auf Holzpfählen', 'Verdichtung von Bewegung und Wahrnehmung', '1:1-Aufbau und performative Durchwegung'],
+      en: ['Site analysis of a framed edge-city path', 'Intervention with translucent sheeting on timber posts', 'Condensing movement and perception', 'Full-scale build and performative walk-through'],
     },
     role: { de: 'Teamarbeit', en: 'Team project' },
+    gallery: [
+      { src: 'assets/projects/randstadt-intervention/g1.jpg', r: '3/4', lbl: { de: 'Annäherung · der gefasste Weg', en: 'Approach · the framed path' } },
+      { src: 'assets/projects/randstadt-intervention/g2.jpg', r: '3/4', lbl: { de: 'Durchwegung', en: 'Passing through' } },
+      { src: 'assets/projects/randstadt-intervention/g3.jpg', r: '2/1', wide: true, lbl: { de: 'Der Eingriff im winterlichen Ort', en: 'The intervention in its winter setting' } },
+    ],
   },
   {
     id: 'raum-struktur-huelle',
@@ -162,34 +179,39 @@ const PROJECTS = [
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/raum-struktur-huelle/card.jpg',
     hero: 'assets/projects/raum-struktur-huelle/hero.jpg',
-    stripA: 'assets/projects/raum-struktur-huelle/a.jpg',
-    stripB: 'assets/projects/raum-struktur-huelle/b.jpg',
+    heroFull: true,
     kicker: { de: 'EGD1 · Entwurf im Bestand', en: 'EGD1 · Intervention in context' },
     summary: {
       de: 'Ein additiver Eingriff in ein Wohnensemble aus Plattenbauten: eine leichte, parasitäre Struktur schreibt sich in die strenge Geometrie des Bestands ein. Raum, tragende Struktur und Hülle werden als voneinander abhängige Ebenen verstanden, aus deren Zusammenspiel eine neue architektonische Ordnung entsteht.',
       en: 'An additive intervention into a housing ensemble of prefabricated slabs: a light, parasitic structure inscribes itself into the strict geometry of the existing fabric. Space, load-bearing structure and skin are read as interdependent layers whose interplay gives rise to a new architectural order.',
     },
     bodyP1: {
-      de: 'Ausgangspunkt war ein Wohnensemble aus Plattenbauten mit strikter Geometrie und repetitiven Fassadenlinien in einer Randstadtsituation. Über die vorhandenen Baukörper legt der Entwurf eine leichte, lineare Konstruktion, die diese miteinander verbindet. Über Brücken werden die Dächer erschlossen und zu einer gemeinschaftlich nutzbaren Fläche zusammengeführt; eine zusätzliche Überdachung schafft geschützte Bereiche.',
-      en: 'The starting point was a housing ensemble of prefabricated slabs with strict geometry and repetitive façade lines, set on the edge of the city. Over the existing volumes the design lays a light, linear construction that links them together. Bridges open up the roofs and join them into a shared surface; an added canopy creates sheltered zones.',
+      de: 'Ausgangspunkt war ein Wohnensemble aus Plattenbauten mit strikter Geometrie und repetitiven Fassadenlinien in einer Randstadtsituation. Über die vorhandenen Baukörper legt der Entwurf eine leichte, lineare Konstruktion, die diese miteinander verbindet. Über verspannte Brücken werden die Dächer erschlossen und zu einer gemeinschaftlich nutzbaren Fläche zusammengeführt; eine zusätzliche Überdachung aus stabartigen Elementen schafft geschützte Bereiche.',
+      en: 'The starting point was a housing ensemble of prefabricated slabs with strict geometry and repetitive façade lines, set on the edge of the city. Over the existing volumes the design lays a light, linear construction that links them together. Cable-stayed bridges open up the roofs and join them into a shared surface; an added canopy of rod-like elements creates sheltered zones.',
     },
     bodyP2: {
-      de: 'Durch die eng gesetzten, stabartigen Elemente entstehen unterschiedlich ausgeprägte Zwischenräume mit wechselnden Blickbeziehungen, Offenheiten und Aufenthaltszonen. Die Struktur übernimmt mehrere Rollen zugleich: Wegesystem, Ort der Begegnung, sozialer Raum — und eröffnet neue Möglichkeiten der Vernetzung im bestehenden Wohngefüge.',
-      en: 'The closely set, rod-like elements create in-between spaces of varying character, with shifting views, degrees of openness and places to stay. The structure takes on several roles at once: a system of paths, a place of encounter, a social space — opening new connections within the existing fabric.',
+      de: 'Die eng gesetzten, stabartigen Elemente erzeugen Zwischenräume mit wechselnden Blickbeziehungen und Offenheiten; ihnen gegenüber stehen geordnete, flächige Module — Hülle und Struktur als zwei Sprachen desselben Systems. So übernimmt die Struktur mehrere Rollen zugleich: Wegesystem, Ort der Begegnung, sozialer Raum — und eröffnet neue Möglichkeiten der Vernetzung im bestehenden Wohngefüge.',
+      en: 'The closely set, rod-like elements create in-between spaces with shifting views and degrees of openness; set against them stand ordered, planar modules — skin and structure as two registers of the same system. The structure thus takes on several roles at once: a system of paths, a place of encounter, a social space — opening new connections within the existing fabric.',
     },
     pull: {
       de: 'Die Struktur ist Weg, Treffpunkt und Hülle zugleich — sie verbindet, was nebeneinander stand.',
       en: 'The structure is path, meeting point and skin at once — it connects what merely stood side by side.',
     },
     capText: {
-      de: 'Leichte, stabartige Struktur über dem Plattenbau-Bestand: Brücken erschließen die Dächer zu einer gemeinschaftlichen Fläche. Modell und Detail.',
-      en: 'A light, rod-like structure above the prefab ensemble: bridges open the roofs into a shared surface. Model and detail.',
+      de: 'Leichtes Stabwerk über dem Plattenbau-Bestand: das stochastische Stabfeld und die geordneten Module, Brücken erschließen die Dächer zur gemeinschaftlichen Fläche. Modell und Photomontage.',
+      en: 'A light rod structure above the prefab ensemble: the stochastic rod field and the ordered modules; bridges open the roofs into a shared surface. Model and photomontage.',
     },
     process: {
-      de: ['Analyse der Plattenbau-Geometrie und Randstadtsituation', 'Additive, parasitäre Leichtstruktur', 'Brücken und Dacherschließung als Gemeinschaftsfläche', 'Modellstudien zu Zwischenraum und Blickbeziehung'],
-      en: ['Analysis of the prefab geometry and edge-city site', 'Additive, parasitic light structure', 'Bridges and roof access as shared space', 'Model studies of in-between space and views'],
+      de: ['Analyse der Plattenbau-Geometrie und Randstadtsituation', 'Additive, parasitäre Leichtstruktur', 'Verspannte Brücken erschließen die Dächer', 'Modell und Photomontage über dem Bestandsfoto'],
+      en: ['Analysis of the prefab geometry and edge-city site', 'Additive, parasitic light structure', 'Cable-stayed bridges open up the roofs', 'Model and photomontage over the site photograph'],
     },
     role: { de: 'Gruppenarbeit', en: 'Group project' },
+    gallery: [
+      { src: 'assets/projects/raum-struktur-huelle/g1.jpg', r: '16/9', wide: true, lbl: { de: 'Modell · Stabwerk über dem Plattenbau-Ensemble', en: 'Model · rod structure spanning the prefab ensemble' } },
+      { src: 'assets/projects/raum-struktur-huelle/g2.jpg', r: '1/1', lbl: { de: 'Das stochastische Stabfeld', en: 'The stochastic rod field' } },
+      { src: 'assets/projects/raum-struktur-huelle/g3.jpg', r: '1/1', lbl: { de: 'Die geordnete Modulstruktur', en: 'The ordered modular structure' } },
+      { src: 'assets/projects/raum-struktur-huelle/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Der Bestand · Plattenbau-Hof in der Randstadt', en: 'The existing fabric · prefab courtyard on the city edge' } },
+    ],
   },
   {
     id: 'masse-und-hohlraum',
@@ -200,16 +222,15 @@ const PROJECTS = [
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/masse-und-hohlraum/card.jpg',
     hero: 'assets/projects/masse-und-hohlraum/hero.jpg',
-    stripA: 'assets/projects/masse-und-hohlraum/a.jpg',
-    stripB: 'assets/projects/masse-und-hohlraum/b.jpg',
+    heroFull: true,
     kicker: { de: 'EGD1 · Raumexperiment', en: 'EGD1 · Spatial experiment' },
     summary: {
       de: 'Eine Untersuchung über das Verhältnis von Volumen und Leere. Raum wird nicht als Nebenprodukt verstanden, sondern als aktives Element, das durch Masse gefasst und erlebbar wird. Über Wachs- und Betongüsse entstehen Modelle, die ausschließlich den Hohlraum sichtbar machen — und das Licht zum eigentlichen Baustoff erklären.',
       en: 'A study of volume and emptiness. Space is treated not as a by-product but as an active element, defined and made tangible by mass. Through wax and concrete casts, the project produces models that show only the void — and make light the true material.',
     },
     bodyP1: {
-      de: 'Zur Untersuchung wurden bestehende Buchkörper als Material genutzt. Durch das Ausschneiden räumlicher Abfolgen und das Ausgießen der Negativräume mit Wachs entstanden Modelle, die nur den Hohlraum zeigten. So ließen sich Raumwirkungen losgelöst von Fassade und Volumen analysieren — Lichtführung, Transparenz und Überlagerung als zentrale Entwurfsparameter.',
-      en: 'Existing book bodies were used as raw material. By cutting away spatial sequences and casting the resulting voids in wax, the work produced models that showed only the hollow space. This made it possible to analyse spatial effects detached from façade and volume — light, transparency and overlap as the core design parameters.',
+      de: 'Ausgangspunkt waren markante Zugangssituationen im Wismarer Stadtraum, aus denen zunächst abstrakte Konzepte für Sequenz, Übergang und räumliche Verdichtung entstanden. Zur Untersuchung wurden bestehende Buchkörper als Material genutzt: Durch das Ausschneiden räumlicher Abfolgen und das Ausgießen der Negativräume mit Wachs entstanden Modelle, die nur den Hohlraum zeigten. So ließen sich Raumwirkungen losgelöst von Fassade und Volumen analysieren — Lichtführung, Transparenz und Überlagerung als zentrale Entwurfsparameter.',
+      en: 'The starting point was a set of distinctive threshold situations in Wismar\'s urban fabric, from which abstract concepts of sequence, transition and spatial compression first emerged. Existing book bodies then served as raw material: by cutting away spatial sequences and casting the resulting voids in wax, the work produced models that showed only the hollow space. This made it possible to analyse spatial effects detached from façade and volume — light, transparency and overlap as the core design parameters.',
     },
     bodyP2: {
       de: 'Auf dieser Basis entstand eine räumliche Struktur, in der das Licht Orientierung und Abfolge bestimmt. Die Realisierung erfolgte als Betonguss in Erde, im Verfahren am Glockenguss orientiert. Nach dem Aushärten blieb ein klar definierter Innenraum zurück, der über ein Oberlicht und gezielt gesetzte Öffnungen belichtet wird — die Lichtführung macht den Weg durch die Struktur erfahrbar.',
@@ -228,6 +249,12 @@ const PROJECTS = [
       en: ['Book bodies as material — cutting spatial sequences', 'Voids cast in wax', 'Concrete cast in earth (after bell-casting)', 'Lighting through skylight and placed openings'],
     },
     role: { de: 'Gruppenarbeit', en: 'Group project' },
+    gallery: [
+      { src: 'assets/projects/masse-und-hohlraum/g1.jpg', r: '2/1', wide: true, lbl: { de: 'Betonguss in Erde · die Negativform im Sand', en: 'Concrete cast in earth · the formwork in sand' } },
+      { src: 'assets/projects/masse-und-hohlraum/g2.jpg', r: '1/1', lbl: { de: 'Maßstabsfigur im Hohlraum', en: 'Scale figure within the void' } },
+      { src: 'assets/projects/masse-und-hohlraum/g3.jpg', r: '1/1', lbl: { de: 'Geometrie des Hohlraums', en: 'Geometry of the void' } },
+      { src: 'assets/projects/masse-und-hohlraum/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Lichtführung durch gesetzte Öffnungen', en: 'Light drawn through placed openings' } },
+    ],
   },
   {
     id: 'zu-wasser-lassen',
@@ -238,8 +265,7 @@ const PROJECTS = [
     status: { de: 'Gebaut', en: 'Built' },
     img: 'assets/projects/zu-wasser-lassen/card.jpg',
     hero: 'assets/projects/zu-wasser-lassen/hero.jpg',
-    stripA: 'assets/projects/zu-wasser-lassen/a.jpg',
-    stripB: 'assets/projects/zu-wasser-lassen/b.jpg',
+    heroRatio: '3/2', heroFull: true,
     kicker: { de: 'EGD1 · Einführungsstegreif', en: 'EGD1 · Opening workshop' },
     summary: {
       de: 'Ein viertägiger Stegreif zum Auftakt des Studiums: Aus Karton, Pappmaché und Farbe sollte ein schwimmfähiges Boot entstehen — Form als unmittelbares Ergebnis konstruktiver Logik. Zwischen Material, Auftrieb und Hydrodynamik führte der Weg vom 1:20-Modell bis zum 1:1-Boot und endete in einer Regatta am Strand von Wendorf.',
@@ -266,6 +292,13 @@ const PROJECTS = [
       en: ['1:20 paper models — form, volume, stability', 'Iterative tests of buoyancy and hydrodynamics', 'Scaling up and building at full size', 'Regatta on the beach at Wendorf'],
     },
     role: { de: 'Teamarbeit', en: 'Team project' },
+    gallery: [
+      { src: 'assets/projects/zu-wasser-lassen/g1.jpg', r: '1/1', lbl: { de: 'Konzept · Skizzenmodell 1:20', en: 'Concept · 1:20 sketch model' } },
+      { src: 'assets/projects/zu-wasser-lassen/g2.jpg', r: '1/1', lbl: { de: 'Rumpfgerippe aus Pappe', en: 'Cardboard rib frame of the hull' } },
+      { src: 'assets/projects/zu-wasser-lassen/g3.jpg', r: '16/9', wide: true, lbl: { de: 'Das fertige Modell vor dem 1:1-Bau', en: 'The finished model before the full-scale build' } },
+      { src: 'assets/projects/zu-wasser-lassen/g4.jpg', r: '1/1', lbl: { de: 'Konstruktion · Fügung und Auftrieb', en: 'Construction · joints and buoyancy' } },
+      { src: 'assets/projects/zu-wasser-lassen/g5.jpg', r: '1/1', lbl: { de: 'Regatta am Strand von Wendorf · das Wappen voraus', en: 'Regatta on the beach at Wendorf · the crest leads the way' } },
+    ],
   },
   {
     id: 'weitere-arbeiten',
@@ -276,8 +309,7 @@ const PROJECTS = [
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/weitere-arbeiten/card.jpg',
     hero: 'assets/projects/weitere-arbeiten/hero.jpg',
-    stripA: 'assets/projects/weitere-arbeiten/a.jpg',
-    stripB: 'assets/projects/weitere-arbeiten/b.jpg',
+    heroRatio: '3/2', heroFull: true,
     kicker: { de: 'EGD1 · Digitale Grundlagen · Geometrie · Freihand', en: 'EGD1 · Digital foundations · Geometry · Freehand' },
     summary: {
       de: 'Begleitende Arbeiten aus den Grundlagenmodulen: eine digitale Collage über die Schwelle zwischen Alltag und Freiheit, geometrisch-konstruktive Darstellungen und Freihandzeichnungen. Drei Übungen im Darstellen — vom freien Bild über die exakte Konstruktion bis zur Hand.',
@@ -288,22 +320,28 @@ const PROJECTS = [
       en: 'The collage "Gate to Freedom" takes up the threshold between the "captivity" of everyday life and freedom. The figure stands at the passage from an emptied urban setting toward an idealised, immaterial space made visible by the bright gate — a place that exists only on paper. The gate becomes the interface between lived reality and a possible future.',
     },
     bodyP2: {
-      de: 'Daneben stehen Arbeiten aus dem Geometrischen Darstellen und dem Freihandzeichnen: perspektivische Konstruktionen, Innenraumstudien und Zeichnungen organischer Formen. Sie bilden das handwerkliche Fundament des Semesters — das Sehen, Konstruieren und Darstellen, auf dem die Entwürfe aufbauen.',
-      en: 'Alongside it stand works from descriptive geometry and freehand drawing: perspective constructions, interior studies and drawings of organic forms. They form the craft foundation of the semester — the seeing, constructing and representing on which the designs are built.',
+      de: 'Daneben stehen Arbeiten aus dem Geometrischen Darstellen und dem Freihandzeichnen. Im Geometrischen Darstellen entstehen exakte Innenraumperspektiven mit Fluchtpunkten sowie konstruierte Membran- und Seilformen; im Freihandzeichnen Studien von Muscheln, Schnecken und einem barocken Kirchenmöbel. Sie bilden das handwerkliche Fundament des Semesters — das Sehen, Konstruieren und Darstellen, auf dem die Entwürfe aufbauen.',
+      en: 'Alongside it stand works from descriptive geometry and freehand drawing. Descriptive geometry produces exact interior perspectives with vanishing points and constructed membrane and cable forms; freehand drawing yields studies of shells, snails and a baroque church furnishing. Together they form the craft foundation of the semester — the seeing, constructing and representing on which the designs are built.',
     },
     pull: {
       de: 'Das Tor existiert nur auf dem Papier — und genau dort beginnt der Entwurf.',
       en: 'The gate exists only on paper — and that is exactly where design begins.',
     },
     capText: {
-      de: 'Collage „Tor zur Freiheit", Freihandzeichnungen organischer Formen und perspektivische Konstruktionen aus den Grundlagenmodulen.',
-      en: 'The collage "Gate to Freedom", freehand studies of organic forms, and perspective constructions from the foundation modules.',
+      de: 'Collage „Tor zur Freiheit" sowie Arbeiten aus Geometrischem Darstellen und Freihandzeichnen — das gestalterische Fundament des ersten Semesters.',
+      en: 'The collage "Gate to Freedom" together with works from descriptive geometry and freehand drawing — the design foundation of the first semester.',
     },
     process: {
-      de: ['Digitale Collage „Tor zur Freiheit"', 'Perspektivische Konstruktion (Geometrisches Darstellen)', 'Innenraum- und Perspektivstudien', 'Freihandzeichnen organischer Formen'],
-      en: ['Digital collage "Gate to Freedom"', 'Perspective construction (descriptive geometry)', 'Interior and perspective studies', 'Freehand drawing of organic forms'],
+      de: ['Digitale Collage „Tor zur Freiheit"', 'Innenraumperspektiven mit Fluchtpunkten', 'Konstruierte Membran- und Seilformen', 'Freihandstudien: Muscheln, Schnecken, barockes Ornament'],
+      en: ['Digital collage "Gate to Freedom"', 'Interior perspectives with vanishing points', 'Constructed membrane and cable forms', 'Freehand studies: shells, snails, baroque ornament'],
     },
     role: { de: 'Einzelarbeit', en: 'Solo project' },
+    gallery: [
+      { src: 'assets/projects/weitere-arbeiten/g1.jpg', r: '1/1', lbl: { de: 'Freihand · Muschelstudie', en: 'Freehand · Shell study' } },
+      { src: 'assets/projects/weitere-arbeiten/g2.jpg', r: '1/1', lbl: { de: 'Freihand · Barockes Ornament', en: 'Freehand · Baroque ornament' } },
+      { src: 'assets/projects/weitere-arbeiten/g3.jpg', r: '2/1', wide: true, lbl: { de: 'Geometrisches Darstellen · Innenraumperspektive', en: 'Descriptive geometry · Interior perspective' } },
+      { src: 'assets/projects/weitere-arbeiten/g4.jpg', r: '2/1', wide: true, lbl: { de: 'Geometrisches Darstellen · Membrankonstruktion', en: 'Descriptive geometry · Membrane construction' } },
+    ],
   },
 ];
 

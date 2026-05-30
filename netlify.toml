@@ -1,0 +1,23 @@
+# Netlify-Konfiguration — statische Seite.
+# build/ ist bereits eingecheckt, daher ist auf Netlify KEIN Build-Schritt nötig.
+# WICHTIG: Nach jeder Änderung an einer .jsx-Datei lokal `npm run build` ausführen,
+# committen und pushen — sonst veröffentlicht Netlify den alten Stand.
+
+[build]
+  publish = "."
+  command = "echo 'Prebuilt – kein Build-Schritt auf Netlify noetig'"
+
+# node_modules würde bei publish = "." sonst mit ausgeliefert; hier ist es ohnehin
+# nicht eingecheckt (.gitignore), daher landet nur der committete Stand online.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Schriften lange cachen (sie ändern sich praktisch nie)
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

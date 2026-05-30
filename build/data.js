@@ -39,204 +39,238 @@ const PROJECTS = [
     role: { de: "Gruppenarbeit", en: "Group project" }
   },
   {
-    id: "kanal",
-    t: { de: "Kanalhaus \u2014 Drei H\xE4user am Wallensteingraben", en: "Kanalhaus \u2014 Three Houses on the Wallensteingraben" },
-    location: "Wismar",
-    year: "2026",
-    semester: { de: "1. Semester", en: "1st semester" },
-    tag: { de: "Wohnungsbau", en: "Housing" },
-    status: { de: "Studio", en: "Studio" },
-    img: "assets/photo-placeholder-cool.svg",
-    kicker: { de: "Wohnstudio \xB7 Prof. Lindner", en: "Housing studio \xB7 Prof. Lindner" },
-    summary: {
-      de: "Drei schmale Reihenh\xE4user entlang eines verwilderten Kanals in der Wismarer Innenstadt. Die Aufgabe verlangte Dichte; meine Antwort war, das Erdgeschoss anzuheben, das Ufer dem Schilf zu \xFCberlassen und die K\xFCche dort zu platzieren, wo der Weg auf das Wasser trifft.",
-      en: "Three narrow row-houses placed along an overgrown canal in central Wismar. The brief asked for density; my answer was to lift the ground floor, leave the canal edge to the reeds, and put the kitchen where the path meets the water."
-    },
-    process: {
-      de: ["Sechs Ortsbegehungen \xFCber vier Wochen", "St\xE4dtebauliche Diagramme im Quartiersma\xDFstab", "Grundrissstudien 1:200", "Atmosph\xE4rische Innencollagen auf Transparentpapier"],
-      en: ["Site walks, six visits over four weeks", "Block-scale urban diagrams", "Plan studies at 1:200", "Interior atmosphere collages on tracing paper"]
-    },
-    role: { de: "Alleinige Autorenschaft", en: "Sole author" }
-  },
-  {
-    id: "fischmarkt",
-    t: { de: "Fischmarkt-Umnutzung \u2014 Ein neues Dach \xFCber einer alten Halle", en: "Fischmarkt Reuse \u2014 A New Roof Over an Old Hall" },
+    id: "genius-loci",
+    t: { de: "Genius Loci \u2014 Innenr\xE4ume der Stadt", en: "Genius Loci \u2014 Interiors of the City" },
     location: "Wismar",
     year: "2025",
-    semester: { de: "Grundlagen", en: "Foundations" },
-    tag: { de: "Umnutzung", en: "Adaptive reuse" },
-    status: { de: "Studio", en: "Studio" },
-    img: "assets/photo-placeholder-stone.svg",
-    kicker: { de: "Grundlagenstudio \xB7 Prof. Brandt", en: "Foundations studio \xB7 Prof. Brandt" },
-    summary: {
-      de: "Eine spekulative Neueindeckung der stillgelegten Fischhalle am Hafen. Der Entwurf erh\xE4lt die Backsteinau\xDFenw\xE4nde, entfernt die maroden Binder und ersetzt sie durch ein langsam ansteigendes Brettschichtholzgew\xF6lbe \u2014 tags\xFCber Markt, nachts \xFCberdachter Platz.",
-      en: "A speculative re-roofing of the disused fish hall on the harbour. The proposal keeps the brick perimeter, removes the failing trusses, and replaces them with a slow-rising glulam vault \u2014 a market by day, a covered square by night."
-    },
-    process: {
-      de: ["Photogrammetrische Aufnahme der Backsteinw\xE4nde", "Tragwerksstudien in BSP und Brettschichtholz", "Schnittmodell 1:100 (Pappe, Messingnadeln)"],
-      en: ["Photogrammetric survey of the existing brick walls", "Structural studies in CLT and glulam", "Section model at 1:100 (cardboard, brass pins)"]
-    },
-    role: { de: "Alleinige Autorenschaft", en: "Sole author" }
-  },
-  {
-    id: "altstadt",
-    t: { de: "Altstadt-Schwelle \u2014 Kartierung einer verschwindenden Kante", en: "Altstadt Threshold \u2014 Mapping a Disappearing Edge" },
-    location: "Wismar",
-    year: "2025",
-    semester: { de: "Grundlagen", en: "Foundations" },
-    tag: { de: "Stadtforschung", en: "Urban research" },
+    semester: { de: "1. Semester \xB7 WS 2025/26", en: "1st semester \xB7 winter 2025/26" },
+    tag: { de: "Forschung \xB7 Stadtraum", en: "Research \xB7 Urban space" },
     status: { de: "Forschung", en: "Research" },
-    img: "assets/photo-placeholder-warm.svg",
-    kicker: { de: "Seminar Stadtanalyse", en: "Urban analysis seminar" },
+    img: "assets/projects/genius-loci/card.jpg",
+    hero: "assets/projects/genius-loci/hero.jpg",
+    stripA: "assets/projects/genius-loci/a.jpg",
+    stripB: "assets/projects/genius-loci/b.jpg",
+    kicker: { de: "EGD1 \xB7 Raumanalyse", en: "EGD1 \xB7 Spatial analysis" },
     summary: {
-      de: "Eine zeichnerische Untersuchung der Naht zwischen mittelalterlicher Altstadt und Nachkriegssiedlung. Sechs Wochen, zw\xF6lf Spazierg\xE4nge, hundertvierzig Fotografien und eine einzige vier Meter lange Tuschezeichnung, die zur Abschlusspr\xE4sentation des Seminars wurde.",
-      en: "A drawing-based survey of the seam between the medieval old town and the post-war housing district. Six weeks, twelve walks, a hundred and forty photographs, and a single 4-metre-long ink elevation that became the seminar\u2019s closing presentation."
+      de: "Eine Untersuchung \xFCber das Verh\xE4ltnis von Innen und Au\xDFen im st\xE4dtischen Raum. K\xF6nnen Stra\xDFen und Pl\xE4tze als Innenr\xE4ume der Stadt verstanden werden \u2014 gefasst durch Fassaden, Vegetation, Licht und Bewegung? Fotografie und K\xF6rper im Stadtraum werden zur Methode, um Grenzen, \xDCberg\xE4nge und Atmosph\xE4ren lesbar zu machen.",
+      en: "A study of the relationship between inside and outside in the urban realm. Can streets and squares be read as interiors of the city \u2014 held by fa\xE7ades, vegetation, light and movement? Photography and the body in space become a method for making boundaries, thresholds and atmospheres legible."
+    },
+    bodyP1: {
+      de: "Ausgangspunkt war die Frage, wie Stra\xDFen und Pl\xE4tze r\xE4umlich wirken und inwiefern sie als Innenr\xE4ume der Stadt verstanden werden k\xF6nnen, die durch Fassaden, Vegetation, Licht und Bewegung gefasst sind. Anhand textlicher und konzeptioneller Untersuchungen habe ich analysiert, wo diese R\xE4ume enden und wie sie sich nach au\xDFen \xF6ffnen \u2014 zur Landschaft, zum Himmel und zur Weite.",
+      en: "The starting point was how streets and squares act spatially, and how far they can be understood as interiors of the city, framed by fa\xE7ades, vegetation, light and movement. Through textual and conceptual study I traced where these rooms end and how they open outward \u2014 toward the landscape, the sky and the distance."
+    },
+    bodyP2: {
+      de: "Dabei zeigte sich, dass Innen und Au\xDFen keine Gegens\xE4tze sind, sondern sich gegenseitig bedingen: Begrenzung schafft Orientierung und Spannung, \xD6ffnung erm\xF6glicht Verbindung und Ausdehnung. Das Projekt sch\xE4rfte mein Verst\xE4ndnis f\xFCr r\xE4umliche \xDCberg\xE4nge und f\xFCr Architektur als Zusammenspiel von Schutz und Offenheit.",
+      en: "What emerged was that inside and outside are not opposites but conditions of one another: enclosure creates orientation and tension, opening allows connection and extension. The project sharpened my sense for spatial thresholds and for architecture as an interplay of shelter and openness."
+    },
+    pull: {
+      de: "Innen und Au\xDFen sind keine Gegens\xE4tze \u2014 sie bedingen einander.",
+      en: "Inside and outside are not opposites \u2014 each makes the other possible."
+    },
+    capText: {
+      de: "K\xF6rper im Stadtraum, im Abendlicht fotografiert: Bewegung als Ma\xDF f\xFCr Enge, Weite und \xDCbergang.",
+      en: "The body in the city, photographed in evening light: movement as a measure of enclosure, distance and threshold."
     },
     process: {
-      de: ["T\xE4gliche Fotografien an festen Standpunkten", "Handgezeichnete Ansicht, Tusche auf Papier, 4 m", "Vergleichende Schwarzpl\xE4ne \xFCber vier Jahrhunderte"],
-      en: ["Daily photographs at fixed points", "Hand-drawn elevation, ink on paper, 4 m", "Comparative figure-ground over four centuries"]
+      de: ["Textliche und konzeptionelle Raumanalyse", "Fotografische Studien im Abendlicht", "Bewegung und K\xF6rper als r\xE4umliches Ma\xDF", "Kartierung von Grenzen und \xD6ffnungen"],
+      en: ["Textual and conceptual spatial analysis", "Photographic studies in evening light", "Body and movement as a spatial measure", "Mapping of edges and openings"]
     },
-    role: { de: "Alleinige Autorenschaft \xB7 Seminarfinalist", en: "Sole author \xB7 seminar finalist" }
+    role: { de: "Einzelarbeit", en: "Solo project" }
   },
   {
-    id: "shedhouse",
-    t: { de: "Schuppenhaus \u2014 Ein Haus aus zwei Schuppen", en: "Shed House \u2014 A House Made of Two Sheds" },
-    location: { de: "L\xFCbeck (hypothetisch)", en: "L\xFCbeck (hypothetical)" },
+    id: "randstadt-intervention",
+    t: { de: "Randstadt Intervention", en: "Edge-City Intervention" },
+    location: "Wismar \xB7 Randstadt",
     year: "2025",
-    semester: { de: "Grundlagen", en: "Foundations" },
-    tag: { de: "Wohnungsbau", en: "Housing" },
-    status: { de: "Studio", en: "Studio" },
-    img: "assets/photo-placeholder-cool.svg",
-    kicker: { de: "Grundlagenstudio", en: "Foundations studio" },
-    summary: {
-      de: "Eine \xDCbung im ersten Semester: ein Haus aus zwei vorhandenen landwirtschaftlichen Schuppen entwerfen. Der Entwurf schiebt einen Schuppen in den anderen, um einen hohen zentralen Raum zu schaffen, mit Schlafnischen unter dem niedrigeren Dach.",
-      en: "A first-semester exercise: design a house from two pre-existing agricultural sheds. The proposal slides one shed inside the other to make a tall central room, with sleeping pockets tucked under the lower roof."
-    },
-    process: {
-      de: ["Volumenstudien aus Karton", "Grundrisse und Schnitte 1:50", "Abschluss-Fotocollage in Schwarz, Wei\xDF und Eisenrot"],
-      en: ["Cardboard volumetric studies", "Plans and sections at 1:50", "Final photo-collage in black, white and oxide red"]
-    },
-    role: { de: "Alleinige Autorenschaft", en: "Sole author" }
-  },
-  {
-    id: "chair",
-    t: { de: "Ein Stuhl, der vorgibt, eine Wand zu sein", en: "A Chair Pretending to be a Wall" },
-    location: "Wismar",
-    year: "2025",
-    semester: { de: "Grundlagen", en: "Foundations" },
-    tag: { de: "Objekt \xB7 M\xF6bel", en: "Object \xB7 Furniture" },
-    status: { de: "Studio", en: "Studio" },
-    img: "assets/photo-placeholder-stone.svg",
-    kicker: { de: "Grundlagen Entwurf \xB7 \xDCbung", en: "Design fundamentals exercise" },
-    summary: {
-      de: "Eine zweiw\xF6chige Objekt\xFCbung. Aufgabe: ein Stuhl, der unbenutzt als Wand erscheint. Aus Kiefer und Stahlstab, mit einem Scharnier, das die Lehne in eine 80mm tiefe Tafel klappt.",
-      en: "A two-week object exercise. The brief: design a chair that, when not in use, reads as a wall. Built in pine and steel rod, hinged so its back folds flat into a 80mm-deep panel."
-    },
-    process: {
-      de: ["Acht Studienmodelle aus Schaumkarton", "Mock-up 1:1 in Kiefer und Stahl", "Scharnierdetail 1:1, gezeichnet und gebaut"],
-      en: ["Eight study models in foamboard", "1:1 mock-up in pine and steel", "Hinge detail at 1:1, drawn and built"]
-    },
-    role: { de: "Alleinige Autorenschaft", en: "Sole author" }
-  },
-  {
-    id: "bauhutte",
-    t: { de: "Bauh\xFCtten-Notizen \u2014 Zeichnungen von der Baustelle", en: "Bauh\xFCtte Notes \u2014 Drawings from the Site" },
-    location: "Stralsund",
-    year: "2024",
-    semester: { de: "Vor dem Studium \xB7 Praktikum", en: "Pre-university internship" },
-    tag: { de: "Bauforschung", en: "Site research" },
-    status: { de: "Praktikum", en: "Internship" },
-    img: "assets/photo-placeholder-warm.svg",
-    kicker: { de: "Sechsw\xF6chiges Praktikum \xB7 Mauerwerksrestaurierung", en: "Six-week internship \xB7 masonry restoration" },
-    summary: {
-      de: "Ein Praktikum bei der Restaurierung eines Backsteingiebels in Stralsund, im Sommer vor Studienbeginn. T\xE4glich dokumentiert in einem einzigen Skizzenbuch \u2014 sechzig Seiten M\xF6rtelmischungen, Ziegelschichten und die langsame Arbeit, das wieder einzusetzen, was die Zeit gelockert hat.",
-      en: "A working internship on the restoration of a brick gable in Stralsund, undertaken in the summer before university. Documented daily in a single sketchbook \u2014 sixty pages of mortar mixes, brick courses, and the slow work of replacing what time has loosened."
-    },
-    process: {
-      de: ["Skizzenbuch \xB7 Tusche und Bleistift, 60 Seiten", "Typologie der M\xF6rtelfugen, handgezeichnet", "W\xF6chentliche fotografische Dokumentation"],
-      en: ["Sketchbook \xB7 ink and pencil, 60 pages", "Mortar joint typology, hand-drawn", "Photographic record, weekly"]
-    },
-    role: { de: "Praktikant \xB7 Zeichnung & Dokumentation", en: "Intern \xB7 drawing & documentation" }
-  },
-  {
-    id: "gartenhaus",
-    t: { de: "Gartenhaus \u2014 Ein Gew\xE4chshaus f\xFCr eine Tante", en: "Gartenhaus \u2014 A Greenhouse for an Aunt" },
-    location: "Schwerin",
-    year: "2024",
-    semester: { de: "Vor dem Studium", en: "Pre-university" },
-    tag: { de: "Gebaut", en: "Built" },
+    semester: { de: "1. Semester \xB7 WS 2025/26", en: "1st semester \xB7 winter 2025/26" },
+    tag: { de: "Installation \xB7 1:1", en: "Installation \xB7 1:1" },
     status: { de: "Gebaut", en: "Built" },
-    img: "assets/photo-placeholder-cool.svg",
-    kicker: { de: "Privater Auftrag", en: "Personal commission" },
+    img: "assets/projects/randstadt-intervention/card.jpg",
+    hero: "assets/projects/randstadt-intervention/hero.jpg",
+    stripA: "assets/projects/randstadt-intervention/a.jpg",
+    stripB: "assets/projects/randstadt-intervention/b.jpg",
+    kicker: { de: "EGD1 \xB7 Installation 1:1", en: "EGD1 \xB7 1:1 installation" },
     summary: {
-      de: "Ein kleines Gew\xE4chshaus, in zwei Sommern mit meiner Tante gebaut, vor dem Studium. L\xE4rchenrahmen, Polycarbonatdach, gebrauchte Fenster aus einem abgerissenen Bauernhof. Mein erstes Mal, dass etwas, das ich gezeichnet hatte, tats\xE4chlich gebaut wurde.",
-      en: "A small greenhouse built with my aunt over two summers, before architecture school. Larch frame, polycarbonate roof, second-hand windows from a demolished farm. My first time drawing something that was actually constructed."
+      de: "Eine ortsspezifische, performative Rauminstallation im Ma\xDFstab 1:1. Mit einfachen Mitteln wird ein bestehender Weg in der Randstadt von Wismar verdichtet und neu gelesen: Ein Folientunnel b\xFCndelt Bewegung und Wahrnehmung, f\xFChrt von der Weite in die Enge \u2014 und \xF6ffnet sich am Ende in einen nat\xFCrlich gewachsenen Raum.",
+      en: "A site-specific, performative installation at full scale. With simple means, an existing path on the edge of Wismar is condensed and re-read: a tunnel of foil gathers movement and perception, leading from openness into compression \u2014 and opening, at its end, into a space shaped by nature."
+    },
+    bodyP1: {
+      de: "Ein klar gefasster Weg in der Randstadt sollte r\xE4umlich interpretiert und intensiviert werden. Mit einfachen Materialien entstand ein gezielter Eingriff, der den \xDCbergang zwischen Offenheit und Enge bewusst inszeniert. Der Weg f\xFChrt aus dem offenen Stadtraum in einen zunehmend verdichteten Tunnel, der die Bewegung visuell und atmosph\xE4risch b\xFCndelt.",
+      en: "A clearly framed path on the edge of the city was to be interpreted and intensified in spatial terms. With simple materials, a precise intervention stages the shift between openness and constriction. The route leads from open urban space into an increasingly dense tunnel that gathers movement, visually and atmospherically."
+    },
+    bodyP2: {
+      de: "Am Ende \xF6ffnet sich die Struktur in einen nat\xFCrlich geformten Raum unter einem dichten Bl\xE4tterdach. Der Wechsel zwischen k\xFCnstlichem Eingriff und bestehender Natur sch\xE4rft die Wahrnehmung des Ortes und macht den Weg selbst zum r\xE4umlichen Erlebnis.",
+      en: "At its end the structure opens into a space shaped by nature, beneath a dense canopy of leaves. The shift between artificial intervention and existing nature sharpens the perception of the place and turns the path itself into a spatial experience."
+    },
+    pull: {
+      de: "Der Eingriff ver\xE4ndert nicht den Ort, sondern die Art, ihn zu durchschreiten.",
+      en: "The intervention does not change the place \u2014 it changes the way you move through it."
+    },
+    capText: {
+      de: "Folientunnel entlang eines winterlichen Randstadt-Wegs: von der Weite in die Enge und zur\xFCck ins Freie unter dem Bl\xE4tterdach.",
+      en: "A foil tunnel along a wintry edge-city path: from openness into compression and back into the open beneath the leaves."
     },
     process: {
-      de: ["Skizzen auf Millimeterpapier", "Werkpl\xE4ne 1:20 von Hand", "Gebaut an Wochenenden, Juni\u2013August 2024"],
-      en: ["Sketches on graph paper", "Hand-drawn working drawings at 1:20", "Built on weekends, June\u2013August 2024"]
+      de: ["Ortsanalyse eines gefassten Wegs in der Randstadt", "Eingriff mit einfachen Materialien (Folie)", "Verdichtung von Bewegung und Wahrnehmung", "1:1-Aufbau und performative Durchwegung"],
+      en: ["Site analysis of a framed edge-city path", "Intervention with simple materials (foil)", "Condensing movement and perception", "Full-scale build and performative walk-through"]
     },
-    role: { de: "Entwurf \xB7 Mitbau", en: "Designer \xB7 co-builder" }
+    role: { de: "Teamarbeit", en: "Team project" }
   },
   {
-    id: "venice2024",
-    t: { de: "Architekturbiennale Venedig \u2014 Feldnotizen", en: "Venice Biennale \u2014 Field Notes" },
-    location: { de: "Venedig", en: "Venice" },
-    year: "2024",
-    semester: { de: "Selbstorganisierte Reise", en: "Independent travel" },
-    tag: { de: "Reiseforschung", en: "Travel research" },
-    status: { de: "Forschung", en: "Research" },
-    img: "assets/photo-placeholder-stone.svg",
-    kicker: { de: "F\xFCnf Tage \xB7 selbst finanziert", en: "Five days \xB7 self-funded" },
+    id: "raum-struktur-huelle",
+    t: { de: "Raum \u2013 Struktur \u2013 H\xFClle", en: "Space \u2013 Structure \u2013 Skin" },
+    location: "Wismar \xB7 Randstadt",
+    year: "2025",
+    semester: { de: "1. Semester \xB7 WS 2025/26", en: "1st semester \xB7 winter 2025/26" },
+    tag: { de: "Entwurf \xB7 Bestand", en: "Design \xB7 Existing fabric" },
+    status: { de: "Studio", en: "Studio" },
+    img: "assets/projects/raum-struktur-huelle/card.jpg",
+    hero: "assets/projects/raum-struktur-huelle/hero.jpg",
+    stripA: "assets/projects/raum-struktur-huelle/a.jpg",
+    stripB: "assets/projects/raum-struktur-huelle/b.jpg",
+    kicker: { de: "EGD1 \xB7 Entwurf im Bestand", en: "EGD1 \xB7 Intervention in context" },
     summary: {
-      de: "Eine selbstorganisierte Studienreise zur Architekturbiennale, vor Studienbeginn. Das Notizbuch dieser f\xFCnf Tage wurde zur Schreibprobe, die ich meiner Bewerbung in Wismar beilegte.",
-      en: "A self-organised study trip to the Architecture Biennale, before starting university. The notebook produced over those five days became the writing sample I included with my application to Wismar."
+      de: "Ein additiver Eingriff in ein Wohnensemble aus Plattenbauten: eine leichte, parasit\xE4re Struktur schreibt sich in die strenge Geometrie des Bestands ein. Raum, tragende Struktur und H\xFClle werden als voneinander abh\xE4ngige Ebenen verstanden, aus deren Zusammenspiel eine neue architektonische Ordnung entsteht.",
+      en: "An additive intervention into a housing ensemble of prefabricated slabs: a light, parasitic structure inscribes itself into the strict geometry of the existing fabric. Space, load-bearing structure and skin are read as interdependent layers whose interplay gives rise to a new architectural order."
+    },
+    bodyP1: {
+      de: "Ausgangspunkt war ein Wohnensemble aus Plattenbauten mit strikter Geometrie und repetitiven Fassadenlinien in einer Randstadtsituation. \xDCber die vorhandenen Bauk\xF6rper legt der Entwurf eine leichte, lineare Konstruktion, die diese miteinander verbindet. \xDCber Br\xFCcken werden die D\xE4cher erschlossen und zu einer gemeinschaftlich nutzbaren Fl\xE4che zusammengef\xFChrt; eine zus\xE4tzliche \xDCberdachung schafft gesch\xFCtzte Bereiche.",
+      en: "The starting point was a housing ensemble of prefabricated slabs with strict geometry and repetitive fa\xE7ade lines, set on the edge of the city. Over the existing volumes the design lays a light, linear construction that links them together. Bridges open up the roofs and join them into a shared surface; an added canopy creates sheltered zones."
+    },
+    bodyP2: {
+      de: "Durch die eng gesetzten, stabartigen Elemente entstehen unterschiedlich ausgepr\xE4gte Zwischenr\xE4ume mit wechselnden Blickbeziehungen, Offenheiten und Aufenthaltszonen. Die Struktur \xFCbernimmt mehrere Rollen zugleich: Wegesystem, Ort der Begegnung, sozialer Raum \u2014 und er\xF6ffnet neue M\xF6glichkeiten der Vernetzung im bestehenden Wohngef\xFCge.",
+      en: "The closely set, rod-like elements create in-between spaces of varying character, with shifting views, degrees of openness and places to stay. The structure takes on several roles at once: a system of paths, a place of encounter, a social space \u2014 opening new connections within the existing fabric."
+    },
+    pull: {
+      de: "Die Struktur ist Weg, Treffpunkt und H\xFClle zugleich \u2014 sie verbindet, was nebeneinander stand.",
+      en: "The structure is path, meeting point and skin at once \u2014 it connects what merely stood side by side."
+    },
+    capText: {
+      de: "Leichte, stabartige Struktur \xFCber dem Plattenbau-Bestand: Br\xFCcken erschlie\xDFen die D\xE4cher zu einer gemeinschaftlichen Fl\xE4che. Modell und Detail.",
+      en: "A light, rod-like structure above the prefab ensemble: bridges open the roofs into a shared surface. Model and detail."
     },
     process: {
-      de: ["T\xE4gliche Eintr\xE4ge \xB7 5 Notizb\xFCcher", "Nachzeichnungen ausgew\xE4hlter Pavillons", "Fotografische Aufzeichnung, von Hand entwickelte Kontaktb\xF6gen"],
-      en: ["Daily entries \xB7 5 notebooks", "Plan re-drawings of selected pavilions", "Photographic record, hand-developed contact sheets"]
+      de: ["Analyse der Plattenbau-Geometrie und Randstadtsituation", "Additive, parasit\xE4re Leichtstruktur", "Br\xFCcken und Dacherschlie\xDFung als Gemeinschaftsfl\xE4che", "Modellstudien zu Zwischenraum und Blickbeziehung"],
+      en: ["Analysis of the prefab geometry and edge-city site", "Additive, parasitic light structure", "Bridges and roof access as shared space", "Model studies of in-between space and views"]
     },
-    role: { de: "Alleinige Autorenschaft", en: "Sole author" }
+    role: { de: "Einzelarbeit", en: "Solo project" }
   },
   {
-    id: "modelmaking",
-    t: { de: "Ein Jahr Modelle \u2014 Arbeitsstudien", en: "A Year of Models \u2014 Working Studies" },
+    id: "masse-und-hohlraum",
+    t: { de: "Masse und Hohlraum", en: "Mass and Void" },
     location: "Wismar",
-    year: "2025\u20132026",
-    semester: { de: "Laufend", en: "Ongoing" },
-    tag: { de: "Modelle", en: "Models" },
-    status: { de: "Laufend", en: "Ongoing" },
-    img: "assets/photo-placeholder-warm.svg",
-    kicker: { de: "Modellbau-Archiv", en: "Model-making record" },
+    year: "2025",
+    semester: { de: "1. Semester \xB7 WS 2025/26", en: "1st semester \xB7 winter 2025/26" },
+    tag: { de: "Modell \xB7 Licht", en: "Model \xB7 Light" },
+    status: { de: "Studio", en: "Studio" },
+    img: "assets/projects/masse-und-hohlraum/card.jpg",
+    hero: "assets/projects/masse-und-hohlraum/hero.jpg",
+    stripA: "assets/projects/masse-und-hohlraum/a.jpg",
+    stripB: "assets/projects/masse-und-hohlraum/b.jpg",
+    kicker: { de: "EGD1 \xB7 Raumexperiment", en: "EGD1 \xB7 Spatial experiment" },
     summary: {
-      de: "Eine fortlaufende Aufzeichnung jedes Arbeitsmodells, das in den ersten drei Semestern entstanden ist. Karton, Lindenholz, Gips, Schaumkarton, gelegentlich Messing. Fotografiert im selben Nordlicht, auf demselben grauen Papier.",
-      en: "A running record of every working model made during the first three semesters. Cardboard, basswood, plaster, foamboard, occasional brass. Photographed in the same north light, on the same grey paper."
+      de: "Eine Untersuchung \xFCber das Verh\xE4ltnis von Volumen und Leere. Raum wird nicht als Nebenprodukt verstanden, sondern als aktives Element, das durch Masse gefasst und erlebbar wird. \xDCber Wachs- und Betong\xFCsse entstehen Modelle, die ausschlie\xDFlich den Hohlraum sichtbar machen \u2014 und das Licht zum eigentlichen Baustoff erkl\xE4ren.",
+      en: "A study of volume and emptiness. Space is treated not as a by-product but as an active element, defined and made tangible by mass. Through wax and concrete casts, the project produces models that show only the void \u2014 and make light the true material."
+    },
+    bodyP1: {
+      de: "Zur Untersuchung wurden bestehende Buchk\xF6rper als Material genutzt. Durch das Ausschneiden r\xE4umlicher Abfolgen und das Ausgie\xDFen der Negativr\xE4ume mit Wachs entstanden Modelle, die nur den Hohlraum zeigten. So lie\xDFen sich Raumwirkungen losgel\xF6st von Fassade und Volumen analysieren \u2014 Lichtf\xFChrung, Transparenz und \xDCberlagerung als zentrale Entwurfsparameter.",
+      en: "Existing book bodies were used as raw material. By cutting away spatial sequences and casting the resulting voids in wax, the work produced models that showed only the hollow space. This made it possible to analyse spatial effects detached from fa\xE7ade and volume \u2014 light, transparency and overlap as the core design parameters."
+    },
+    bodyP2: {
+      de: "Auf dieser Basis entstand eine r\xE4umliche Struktur, in der das Licht Orientierung und Abfolge bestimmt. Die Realisierung erfolgte als Betonguss in Erde, im Verfahren am Glockenguss orientiert. Nach dem Aush\xE4rten blieb ein klar definierter Innenraum zur\xFCck, der \xFCber ein Oberlicht und gezielt gesetzte \xD6ffnungen belichtet wird \u2014 die Lichtf\xFChrung macht den Weg durch die Struktur erfahrbar.",
+      en: "From this grew a spatial structure in which light governs orientation and sequence. It was realised as a concrete cast in earth, a process borrowed from bell-casting. Once set, a clearly defined interior remained, lit through a skylight and carefully placed openings \u2014 the play of light makes the path through the structure tangible."
+    },
+    pull: {
+      de: "Nicht die Masse war das Thema, sondern das, was sie umschlie\xDFt.",
+      en: "The subject was never the mass, but what it encloses."
+    },
+    capText: {
+      de: "Negativr\xE4ume in Wachs und Beton gegossen, im Verfahren des Glockengusses; Oberlicht und \xD6ffnungen f\xFChren das Licht durch den Innenraum.",
+      en: "Voids cast in wax and concrete, after the technique of bell-casting; a skylight and openings draw light through the interior."
     },
     process: {
-      de: ["Bislang zweiundvierzig Modelle", "Durchgehend gleicher Fotografie-Aufbau", "Indexiert nach Projekt und Ma\xDFstab"],
-      en: ["Forty-two models to date", "Same photographic setup throughout", "Indexed by project and scale"]
+      de: ["Buchk\xF6rper als Material \u2014 Ausschneiden r\xE4umlicher Abfolgen", "Negativr\xE4ume in Wachs ausgegossen", "Betonguss in Erde (analog Glockenguss)", "Belichtung \xFCber Oberlicht und gesetzte \xD6ffnungen"],
+      en: ["Book bodies as material \u2014 cutting spatial sequences", "Voids cast in wax", "Concrete cast in earth (after bell-casting)", "Lighting through skylight and placed openings"]
     },
-    role: { de: "Pers\xF6nliche Praxis", en: "Personal practice" }
+    role: { de: "Einzelarbeit", en: "Solo project" }
   },
   {
-    id: "analoguephoto",
-    t: { de: "Analoge Fotografien gew\xF6hnlicher Geb\xE4ude", en: "Analogue Photographs of Ordinary Buildings" },
-    location: "Mecklenburg-Vorpommern",
-    year: "2024\u20132026",
-    semester: { de: "Laufend", en: "Ongoing" },
-    tag: { de: "Fotografie", en: "Photography" },
-    status: { de: "Laufend", en: "Ongoing" },
-    img: "assets/photo-placeholder-cool.svg",
-    kicker: { de: "Pers\xF6nliche Serie \xB7 Mamiya RB67", en: "Personal series \xB7 Mamiya RB67" },
+    id: "zu-wasser-lassen",
+    t: { de: "Zu Wasser lassen \u2014 Ein Boot aus Karton", en: "Set Afloat \u2014 A Boat from Cardboard" },
+    location: "Wismar \xB7 Wendorf",
+    year: "2025",
+    semester: { de: "1. Semester \xB7 WS 2025/26", en: "1st semester \xB7 winter 2025/26" },
+    tag: { de: "Stegreif \xB7 Modellbau", en: "Workshop \xB7 Model-making" },
+    status: { de: "Gebaut", en: "Built" },
+    img: "assets/projects/zu-wasser-lassen/card.jpg",
+    hero: "assets/projects/zu-wasser-lassen/hero.jpg",
+    stripA: "assets/projects/zu-wasser-lassen/a.jpg",
+    stripB: "assets/projects/zu-wasser-lassen/b.jpg",
+    kicker: { de: "EGD1 \xB7 Einf\xFChrungsstegreif", en: "EGD1 \xB7 Opening workshop" },
     summary: {
-      de: "Eine fortlaufende fotografische Serie unspektakul\xE4rer Nachkriegsbauten in der Region. Aufgenommen auf Mittelformat-Schwarzwei\xDFfilm. Achtzehn Filme, selbst entwickelt, kontaktkopiert.",
-      en: "A long-running photographic series of unremarkable post-war buildings across the region. Shot on medium-format black-and-white film. Eighteen rolls, self-developed, contact-printed."
+      de: "Ein viert\xE4giger Stegreif zum Auftakt des Studiums: Aus Karton, Pappmach\xE9 und Farbe sollte ein schwimmf\xE4higes Boot entstehen \u2014 Form als unmittelbares Ergebnis konstruktiver Logik. Zwischen Material, Auftrieb und Hydrodynamik f\xFChrte der Weg vom 1:20-Modell bis zum 1:1-Boot und endete in einer Regatta am Strand von Wendorf.",
+      en: "A four-day opening workshop: a buoyant boat made only from cardboard, papier-m\xE2ch\xE9 and paint \u2014 form as the direct result of structural logic. Working between material, buoyancy and hydrodynamics, the project moved from a 1:20 model to a full-size boat and ended in a regatta on the beach at Wendorf."
+    },
+    bodyP1: {
+      de: "Am Anfang stand kein Entwurf, sondern eine Frage des Materials: Wie tr\xE4gt eine Schicht aus Karton und Pappmach\xE9 ein Gewicht \xFCber Wasser? In schnellen Papiermodellen im Ma\xDFstab 1:20 wurden Form, Volumen und Stabilit\xE4t getestet und Schritt f\xFCr Schritt weiterentwickelt \u2014 jede Iteration eine Antwort auf die vorige.",
+      en: "It did not begin with a design but with a question of material: how does a shell of cardboard and papier-m\xE2ch\xE9 carry weight across water? Quick 1:20 paper models tested form, volume and stability and developed them step by step \u2014 each iteration an answer to the last."
+    },
+    bodyP2: {
+      de: "Aus den Versuchen wuchs ein Rumpf, der hochskaliert und schlie\xDFlich im Ma\xDFstab 1:1 gebaut wurde. Der Prozess verband konstruktive Logik mit gestalterischem Anspruch und m\xFCndete in einem funktionsf\xE4higen Objekt \u2014 auf die Probe gestellt bei einer Regatta am Strand von Wendorf.",
+      en: "From these experiments grew a hull that was scaled up and finally built at full size. The process tied constructive logic to a design ambition and led to a working object \u2014 put to the test in a regatta on the beach at Wendorf."
+    },
+    pull: {
+      de: "Die Form war kein Bild, sondern die Folge dessen, was das Material tragen konnte.",
+      en: "The form was never an image \u2014 it was the consequence of what the material could carry."
+    },
+    capText: {
+      de: "Vom Papiermodell zum 1:1-Boot: Konstruktion, Probefahrt und Regatta am Strand von Wendorf.",
+      en: "From paper model to full-size boat: construction, trial and regatta on the beach at Wendorf."
     },
     process: {
-      de: ["Mamiya RB67 \xB7 Ilford HP5", "In Caffenol selbst entwickelt", "Kontaktb\xF6gen im Studio aufgeh\xE4ngt"],
-      en: ["Mamiya RB67 \xB7 Ilford HP5", "Hand-developed in caffenol", "Contact sheets pinned in studio"]
+      de: ["Papiermodelle 1:20 \u2014 Form, Volumen, Stabilit\xE4t", "Iterative Tests von Auftrieb und Hydrodynamik", "Hochskalierung und Bau im Ma\xDFstab 1:1", "Regatta am Strand von Wendorf"],
+      en: ["1:20 paper models \u2014 form, volume, stability", "Iterative tests of buoyancy and hydrodynamics", "Scaling up and building at full size", "Regatta on the beach at Wendorf"]
     },
-    role: { de: "Pers\xF6nliche Praxis", en: "Personal practice" }
+    role: { de: "Teamarbeit", en: "Team project" }
+  },
+  {
+    id: "weitere-arbeiten",
+    t: { de: "Grundlagen \u2014 Collage, Geometrie, Freihand", en: "Foundations \u2014 Collage, Geometry, Freehand" },
+    location: "Wismar",
+    year: "2025",
+    semester: { de: "1. Semester \xB7 WS 2025/26", en: "1st semester \xB7 winter 2025/26" },
+    tag: { de: "Grundlagen \xB7 Darstellung", en: "Foundations \xB7 Representation" },
+    status: { de: "Studio", en: "Studio" },
+    img: "assets/projects/weitere-arbeiten/card.jpg",
+    hero: "assets/projects/weitere-arbeiten/hero.jpg",
+    stripA: "assets/projects/weitere-arbeiten/a.jpg",
+    stripB: "assets/projects/weitere-arbeiten/b.jpg",
+    kicker: { de: "EGD1 \xB7 Digitale Grundlagen \xB7 Geometrie \xB7 Freihand", en: "EGD1 \xB7 Digital foundations \xB7 Geometry \xB7 Freehand" },
+    summary: {
+      de: "Begleitende Arbeiten aus den Grundlagenmodulen: eine digitale Collage \xFCber die Schwelle zwischen Alltag und Freiheit, geometrisch-konstruktive Darstellungen und Freihandzeichnungen. Drei \xDCbungen im Darstellen \u2014 vom freien Bild \xFCber die exakte Konstruktion bis zur Hand.",
+      en: "Accompanying work from the foundation modules: a digital collage on the threshold between everyday life and freedom, geometric construction drawings, and freehand studies. Three exercises in representation \u2014 from the free image to exact construction to the hand."
+    },
+    bodyP1: {
+      de: 'Die Collage \u201ETor zur Freiheit" thematisiert die Schwelle zwischen der \u201EGefangenschaft" im Alltag und der Freiheit. Der Protagonist steht am \xDCbergang eines entleerten st\xE4dtischen Umfelds hin zu einem idealisierten, immateriellen Raum, der durch das helle Tor sichtbar wird \u2014 ein Ort, den es nur auf dem Papier gibt. Das Tor wird zur Schnittstelle zwischen gelebter Realit\xE4t und m\xF6glicher Zukunft.',
+      en: 'The collage "Gate to Freedom" takes up the threshold between the "captivity" of everyday life and freedom. The figure stands at the passage from an emptied urban setting toward an idealised, immaterial space made visible by the bright gate \u2014 a place that exists only on paper. The gate becomes the interface between lived reality and a possible future.'
+    },
+    bodyP2: {
+      de: "Daneben stehen Arbeiten aus dem Geometrischen Darstellen und dem Freihandzeichnen: perspektivische Konstruktionen, Innenraumstudien und Zeichnungen organischer Formen. Sie bilden das handwerkliche Fundament des Semesters \u2014 das Sehen, Konstruieren und Darstellen, auf dem die Entw\xFCrfe aufbauen.",
+      en: "Alongside it stand works from descriptive geometry and freehand drawing: perspective constructions, interior studies and drawings of organic forms. They form the craft foundation of the semester \u2014 the seeing, constructing and representing on which the designs are built."
+    },
+    pull: {
+      de: "Das Tor existiert nur auf dem Papier \u2014 und genau dort beginnt der Entwurf.",
+      en: "The gate exists only on paper \u2014 and that is exactly where design begins."
+    },
+    capText: {
+      de: 'Collage \u201ETor zur Freiheit", Freihandzeichnungen organischer Formen und perspektivische Konstruktionen aus den Grundlagenmodulen.',
+      en: 'The collage "Gate to Freedom", freehand studies of organic forms, and perspective constructions from the foundation modules.'
+    },
+    process: {
+      de: ['Digitale Collage \u201ETor zur Freiheit"', "Perspektivische Konstruktion (Geometrisches Darstellen)", "Innenraum- und Perspektivstudien", "Freihandzeichnen organischer Formen"],
+      en: ['Digital collage "Gate to Freedom"', "Perspective construction (descriptive geometry)", "Interior and perspective studies", "Freehand drawing of organic forms"]
+    },
+    role: { de: "Einzelarbeit", en: "Solo project" }
   }
 ];
 window.L = (v, lang) => v && typeof v === "object" && v[lang] != null ? v[lang] : v;

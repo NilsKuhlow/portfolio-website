@@ -113,19 +113,19 @@ const PROJECTS = [
       en: 'Inside and outside are not opposites — each makes the other possible.',
     },
     capText: {
-      de: 'Fotografische Körperstudien im Herbstlicht, Fotomontage und Stadtplan-Kartierung: der Stadtraum als Innenraum, gelesen durch Grenzen, Bewegung und Licht.',
-      en: 'Photographic body studies in autumn light, a photomontage and an urban mapping plan: the city read as interior — through edges, movement and light.',
+      de: 'Inszenierte Fotografien nach Jeff Wall — der Körper im Stadtraum, im Herbstlicht — und die Fotomontage der Fassade als Wand des Innenraums Stadt.',
+      en: 'Staged photographs after Jeff Wall — the body in the city, in autumn light — and the photomontage of the façade as the wall of the city interior.',
     },
     process: {
-      de: ['Textliche und konzeptionelle Raumanalyse', 'Perspektivische Handzeichnungen im Stadtraum', 'Fotografische Körperstudien im Herbstlicht', 'Stadtplan-Kartierung von Grenzen und Öffnungen'],
-      en: ['Textual and conceptual spatial analysis', 'Perspective hand-drawings in the urban realm', 'Photographic body studies in autumn light', 'Urban mapping of edges and openings'],
+      de: ['Textliche und konzeptionelle Raumanalyse', 'Inszenierte Fotografien nach Jeff Wall', 'Der Körper als räumliches Maß im Stadtraum', 'Stadtplan-Kartierung von Grenzen und Öffnungen'],
+      en: ['Textual and conceptual spatial analysis', 'Staged photographs after Jeff Wall', 'The body as a spatial measure in the city', 'Urban mapping of edges and openings'],
     },
     role: { de: 'Einzelarbeit', en: 'Solo project' },
     gallery: [
-      { src: 'assets/projects/genius-loci/g1.jpg', r: '16/9', wide: true, lbl: { de: 'Fotomontage · die Fassade als Wand des Stadtraums', en: 'Photomontage · the façade as the wall of urban space' } },
-      { src: 'assets/projects/genius-loci/g2.jpg', r: '3/4', lbl: { de: 'Im Herbstlicht · der Körper im Stadtraum', en: 'In autumn light · the body in the city' } },
-      { src: 'assets/projects/genius-loci/g3.jpg', r: '3/4', lbl: { de: 'Körper, Objekt und Stadtwand', en: 'Body, object and the city wall' } },
-      { src: 'assets/projects/genius-loci/g4.jpg', r: '2/1', wide: true, lbl: { de: 'Kartierung · Grenzen, Öffnungen, Blickachsen', en: 'Mapping · edges, openings, sightlines' } },
+      { src: 'assets/projects/genius-loci/g1.jpg', r: '16/9', wide: true, lbl: { de: 'Inszenierter Moment im Stadtraum · nach Jeff Wall', en: 'A staged moment in the city · after Jeff Wall' } },
+      { src: 'assets/projects/genius-loci/g2.jpg', r: '3/2', lbl: { de: 'Alltagsgeste · der Körper im Park', en: 'An everyday gesture · the body in the park' } },
+      { src: 'assets/projects/genius-loci/g3.jpg', r: '3/2', lbl: { de: 'Innehalten im Abendlicht', en: 'A pause in evening light' } },
+      { src: 'assets/projects/genius-loci/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Fotomontage · die Fassade als Wand des Stadtraums', en: 'Photomontage · the façade as the wall of urban space' } },
     ],
   },
   {

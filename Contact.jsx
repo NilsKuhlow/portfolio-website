@@ -37,7 +37,7 @@ const Contact = ({ lang }) => {
             </div>
             <div className="nk-stack" style={linkRow}>
               <span style={lk}>{t.lbls.insta}</span>
-              <span style={lv}><a className="nk-underline" style={a} href="#">@nils_klw</a></span>
+              <span style={lv}><a className="nk-underline" style={a} href="https://www.instagram.com/nils_klw/" target="_blank" rel="noopener noreferrer">@nils_klw</a></span>
             </div>
             <div className="nk-stack" style={linkRow}>
               <span style={lk}>{t.lbls.person}</span>

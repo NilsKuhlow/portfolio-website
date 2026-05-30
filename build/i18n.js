@@ -17,7 +17,7 @@ window.I18N = {
       grid: "Raster",
       index: "Verzeichnis",
       stats: (n, m) => `${n} Projekte
-2024 \u2014 2026
+2025 \u2014 2026
 ${m} angezeigt`,
       empty: "Nichts entspricht dieser Kombination \u2014 versuchen Sie, den Filter zu erweitern.",
       all: "Alle"
@@ -100,7 +100,7 @@ ${m} angezeigt`,
       grid: "Grid",
       index: "Index",
       stats: (n, m) => `${n} projects
-2024 \u2014 2026
+2025 \u2014 2026
 ${m} shown`,
       empty: "Nothing matches that combination \u2014 try widening the filter.",
       all: "All"

@@ -9,7 +9,6 @@ const Footer = ({ setRoute, lang }) => {
   const linkList = { display: 'flex', flexDirection: 'column', gap: 10, listStyle: 'none', padding: 0, margin: 0 };
   const linkA = { fontFamily: 'var(--font-sans)', fontSize: 14, color: 'var(--fg)', cursor: 'pointer', textDecoration: 'none' };
   const addr = { fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.6, color: 'var(--fg)', margin: 0, whiteSpace: 'pre-line' };
-  const tel = { fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fg-subtle)', letterSpacing: '0.04em', marginTop: 8 };
   const bottom = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 64, paddingTop: 24, borderTop: '1px solid var(--hairline)', flexWrap: 'wrap', gap: 16 };
   const small = { fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-subtle)', letterSpacing: '0.04em' };
 
@@ -38,7 +37,6 @@ const Footer = ({ setRoute, lang }) => {
         <div>
           <div style={lblK}>{t.address}</div>
           <p style={addr}>Hochschule Wismar{'\n'}Philipp-Müller-Straße 14{'\n'}23966 Wismar · DE</p>
-          <div style={tel}>+49 152 0000 0000</div>
         </div>
       </div>
       <div style={bottom}>

@@ -29,15 +29,11 @@ const Contact = ({ lang }) => {
           <div>
             <div className="nk-stack" style={linkFirst}>
               <span style={lk}>{t.lbls.email}</span>
-              <span style={lv}><a className="nk-underline" style={a} href="mailto:nils@nilskuhlow.de">nils@nilskuhlow.de</a></span>
-            </div>
-            <div className="nk-stack" style={linkRow}>
-              <span style={lk}>{t.lbls.studio}</span>
-              <span style={lv}><a className="nk-underline" style={a} href="mailto:nils.kuhlow@hs-wismar.de">nils.kuhlow@hs-wismar.de</a></span>
+              <span style={lv}><a className="nk-underline" style={a} href="mailto:nils@kuhlow.eu">nils@kuhlow.eu</a></span>
             </div>
             <div className="nk-stack" style={linkRow}>
               <span style={lk}>{t.lbls.phone}</span>
-              <span style={{ ...lv, fontFamily: 'var(--font-mono)', fontSize: 18, letterSpacing: '0.04em' }}>0176 644 358 73</span>
+              <span style={{ ...lv, fontFamily: 'var(--font-mono)', fontSize: 18, letterSpacing: '0.04em' }}>+49 176 64435873</span>
             </div>
             <div className="nk-stack" style={linkRow}>
               <span style={lk}>{t.lbls.insta}</span>

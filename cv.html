@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Lebenslauf — Nils Kuhlow</title>
+<style>
+  @font-face { font-family:"HN"; src:url("fonts/HelveticaNeueLTStd-Lt.otf")    format("opentype"); font-weight:300; font-style:normal; }
+  @font-face { font-family:"HN"; src:url("fonts/HelveticaNeueLTStd-Roman.otf") format("opentype"); font-weight:400; font-style:normal; }
+  @font-face { font-family:"HN"; src:url("fonts/HelveticaNeueLTStd-Md.otf")    format("opentype"); font-weight:500; font-style:normal; }
+  @font-face { font-family:"HN"; src:url("fonts/HelveticaNeueLTStd-Bd.otf")    format("opentype"); font-weight:700; font-style:normal; }
+
+  :root{
+    --ink:#0A0A0A; --ink2:#404040; --ink3:#737373;
+    --line:rgba(10,10,10,.14); --line2:rgba(10,10,10,.30); --yellow:#FFED29;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  @page{ size:A4; margin:0; }
+  html,body{ background:#fff; }
+  body{
+    font-family:"HN","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:var(--ink); -webkit-print-color-adjust:exact; print-color-adjust:exact;
+    width:210mm; min-height:297mm; padding:20mm 22mm 16mm;
+    font-weight:400; font-size:10pt; line-height:1.5;
+  }
+
+  .name{ font-weight:700; font-size:30pt; letter-spacing:-.022em; line-height:1; }
+  .role{ margin-top:9pt; font-size:9pt; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--ink2); }
+  .rule{ position:relative; height:2px; background:var(--line2); margin-top:13pt; }
+  .rule::before{ content:""; position:absolute; left:0; top:0; height:2px; width:52pt; background:var(--yellow); }
+  .meta{ margin-top:10pt; font-size:8.5pt; letter-spacing:.02em; color:var(--ink3); display:flex; flex-wrap:wrap; }
+  .meta span + span::before{ content:"·"; margin:0 8pt; color:var(--line2); }
+
+  section{ display:grid; grid-template-columns:33mm 1fr; gap:0 9mm; padding:12pt 0; border-top:1px solid var(--line); }
+  section:first-of-type{ margin-top:17pt; }
+  h2{ font-size:8.5pt; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3); padding-top:2pt; }
+
+  .lead{ font-size:10.5pt; line-height:1.62; color:var(--ink); max-width:148mm; }
+
+  .entry{ display:grid; grid-template-columns:24mm 1fr; gap:0 6mm; padding-bottom:10pt; }
+  .entry:last-child{ padding-bottom:0; }
+  .yr{ font-size:8.5pt; color:var(--ink3); letter-spacing:.02em; padding-top:2pt; }
+  .what{ font-weight:500; font-size:11.5pt; letter-spacing:-.006em; }
+  .where{ font-size:9pt; color:var(--ink2); margin-top:1.5pt; }
+  .det{ font-size:9.5pt; color:var(--ink2); line-height:1.5; margin-top:3.5pt; max-width:118mm; }
+
+  .tags{ display:flex; flex-wrap:wrap; font-size:10pt; row-gap:5pt; }
+  .tags span + span::before{ content:"·"; margin:0 8pt; color:var(--line2); }
+
+  .langs{ display:flex; flex-direction:column; }
+  .langs .lr{ display:flex; justify-content:space-between; align-items:baseline; max-width:88mm; padding:0 0 5pt; margin-bottom:5pt; border-bottom:1px solid var(--line); }
+  .langs .lr:last-child{ margin-bottom:0; }
+  .langs .ll{ font-size:11.5pt; }
+  .langs .lv{ font-size:8.5pt; color:var(--ink3); letter-spacing:.05em; text-transform:uppercase; }
+
+  footer{ margin-top:18pt; padding-top:8pt; border-top:1px solid var(--line);
+    font-size:7.5pt; letter-spacing:.07em; text-transform:uppercase; color:var(--ink3);
+    display:flex; justify-content:space-between; }
+</style>
+</head>
+<body>
+  <div class="name">Nils Kuhlow</div>
+  <div class="role">Architektur&nbsp;B.A. · Ausgebildeter Zimmerer</div>
+  <div class="rule"></div>
+  <div class="meta">
+    <span>Hamburg</span><span>geb.&nbsp;18.12.2004</span><span>nils@kuhlow.eu</span><span>+49&nbsp;176&nbsp;64435873</span><span>stately-starburst-062a77.netlify.app</span>
+  </div>
+
+  <section>
+    <h2>Profil</h2>
+    <div class="lead">Architekturstudent im ersten Jahr an der Hochschule Wismar mit abgeschlossener Ausbildung zum Zimmerer. Mein Weg in die Architektur führt über das Handwerk: Aus der Arbeit mit Holz und dem Bau eines ersten Architekturmodells ist der Wunsch gewachsen, gestalterisches Denken und handwerkliche Präzision zu verbinden — und zu verstehen, wie aus Ideen reale Räume werden.</div>
+  </section>
+
+  <section>
+    <h2>Werdegang</h2>
+    <div>
+      <div class="entry"><div class="yr">2025 — heute</div><div><div class="what">B.A. Architektur</div><div class="where">Hochschule Wismar</div><div class="det">Erstes Studienjahr (2. Semester), seit dem Wintersemester 2025/26.</div></div></div>
+      <div class="entry"><div class="yr">2023 — 2025</div><div><div class="what">Ausbildung zum Zimmerer</div><div class="where">Hamburg</div><div class="det">Dreijährige Ausbildung im Holzbau, Gesellenabschluss im Juli 2025.</div></div></div>
+      <div class="entry"><div class="yr">2015 — 2023</div><div><div class="what">Allgemeine Hochschulreife (Abitur)</div><div class="where">Gymnasium Eppendorf, Hamburg</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stärken</h2>
+    <div class="tags">
+      <span>Zimmererhandwerk &amp; Holzbau</span><span>Teamfähigkeit</span><span>Lösungsorientierung</span><span>Zuverlässigkeit</span><span>Kritikfähigkeit</span><span>Selbstreflexion</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sprachen</h2>
+    <div class="langs">
+      <div class="lr"><div class="ll">Deutsch</div><div class="lv">Muttersprache</div></div>
+      <div class="lr"><div class="ll">Englisch</div><div class="lv">Gute Kenntnisse</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Interessen</h2>
+    <div class="tags">
+      <span>Handball</span><span>Schach</span><span>Calisthenics</span><span>Künstlerische Arbeiten</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Engagement</h2>
+    <div class="lead">Volleyball-Team Hamburg — Erarbeitung eines Turnierkonzepts für den Verein.</div>
+  </section>
+
+  <footer>
+    <span>Nils Kuhlow · Lebenslauf</span><span>Stand Mai 2026</span>
+  </footer>
+</body>
+</html>

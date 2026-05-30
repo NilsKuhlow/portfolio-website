@@ -76,8 +76,9 @@
   --fg-subtle:    var(--ink-3);
   --hairline:     rgba(10, 10, 10, 0.12);
   --hairline-strong: rgba(10, 10, 10, 0.24);
-  --accent:       var(--yellow-500);
-  --accent-fg:    var(--ink-1); /* text on yellow stays graphite */
+  --accent:       #7C3AED;  /* light mode: purple — the complement of yellow */
+  --accent-fg:    #FFFFFF;  /* white text on the purple accent */
+  --accent-strong: #6D28D9; /* accent hover/press */
   --link:         var(--ink-1);
   --link-hover:   var(--ink-1);
 
@@ -181,7 +182,7 @@ body {
 }
 
 ::selection {
-  background: var(--yellow-200);
+  background: #E9DDFF;
   color: var(--ink-1);
 }
 
@@ -351,8 +352,8 @@ button:focus-visible, .btn:focus-visible {
   color: var(--accent-fg);
 }
 .btn--accent:hover {
-  background: var(--yellow-700);
-  border-color: var(--yellow-700);
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 </style>
@@ -369,6 +370,9 @@ button:focus-visible, .btn:focus-visible {
     --hairline-strong: rgba(245, 245, 245, 0.28);
     --paper-2: #1F1F1F;
     --link: #F5F5F5;
+    --accent: var(--yellow-500);   /* dark mode keeps the bright-yellow accent */
+    --accent-fg: var(--ink-1);
+    --accent-strong: var(--yellow-700);
   }
   body[data-theme="dark"] ::selection { background: var(--yellow-500); color: #0A0A0A; }
   body[data-theme="dark"] .btn--primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
@@ -443,14 +447,13 @@ button:focus-visible, .btn:focus-visible {
   }
 </style>
 </head>
-<body data-screen-label="01 Home" data-theme="light">
+<body data-screen-label="01 Home" data-theme="dark">
 <script>
   /* Apply saved or OS colour scheme before paint — avoids a light→dark flash. */
   (function () {
     try {
       var saved = localStorage.getItem('nk-theme');
-      var dark = saved ? saved === 'dark'
-                       : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var dark = saved ? saved === 'dark' : true;  /* default to dark unless the visitor chose light */
       document.body.setAttribute('data-theme', dark ? 'dark' : 'light');
     } catch (e) {}
   })();

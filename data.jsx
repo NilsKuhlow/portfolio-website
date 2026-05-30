@@ -51,9 +51,7 @@ const PROJECTS = [
     tag: { de: 'Studie · Figur', en: 'Study · Figure' },
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/avatar/card.jpg',
-    hero: 'assets/projects/avatar/hero.jpg',
-    heroFull: true,
-    kicker: { de: 'EGD II · A01', en: 'EGD II · A01' },
+    hero: 'assets/projects/avatar/hero.jpg',    kicker: { de: 'EGD II · A01', en: 'EGD II · A01' },
     summary: {
       de: 'Architectural Avatar macht den eigenen Körper zum architektonischen Protagonisten. Aus fotografischen Haltungsstudien — zeigen, fotografieren, innehalten — entsteht eine abstrahierte weiße Figur, ein Avatar, der als Maßstabsfigur in reale Situationen gesetzt wird: auf den Wohnweg, in den herbstlichen Park, in den Hörsaal. Der Körper wird zum Werkzeug, räumliche Wirkung zu erproben.',
       en: 'Architectural Avatar turns the body itself into an architectural protagonist. From photographic posture studies — pointing, photographing, pausing — an abstracted white figure emerges, an avatar, set as a scale figure into real situations: a residential path, an autumn park, a lecture hall. The body becomes a tool for testing spatial effect.',
@@ -80,10 +78,9 @@ const PROJECTS = [
     },
     role: { de: 'Einzelarbeit', en: 'Solo project' },
     gallery: [
-      { src: 'assets/projects/avatar/g1.jpg', r: '16/9', wide: true, lbl: { de: 'Konstellation · Maßstabsfiguren auf der Dartscheibe', en: 'Constellation · scale figures on the dartboard' } },
-      { src: 'assets/projects/avatar/g2.jpg', r: '3/4', lbl: { de: 'Haltungsstudie · Zeigen', en: 'Posture study · pointing' } },
-      { src: 'assets/projects/avatar/g3.jpg', r: '3/4', lbl: { de: 'Haltungsstudie · Fotografieren', en: 'Posture study · photographing' } },
-      { src: 'assets/projects/avatar/g4.jpg', r: '16/9', wide: true, lbl: { de: 'Der Avatar im Hörsaal', en: 'The avatar in the lecture hall' } },
+      { src: 'assets/projects/avatar/g1.jpg', r: '16/9', wide: true, lbl: { de: 'Der Avatar im Hörsaal', en: 'The avatar in the lecture hall' } },
+      { src: 'assets/projects/avatar/g2.jpg', r: '3/4', lbl: { de: 'Der Avatar im Wohngebiet', en: 'The avatar in a residential setting' } },
+      { src: 'assets/projects/avatar/g3.jpg', r: '3/4', lbl: { de: 'Haltungsstudie · der fotografierte Körper', en: 'Posture study · the photographed body' } },
     ],
   },
   {
@@ -136,9 +133,7 @@ const PROJECTS = [
     tag: { de: 'Installation · 1:1', en: 'Installation · 1:1' },
     status: { de: 'Gebaut', en: 'Built' },
     img: 'assets/projects/randstadt-intervention/card.jpg',
-    hero: 'assets/projects/randstadt-intervention/hero.jpg',
-    heroFull: true,
-    kicker: { de: 'EGD1 · Installation 1:1', en: 'EGD1 · 1:1 installation' },
+    hero: 'assets/projects/randstadt-intervention/hero.jpg',    kicker: { de: 'EGD1 · Installation 1:1', en: 'EGD1 · 1:1 installation' },
     summary: {
       de: 'Eine ortsspezifische, performative Rauminstallation im Maßstab 1:1. Mit einfachen Mitteln wird ein bestehender Weg in der Randstadt von Wismar verdichtet und neu gelesen: Ein Folientunnel bündelt Bewegung und Wahrnehmung, führt von der Weite in die Enge — und öffnet sich am Ende in einen natürlich gewachsenen Raum.',
       en: 'A site-specific, performative installation at full scale. With simple means, an existing path on the edge of Wismar is condensed and re-read: a tunnel of foil gathers movement and perception, leading from openness into compression — and opening, at its end, into a space shaped by nature.',
@@ -178,9 +173,7 @@ const PROJECTS = [
     tag: { de: 'Entwurf · Bestand', en: 'Design · Existing fabric' },
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/raum-struktur-huelle/card.jpg',
-    hero: 'assets/projects/raum-struktur-huelle/hero.jpg',
-    heroFull: true,
-    kicker: { de: 'EGD1 · Entwurf im Bestand', en: 'EGD1 · Intervention in context' },
+    hero: 'assets/projects/raum-struktur-huelle/hero.jpg',    kicker: { de: 'EGD1 · Entwurf im Bestand', en: 'EGD1 · Intervention in context' },
     summary: {
       de: 'Ein additiver Eingriff in ein Wohnensemble aus Plattenbauten: eine leichte, parasitäre Struktur schreibt sich in die strenge Geometrie des Bestands ein. Raum, tragende Struktur und Hülle werden als voneinander abhängige Ebenen verstanden, aus deren Zusammenspiel eine neue architektonische Ordnung entsteht.',
       en: 'An additive intervention into a housing ensemble of prefabricated slabs: a light, parasitic structure inscribes itself into the strict geometry of the existing fabric. Space, load-bearing structure and skin are read as interdependent layers whose interplay gives rise to a new architectural order.',
@@ -221,9 +214,7 @@ const PROJECTS = [
     tag: { de: 'Modell · Licht', en: 'Model · Light' },
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/masse-und-hohlraum/card.jpg',
-    hero: 'assets/projects/masse-und-hohlraum/hero.jpg',
-    heroFull: true,
-    kicker: { de: 'EGD1 · Raumexperiment', en: 'EGD1 · Spatial experiment' },
+    hero: 'assets/projects/masse-und-hohlraum/hero.jpg',    kicker: { de: 'EGD1 · Raumexperiment', en: 'EGD1 · Spatial experiment' },
     summary: {
       de: 'Eine Untersuchung über das Verhältnis von Volumen und Leere. Raum wird nicht als Nebenprodukt verstanden, sondern als aktives Element, das durch Masse gefasst und erlebbar wird. Über Wachs- und Betongüsse entstehen Modelle, die ausschließlich den Hohlraum sichtbar machen — und das Licht zum eigentlichen Baustoff erklären.',
       en: 'A study of volume and emptiness. Space is treated not as a by-product but as an active element, defined and made tangible by mass. Through wax and concrete casts, the project produces models that show only the void — and make light the true material.',
@@ -265,7 +256,7 @@ const PROJECTS = [
     status: { de: 'Gebaut', en: 'Built' },
     img: 'assets/projects/zu-wasser-lassen/card.jpg',
     hero: 'assets/projects/zu-wasser-lassen/hero.jpg',
-    heroRatio: '3/2', heroFull: true,
+    heroRatio: '3/2',
     kicker: { de: 'EGD1 · Einführungsstegreif', en: 'EGD1 · Opening workshop' },
     summary: {
       de: 'Ein viertägiger Stegreif zum Auftakt des Studiums: Aus Karton, Pappmaché und Farbe sollte ein schwimmfähiges Boot entstehen — Form als unmittelbares Ergebnis konstruktiver Logik. Zwischen Material, Auftrieb und Hydrodynamik führte der Weg vom 1:20-Modell bis zum 1:1-Boot und endete in einer Regatta am Strand von Wendorf.',
@@ -309,7 +300,7 @@ const PROJECTS = [
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/weitere-arbeiten/card.jpg',
     hero: 'assets/projects/weitere-arbeiten/hero.jpg',
-    heroRatio: '3/2', heroFull: true,
+    heroRatio: '3/2',
     kicker: { de: 'EGD1 · Digitale Grundlagen · Geometrie · Freihand', en: 'EGD1 · Digital foundations · Geometry · Freehand' },
     summary: {
       de: 'Begleitende Arbeiten aus den Grundlagenmodulen: eine digitale Collage über die Schwelle zwischen Alltag und Freiheit, geometrisch-konstruktive Darstellungen und Freihandzeichnungen. Drei Übungen im Darstellen — vom freien Bild über die exakte Konstruktion bis zur Hand.',

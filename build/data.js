@@ -52,7 +52,6 @@ const PROJECTS = [
     status: { de: "Studio", en: "Studio" },
     img: "assets/projects/avatar/card.jpg",
     hero: "assets/projects/avatar/hero.jpg",
-    heroFull: true,
     kicker: { de: "EGD II \xB7 A01", en: "EGD II \xB7 A01" },
     summary: {
       de: "Architectural Avatar macht den eigenen K\xF6rper zum architektonischen Protagonisten. Aus fotografischen Haltungsstudien \u2014 zeigen, fotografieren, innehalten \u2014 entsteht eine abstrahierte wei\xDFe Figur, ein Avatar, der als Ma\xDFstabsfigur in reale Situationen gesetzt wird: auf den Wohnweg, in den herbstlichen Park, in den H\xF6rsaal. Der K\xF6rper wird zum Werkzeug, r\xE4umliche Wirkung zu erproben.",
@@ -80,10 +79,9 @@ const PROJECTS = [
     },
     role: { de: "Einzelarbeit", en: "Solo project" },
     gallery: [
-      { src: "assets/projects/avatar/g1.jpg", r: "16/9", wide: true, lbl: { de: "Konstellation \xB7 Ma\xDFstabsfiguren auf der Dartscheibe", en: "Constellation \xB7 scale figures on the dartboard" } },
-      { src: "assets/projects/avatar/g2.jpg", r: "3/4", lbl: { de: "Haltungsstudie \xB7 Zeigen", en: "Posture study \xB7 pointing" } },
-      { src: "assets/projects/avatar/g3.jpg", r: "3/4", lbl: { de: "Haltungsstudie \xB7 Fotografieren", en: "Posture study \xB7 photographing" } },
-      { src: "assets/projects/avatar/g4.jpg", r: "16/9", wide: true, lbl: { de: "Der Avatar im H\xF6rsaal", en: "The avatar in the lecture hall" } }
+      { src: "assets/projects/avatar/g1.jpg", r: "16/9", wide: true, lbl: { de: "Der Avatar im H\xF6rsaal", en: "The avatar in the lecture hall" } },
+      { src: "assets/projects/avatar/g2.jpg", r: "3/4", lbl: { de: "Der Avatar im Wohngebiet", en: "The avatar in a residential setting" } },
+      { src: "assets/projects/avatar/g3.jpg", r: "3/4", lbl: { de: "Haltungsstudie \xB7 der fotografierte K\xF6rper", en: "Posture study \xB7 the photographed body" } }
     ]
   },
   {
@@ -139,7 +137,6 @@ const PROJECTS = [
     status: { de: "Gebaut", en: "Built" },
     img: "assets/projects/randstadt-intervention/card.jpg",
     hero: "assets/projects/randstadt-intervention/hero.jpg",
-    heroFull: true,
     kicker: { de: "EGD1 \xB7 Installation 1:1", en: "EGD1 \xB7 1:1 installation" },
     summary: {
       de: "Eine ortsspezifische, performative Rauminstallation im Ma\xDFstab 1:1. Mit einfachen Mitteln wird ein bestehender Weg in der Randstadt von Wismar verdichtet und neu gelesen: Ein Folientunnel b\xFCndelt Bewegung und Wahrnehmung, f\xFChrt von der Weite in die Enge \u2014 und \xF6ffnet sich am Ende in einen nat\xFCrlich gewachsenen Raum.",
@@ -182,7 +179,6 @@ const PROJECTS = [
     status: { de: "Studio", en: "Studio" },
     img: "assets/projects/raum-struktur-huelle/card.jpg",
     hero: "assets/projects/raum-struktur-huelle/hero.jpg",
-    heroFull: true,
     kicker: { de: "EGD1 \xB7 Entwurf im Bestand", en: "EGD1 \xB7 Intervention in context" },
     summary: {
       de: "Ein additiver Eingriff in ein Wohnensemble aus Plattenbauten: eine leichte, parasit\xE4re Struktur schreibt sich in die strenge Geometrie des Bestands ein. Raum, tragende Struktur und H\xFClle werden als voneinander abh\xE4ngige Ebenen verstanden, aus deren Zusammenspiel eine neue architektonische Ordnung entsteht.",
@@ -226,7 +222,6 @@ const PROJECTS = [
     status: { de: "Studio", en: "Studio" },
     img: "assets/projects/masse-und-hohlraum/card.jpg",
     hero: "assets/projects/masse-und-hohlraum/hero.jpg",
-    heroFull: true,
     kicker: { de: "EGD1 \xB7 Raumexperiment", en: "EGD1 \xB7 Spatial experiment" },
     summary: {
       de: "Eine Untersuchung \xFCber das Verh\xE4ltnis von Volumen und Leere. Raum wird nicht als Nebenprodukt verstanden, sondern als aktives Element, das durch Masse gefasst und erlebbar wird. \xDCber Wachs- und Betong\xFCsse entstehen Modelle, die ausschlie\xDFlich den Hohlraum sichtbar machen \u2014 und das Licht zum eigentlichen Baustoff erkl\xE4ren.",
@@ -271,7 +266,6 @@ const PROJECTS = [
     img: "assets/projects/zu-wasser-lassen/card.jpg",
     hero: "assets/projects/zu-wasser-lassen/hero.jpg",
     heroRatio: "3/2",
-    heroFull: true,
     kicker: { de: "EGD1 \xB7 Einf\xFChrungsstegreif", en: "EGD1 \xB7 Opening workshop" },
     summary: {
       de: "Ein viert\xE4giger Stegreif zum Auftakt des Studiums: Aus Karton, Pappmach\xE9 und Farbe sollte ein schwimmf\xE4higes Boot entstehen \u2014 Form als unmittelbares Ergebnis konstruktiver Logik. Zwischen Material, Auftrieb und Hydrodynamik f\xFChrte der Weg vom 1:20-Modell bis zum 1:1-Boot und endete in einer Regatta am Strand von Wendorf.",
@@ -317,7 +311,6 @@ const PROJECTS = [
     img: "assets/projects/weitere-arbeiten/card.jpg",
     hero: "assets/projects/weitere-arbeiten/hero.jpg",
     heroRatio: "3/2",
-    heroFull: true,
     kicker: { de: "EGD1 \xB7 Digitale Grundlagen \xB7 Geometrie \xB7 Freihand", en: "EGD1 \xB7 Digital foundations \xB7 Geometry \xB7 Freehand" },
     summary: {
       de: "Begleitende Arbeiten aus den Grundlagenmodulen: eine digitale Collage \xFCber die Schwelle zwischen Alltag und Freiheit, geometrisch-konstruktive Darstellungen und Freihandzeichnungen. Drei \xDCbungen im Darstellen \u2014 vom freien Bild \xFCber die exakte Konstruktion bis zur Hand.",

@@ -1,42 +1,81 @@
 const PROJECTS = [
   {
     id: "spatialsound",
-    t: { de: "Spatial Sound \u2014 Klang in Raum \xFCbersetzt", en: "Spatial Sound \u2014 Translating Sound into Space" },
+    t: { de: "Scenographic Space \u2014 Klang wird Raum", en: "Scenographic Space \u2014 Sound Becomes Space" },
     location: "Wismar",
     year: "2026",
-    semester: { de: "2. Semester \xB7 laufend", en: "2nd semester \xB7 ongoing" },
-    tag: { de: "Forschung \xB7 Installation", en: "Research \xB7 Installation" },
+    semester: { de: "2. Semester \xB7 SoSe 2026", en: "2nd semester \xB7 summer 2026" },
+    tag: { de: "Forschung \xB7 Parametrik", en: "Research \xB7 Parametric" },
     status: { de: "Studio", en: "Studio" },
-    img: "assets/projects/spatial-sound/01-poster.jpg",
-    hero: "assets/projects/spatial-sound/02-render.jpg",
-    stripA: "assets/projects/spatial-sound/04-fabric.jpg",
-    stripB: "assets/projects/spatial-sound/05-vessel.jpg",
-    kicker: { de: "Studio I \xB7 Queens of Structure", en: "Studio I \xB7 Queens of Structure" },
+    img: "assets/projects/spatial-sound/card.jpg",
+    hero: "assets/projects/spatial-sound/hero.jpg",
+    stripA: "assets/projects/spatial-sound/a.jpg",
+    stripB: "assets/projects/spatial-sound/b.jpg",
+    kicker: { de: "EGD II \xB7 A02 \xB7 Architektur aus Bewegung", en: "EGD II \xB7 A02 \xB7 Architecture from Movement" },
     summary: {
-      de: "Spatial Sound untersucht, wie Klang nicht nur als H\xF6rbares, sondern als r\xE4umliche Erfahrung verstanden werden kann. Die Arbeit \xFCbersetzt Rhythmus, Resonanz, Dichte und Fragmentierung in architektonische Konzepte \u2014 Klang als Erzeuger von Raum, nicht als nachtr\xE4gliche Schicht.",
-      en: "Spatial Sound explores how sound can be understood not only as something we hear, but as something that shapes spatial experience. The project investigates the relationship between acoustic phenomena and architectural form, asking how rhythm, resonance, density and fragmentation can be translated into spatial concepts."
+      de: "Wie klingt ein Raum \u2014 und wie formt Klang Raum? Scenographic Space \xFCbersetzt Klang in Architektur: Aus Feldaufnahmen werden \xFCber Analyse, psychoakustische Interpretation und parametrische Generierung r\xE4umliche Sequenzen, die Bewegung, Zeit und Atmosph\xE4re unmittelbar erfahrbar machen.",
+      en: "How does a space sound \u2014 and how does sound shape space? Scenographic Space translates sound into architecture: from field recordings, through analysis, psychoacoustic interpretation and parametric generation, spatial sequences emerge that make movement, time and atmosphere directly tangible."
     },
     bodyP1: {
-      de: "Statt Klang als sekund\xE4re Schicht der Architektur zu behandeln, versteht diese Arbeit ihn als Erzeuger von Raum. Durch Analyse, visuelle Studien und r\xE4umliche Interpretation werden klangliche Qualit\xE4ten in Atmosph\xE4ren, Bewegungen und volumetrische Beziehungen \xFCbersetzt.",
-      en: "Rather than treating sound as a secondary layer of architecture, this work understands it as a generator of space. Through analysis, visual studies, and spatial interpretation, sonic qualities are transformed into atmospheres, movements, and volumetric relationships."
+      de: "Der Prozess folgt sechs Schritten: Klangaufnahme im Feld, Analyse \xFCber Spektrogramme (Python), psychoakustische Interpretation der emotionalen Wirkung, Mapping in Geometrie, parametrische Raumgenerierung (Grasshopper, Blender) und schlie\xDFlich Akustiksimulation und Visualisierung. Klang wird so nicht illustriert, sondern als Entwurfsmaterial gelesen.",
+      en: "The process follows six steps: field recording, analysis through spectrograms (Python), psychoacoustic interpretation of emotional effect, mapping into geometry, parametric space generation (Grasshopper, Blender), and finally acoustic simulation and visualisation. Sound is not illustrated but read as design material."
     },
     bodyP2: {
-      de: "Das Ergebnis ist ein architektonischer Ansatz, in dem Raum nicht mehr nur durch W\xE4nde, Fl\xE4chen und Struktur definiert wird, sondern auch durch Vibration, Zeitlichkeit und Wahrnehmung. Die Arbeit bewegt sich zwischen Klangforschung, visuellem Experiment und architektonischem Denken \u2014 getragen von der Idee, dass Architektur als szenografische und akustische Bedingung gelesen, entworfen und erfahren werden kann, die sich durch den K\xF6rper in der Zeit entfaltet.",
-      en: "The result is an architectural approach in which space is no longer defined only by walls, surfaces, and structure, but also by vibration, temporality, and perception. The project moves between sound research, visual experimentation, and architectural thinking \u2014 driven by the idea that architecture can be read, designed, and experienced as a scenographic and acoustic condition, one that unfolds through the body in time."
+      de: "Mein eigener Raum \xFCbersetzt unruhige, vielschichtige Klangstrukturen in eine diskontinuierliche Raumorganisation. Fragmentierte akustische Impulse \u2014 kurze, abgebrochene T\xF6ne, wechselnde Frequenzen \u2014 werden nicht als lineare Bewegung verstanden, sondern als System aus Versatz, Bruch und \xDCberlagerung. Raumkanten sind keine festen Grenzen, sondern instabile \xDCberg\xE4nge; der K\xF6rper findet keine klare Orientierung und wird aktiv gefordert.",
+      en: "My own space translates restless, layered sound structures into a discontinuous spatial organisation. Fragmented acoustic impulses \u2014 short, broken tones, shifting frequencies \u2014 are read not as linear movement but as a system of offset, rupture and overlap. Room edges are not fixed boundaries but unstable transitions; the body finds no clear orientation and is actively challenged."
     },
     pull: {
-      de: "Raum ist nicht nur Wand und Fl\xE4che \u2014 Raum ist Vibration, Zeit, Wahrnehmung.",
-      en: "Space is not only wall and surface \u2014 space is vibration, time, perception."
+      de: "Klang wird nicht illustriert \u2014 er wird zum Material des Raums.",
+      en: "Sound is not illustrated \u2014 it becomes the material of space."
     },
     capText: {
-      de: "Oben \u2014 Render der akustischen H\xFClle. Mitte \u2014 Wellenfeldstudie aus Cymatics-Versuchen. Unten \u2014 Modellfragmente aus Reispapier und Karton, in der Aula fotografiert, M\xE4rz 2026.",
-      en: "Top \u2014 render of the acoustic envelope. Middle \u2014 wave-field study from cymatics experiments. Below \u2014 model fragments in rice paper and cardboard, photographed in the studio, March 2026."
+      de: "Modelle der klanggenerierten R\xE4ume mit Ma\xDFstabsfigur: aus Frequenz, Rhythmus und Dichte werden Schwellen, Engstellen und \xD6ffnungen. Gruppenarbeit mit Kai-Lars Ehrich, Richard Muth und Philipp Tomschin.",
+      en: "Models of the sound-generated spaces with scale figure: frequency, rhythm and density become thresholds, narrows and openings. A group project with Kai-Lars Ehrich, Richard Muth and Philipp Tomschin."
     },
     process: {
-      de: ["Cymatics-Versuche \xB7 Wasser, Sand, Lautsprecher", "Frequenzanalysen der Wismarer Hafenkl\xE4nge", "Modellfragmente aus Reispapier, Karton und Stoff", "Render und 1:1-Stoffh\xFClle f\xFCr die Abschluss-Installation"],
-      en: ["Cymatics experiments \xB7 water, sand, loudspeaker", "Frequency analysis of Wismar harbour soundscape", "Model fragments in rice paper, cardboard, and fabric", "Render and 1:1 fabric envelope for the closing installation"]
+      de: ["Feldaufnahmen \xB7 Klang im Raum", "Spektrogramm-Analyse (Python)", "Psychoakustisches Mapping in Geometrie", "Parametrische Raumgenerierung & Akustiksimulation"],
+      en: ["Field recordings \xB7 sound in space", "Spectrogram analysis (Python)", "Psychoacoustic mapping into geometry", "Parametric space generation & acoustic simulation"]
     },
     role: { de: "Gruppenarbeit", en: "Group project" }
+  },
+  {
+    id: "avatar",
+    t: { de: "Architectural Avatar", en: "Architectural Avatar" },
+    location: "Wismar",
+    year: "2026",
+    semester: { de: "2. Semester \xB7 SoSe 2026", en: "2nd semester \xB7 summer 2026" },
+    tag: { de: "Studie \xB7 Figur", en: "Study \xB7 Figure" },
+    status: { de: "Studio", en: "Studio" },
+    img: "assets/projects/avatar/card.jpg",
+    hero: "assets/projects/avatar/hero.jpg",
+    stripA: "assets/projects/avatar/a.jpg",
+    stripB: "assets/projects/avatar/b.jpg",
+    kicker: { de: "EGD II \xB7 A01", en: "EGD II \xB7 A01" },
+    summary: {
+      de: "Architectural Avatar entwickelt eine architektonische Figur \u2014 einen Avatar \u2014 als Protagonist und Ma\xDF des Raums. Aus fotografischen K\xF6rperstudien entsteht eine abstrahierte wei\xDFe Gestalt, die in wechselnde r\xE4umliche Situationen gesetzt wird: vor Feuer, im projizierten Licht, in der Landschaft. Der K\xF6rper wird zum Werkzeug, Architektur zu erproben, bevor sie gebaut ist.",
+      en: "Architectural Avatar develops an architectural figure \u2014 an avatar \u2014 as the protagonist and measure of space. From photographic studies of the body, an abstracted white figure emerges and is placed into changing spatial situations: before fire, in projected light, in the landscape. The body becomes a tool for testing architecture before it is built."
+    },
+    bodyP1: {
+      de: "Ausgangspunkt sind fotografische Studien des K\xF6rpers in unterschiedlichen Haltungen \u2014 Zeigen, Halten, Innehalten. Aus ihnen entsteht ein abstrahierter Avatar, eine reduzierte wei\xDFe Figur, die den Menschen nicht abbildet, sondern als Stellvertreter im Raum lesbar macht.",
+      en: "The starting point is a photographic study of the body in different postures \u2014 pointing, holding, pausing. From these an abstracted avatar emerges, a reduced white figure that does not depict the person but stands in for them, legible within space."
+    },
+    bodyP2: {
+      de: "Der Avatar wird in verschiedene Szenen montiert \u2014 an ein n\xE4chtliches Feuer, in einen Raum aus projiziertem Licht, in eine herbstliche Landschaft. Jede Situation pr\xFCft ein anderes Verh\xE4ltnis von Figur und Raum: N\xE4he und Distanz, Licht und Dunkel, Ma\xDFstab und Atmosph\xE4re. So wird der K\xF6rper zum Instrument, mit dem sich r\xE4umliche Wirkung erproben und lesen l\xE4sst.",
+      en: "The avatar is placed into different scenes \u2014 beside a fire at night, into a room of projected light, into an autumn landscape. Each situation tests another relationship between figure and space: nearness and distance, light and dark, scale and atmosphere. The body becomes an instrument for testing and reading spatial effect."
+    },
+    pull: {
+      de: "Der Avatar bildet den Menschen nicht ab \u2014 er macht ihn als Ma\xDF des Raums lesbar.",
+      en: "The avatar does not depict the person \u2014 it makes them legible as the measure of space."
+    },
+    capText: {
+      de: "Der Avatar in wechselnden Situationen \u2014 vor dem Feuer, im projizierten Licht, in der Landschaft \u2014 sowie die Haltungsstudien, aus denen die Figur entstand.",
+      en: "The avatar in changing situations \u2014 before fire, in projected light, in the landscape \u2014 with the posture studies from which the figure emerged."
+    },
+    process: {
+      de: ["Fotografische K\xF6rper- und Haltungsstudien", "Abstraktion zur wei\xDFen Avatar-Figur", "Montage in wechselnde Raumsituationen", "Figur und Raum: Ma\xDFstab, Licht, Atmosph\xE4re"],
+      en: ["Photographic body and posture studies", "Abstraction into the white avatar figure", "Compositing into changing spatial situations", "Figure and space: scale, light, atmosphere"]
+    },
+    role: { de: "Einzelarbeit", en: "Solo project" }
   },
   {
     id: "genius-loci",

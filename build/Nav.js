@@ -75,6 +75,7 @@ const Nav = ({ route, setRoute, lang, setLang, dark, setDark }) => {
       onClick: () => setDark(!dark),
       onMouseEnter: (e) => e.currentTarget.style.color = "var(--fg)",
       onMouseLeave: (e) => e.currentTarget.style.color = "var(--fg-subtle)",
+      "aria-pressed": dark,
       "aria-label": t.nav.theme,
       title: t.nav.theme
     },

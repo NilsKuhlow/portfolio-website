@@ -30,12 +30,15 @@ const Home = ({ onOpen, setRoute, lang }) => {
 
   const Featured = () => {
     const [i, setI] = useStateH(0);
+    const [paused, setPaused] = useStateH(false);
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const item = FEATURED[i];
     const go = (d) => setI((x) => (x + d + FEATURED.length) % FEATURED.length);
     useEffectH(() => {
+      if (reduce || paused) return;
       const timer = setInterval(() => setI((x) => (x + 1) % FEATURED.length), 9000);
       return () => clearInterval(timer);
-    }, [i]);
+    }, [paused, reduce]);
     const wrap = { padding: '64px 80px 96px', maxWidth: 1440, margin: '0 auto' };
     const grid = { display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 320px', gap: 64, alignItems: 'end' };
     const figure = { position: 'relative', aspectRatio: '16 / 9', background: `var(--paper-2) url(${item.img}) center/cover no-repeat`, cursor: 'pointer' };
@@ -46,10 +49,13 @@ const Home = ({ onOpen, setRoute, lang }) => {
     const dotsRow = { display: 'flex', gap: 6, alignItems: 'center' };
     const ctrlRow = { display: 'flex', alignItems: 'center', gap: 16, marginTop: 8 };
     const navBtn = { width: 38, height: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--fg)', background: 'transparent', color: 'var(--fg)', cursor: 'pointer', fontFamily: 'var(--font-sans)', fontSize: 16, lineHeight: 1, padding: 0 };
-    const dot = (active) => ({ width: active ? 28 : 8, height: 2, background: active ? 'var(--accent)' : 'var(--hairline-strong)', border: 0, padding: 0, cursor: 'pointer', transition: 'width 240ms ease, background 240ms ease' });
+    const dotBtn = { height: 22, display: 'inline-flex', alignItems: 'center', background: 'none', border: 0, padding: '0 3px', cursor: 'pointer' };
+    const dotBar = (active) => ({ display: 'block', width: active ? 28 : 8, height: 2, background: active ? 'var(--accent)' : 'var(--hairline-strong)', transition: 'width 240ms ease, background 240ms ease' });
     const cta = { alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: 10, background: 'transparent', border: 0, padding: '14px 0', color: 'var(--fg)', fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', cursor: 'pointer', borderTop: '1px solid var(--fg)' };
     return (
-      <section className="nk-pad" style={wrap}>
+      <section className="nk-pad" style={wrap}
+        onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}
+        onFocus={() => setPaused(true)} onBlur={() => setPaused(false)}>
         <div className="nk-stack" style={grid}>
           <div className="nk-fig" style={figure} role="button" tabIndex={0} aria-label={item.title}
             onClick={() => onOpen(item.project)}
@@ -64,7 +70,9 @@ const Home = ({ onOpen, setRoute, lang }) => {
               <button type="button" className="nk-cta" style={navBtn} onClick={() => go(-1)} aria-label={lang === 'de' ? 'Vorheriges Projekt' : 'Previous project'}>←</button>
               <div style={dotsRow}>
                 {FEATURED.map((_, k) => (
-                  <button key={k} style={dot(k === i)} onClick={() => setI(k)} aria-label={(lang === 'de' ? 'Projekt ' : 'Project ') + (k + 1)} />
+                  <button key={k} type="button" style={dotBtn} onClick={() => setI(k)} aria-current={k === i ? 'true' : undefined} aria-label={(lang === 'de' ? 'Projekt ' : 'Project ') + (k + 1)}>
+                    <span style={dotBar(k === i)} />
+                  </button>
                 ))}
               </div>
               <button type="button" className="nk-cta" style={navBtn} onClick={() => go(1)} aria-label={lang === 'de' ? 'Nächstes Projekt' : 'Next project'}>→</button>

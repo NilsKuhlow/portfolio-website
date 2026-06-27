@@ -176,6 +176,53 @@ const PROJECTS = [
     ],
   },
   {
+    id: 'edge-hafencity',
+    t: { de: 'EDGE HafenCity · Gebäudeanalyse', en: 'EDGE HafenCity · Building Analysis' },
+    location: 'Hamburg · HafenCity', year: '2025',
+    semester: { de: '1. Semester · WS 2025/26', en: '1st semester · winter 2025/26' },
+    tag: { de: 'Analyse · Bürobau', en: 'Analysis · Office building' },
+    status: { de: 'Analyse', en: 'Analysis' },
+    img: 'assets/projects/edge-hafencity/card.jpg',
+    hero: 'assets/projects/edge-hafencity/hero.jpg',
+    heroRatio: '16/9',
+    kicker: { de: 'Zeitgenössische Architektur · Gebäudeanalyse', en: 'Contemporary Architecture · Building analysis' },
+    liveUrl: 'assets/projects/edge-hafencity/analyse.pdf',
+    linkLabel: { de: 'Analyse als PDF lesen ↗', en: 'Read the full analysis (PDF) ↗' },
+    summary: {
+      de: 'Eine kritische Analyse des Bürogebäudes EDGE HafenCity in Hamburg (HENN, 2024). Sie liest das Gebäude zwischen Transformation, Nachhaltigkeitsversprechen und Realität: eingebunden in die masterplangeführte HafenCity, rational und nutzungsorientiert von HENN entworfen, mit hochtransparenter Rasterfassade und flexiblen Bürowelten. Am Ende steht die Frage nach dem ökologischen Mehrwert eines klassischen Betonbaus und nach der Relevanz solcher Bürogebäude in einer sich verändernden Arbeitswelt.',
+      en: 'A critical analysis of the EDGE HafenCity office building in Hamburg (HENN, 2024). It reads the building between transformation, sustainability promise and reality: embedded in the masterplan-led HafenCity, designed by HENN as rational and use-oriented, with a highly transparent grid facade and flexible work worlds. In the end it asks about the ecological value of a classic concrete building and the relevance of such offices in a changing world of work.',
+    },
+    bodyP1: {
+      de: 'Ausgangspunkt ist der städtebauliche Kontext. Die HafenCity ist eines der größten innerstädtischen Stadtentwicklungsprojekte Europas, entstanden aus dem Strukturwandel des Hamburger Hafens. Ein übergeordneter Masterplan steuert Baufluchten, Höhen und Nutzungen; Architektur wird weniger als Einzelstatement verstanden, sondern als Teil eines funktionierenden Gesamtsystems. Über das Warften-Prinzip schützt sich das Quartier vor Hochwasser. Das EDGE HafenCity ordnet sich diesem Rahmen unter: ein gestaffelter Baukörper auf erhöhter Sockelzone, die zwar funktional notwendig ist, aber Distanz zum öffentlichen Raum schafft und das Erdgeschoss kaum belebt.',
+      en: 'The starting point is the urban context. The HafenCity is one of Europe\'s largest inner-city development projects, born of the structural change of the Port of Hamburg. An overarching masterplan governs building lines, heights and uses; architecture is read less as an individual statement than as part of a functioning whole. The quarter protects itself from flooding through the Warften principle of raised plinths. EDGE HafenCity submits to this frame: a stepped volume on a raised base that is functionally necessary, yet keeps its distance from the public realm and barely activates the ground floor.',
+    },
+    bodyP2: {
+      de: 'Das Gebäude stammt vom Büro HENN, dessen Architektur rational, systemisch und nutzungsorientiert ist: ein gleichmäßiges Stahlbeton-Stützenraster für flexible Grundrisse, zentrale Erschließungskerne und eine hochtransparente Glasfassade mit klarem Raster. So entstehen anpassbare Bürowelten, deren Modell sich nach Corona allerdings hinterfragen lässt. Der kritischste Punkt ist das Nachhaltigkeitsversprechen: Es wird vor allem über Zertifikate, Kennzahlen und Marketing kommuniziert, während Materialität und graue Energie in den Hintergrund treten. Ein Stahlbetonbau bleibt in seiner Herstellung CO₂-intensiv, auch bei effizienter Gebäudetechnik. Die vollständige Analyse ist als PDF verlinkt.',
+      en: 'The building comes from HENN, whose architecture is rational, systemic and use-oriented: a regular reinforced-concrete column grid for flexible floor plans, central circulation cores and a highly transparent glass facade with a clear grid. The result is adaptable work worlds whose model has become questionable after Corona. The most critical point is the sustainability promise: it is communicated above all through certificates, metrics and marketing, while materiality and embodied energy recede into the background. A reinforced-concrete building stays CO₂-intensive in its production, even with efficient building services. The full analysis is linked as a PDF.',
+    },
+    pull: {
+      de: 'Nachhaltigkeit wird zertifiziert, nicht konstruiert.',
+      en: 'Sustainability gets certified, not constructed.',
+    },
+    capText: {
+      de: 'Vom Luftbild der HafenCity über das Gebäude von HENN, seinen Innenhof und die Rasterfassade bis zu den Nachhaltigkeitszertifikaten und dem historischen Hafen. Einzelarbeit, vollständige Analyse als PDF verlinkt.',
+      en: 'From the aerial of the HafenCity, through HENN\'s building, its atrium and the grid facade, to the sustainability certificates and the historical harbour. A solo project; the full analysis is linked as a PDF.',
+    },
+    process: {
+      de: ['Städtebaulicher Kontext · HafenCity-Masterplan', 'Das Gebäude · HENN, Haltung und Baukörper', 'Fassade, Konstruktion und Arbeitswelten', 'Kritik · Nachhaltigkeit und Greenwashing'],
+      en: ['Urban context · the HafenCity masterplan', 'The building · HENN, stance and volume', 'Facade, construction and work worlds', 'Critique · sustainability and greenwashing'],
+    },
+    role: { de: 'Einzelarbeit', en: 'Solo project' },
+    gallery: [
+      { src: 'assets/projects/edge-hafencity/g1.jpg', r: '3/2', wide: true, lbl: { de: 'Die HafenCity, masterplangeführtes Großprojekt am Wasser', en: 'The HafenCity, a masterplan-led megaproject on the water' } },
+      { src: 'assets/projects/edge-hafencity/g2.jpg', r: '3/2', wide: true, lbl: { de: 'EDGE HafenCity von HENN, gestaffelter Baukörper im Quartier', en: 'EDGE HafenCity by HENN, a stepped volume within the block' } },
+      { src: 'assets/projects/edge-hafencity/g3.jpg', r: '4/3', lbl: { de: 'Innenhof und Erschließung · moderne Arbeitswelten', en: 'Atrium and circulation · modern work worlds' } },
+      { src: 'assets/projects/edge-hafencity/g4.jpg', r: '4/3', lbl: { de: 'Hochtransparente Rasterfassade aus Glas', en: 'A highly transparent glass grid facade' } },
+      { src: 'assets/projects/edge-hafencity/g5.jpg', r: '3/2', lbl: { de: 'Nachhaltigkeit über Zertifikate und Kennzahlen', en: 'Sustainability via certificates and metrics' } },
+      { src: 'assets/projects/edge-hafencity/g6.jpg', r: '3/2', lbl: { de: 'Hamburg als Hafenstadt, der historische Kontext (1888)', en: 'Hamburg as a port city, the historical context (1888)' } },
+    ],
+  },
+  {
     id: 'genius-loci',
     t: { de: 'Genius Loci — Innenräume der Stadt', en: 'Genius Loci — Interiors of the City' },
     location: 'Wismar', year: '2025',

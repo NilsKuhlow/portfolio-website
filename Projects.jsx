@@ -8,6 +8,7 @@ const TYPOLOGY = {
   lichtfaenger: ['installation', 'entwurf'],
   spatialsound: ['experiment', 'digital'],
   avatar: ['studie'],
+  'edge-hafencity': ['analyse'],
   'genius-loci': ['analyse', 'studie'],
   'randstadt-intervention': ['installation'],
   'raum-struktur-huelle': ['entwurf'],
@@ -19,7 +20,7 @@ const TYP_LABELS = {
   installation: { de: 'Installation', en: 'Installation' },
   entwurf: { de: 'Entwurf', en: 'Design' },
   experiment: { de: 'Experiment', en: 'Experiment' },
-  analyse: { de: 'Stadtanalyse', en: 'Urban analysis' },
+  analyse: { de: 'Analyse', en: 'Analysis' },
   studie: { de: 'Studie', en: 'Study' },
   digital: { de: 'Digital', en: 'Digital' },
 };

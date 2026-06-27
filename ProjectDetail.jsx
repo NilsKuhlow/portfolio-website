@@ -51,7 +51,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
   ) : null;
   const embedEl = (p.embed && p.liveUrl) ? (
     <div className="nk-pad" style={{ maxWidth: 1440, margin: '0 auto', padding: '96px 40px 0' }}>
-      <div style={{ ...procH, marginTop: 0 }}>{lang === 'de' ? 'Live ausprobieren' : 'Try it live'}</div>
+      <div style={{ ...procH, marginTop: 0, scrollMarginTop: 84 }} data-sec="Live">{lang === 'de' ? 'Live ausprobieren' : 'Try it live'}</div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <iframe src={p.liveUrl} title={L(p.t, lang)} loading="lazy" allow="geolocation; clipboard-write"
           style={{ width: '100%', maxWidth: 412, height: 800, border: '1px solid var(--hairline)', borderRadius: 22, background: 'var(--paper-2)' }}></iframe>
@@ -97,8 +97,9 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
   const aCap = { fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--fg-subtle)', lineHeight: 1.5, margin: '12px auto 0', maxWidth: aColMax };
   const articleEl = p.article ? (
     <div className="nk-pad" style={{ maxWidth: 1080, margin: '0 auto', padding: '8px 40px 0' }}>
+      <span data-sec={lang === 'de' ? 'Auftakt' : 'Opening'} aria-hidden="true" style={{ display: 'block', height: 0, scrollMarginTop: 84 }}></span>
       {p.article.map((b, i) => {
-        if (b.h) return <h2 key={i} style={aH}>{L(b.h, lang)}</h2>;
+        if (b.h) return <h2 key={i} data-sec={shortSec(L(b.h, lang))} style={{ ...aH, scrollMarginTop: 84 }}>{L(b.h, lang)}</h2>;
         if (b.q) return <blockquote key={i} style={aQ}>{L(b.q, lang)}</blockquote>;
         if (b.img) return (
           <figure key={i} style={aFig}>
@@ -114,7 +115,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
   let imageSection;
   if (p.gallery && p.galleryDark) {
     imageSection = (
-      <div className="nk-band-dark nk-bleed" style={{ marginTop: 96 }}>
+      <div className="nk-band-dark nk-bleed" data-sec={lang === 'de' ? 'Material' : 'Material'} style={{ marginTop: 96, scrollMarginTop: 84 }}>
         <div style={{ ...padWrap, padding: '76px 40px' }}>
           {galleryGrid}
           {capRow(true)}
@@ -123,14 +124,14 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
     );
   } else if (p.gallery) {
     imageSection = (
-      <div className="nk-pad" style={stripWrap}>
+      <div className="nk-pad" data-sec={lang === 'de' ? 'Material' : 'Material'} style={{ ...stripWrap, scrollMarginTop: 84 }}>
         {galleryGrid}
         {capRow(false)}
       </div>
     );
   } else {
     imageSection = (
-      <div className="nk-pad" style={stripWrap}>
+      <div className="nk-pad" data-sec={lang === 'de' ? 'Material' : 'Material'} style={{ ...stripWrap, scrollMarginTop: 84 }}>
         <div className="nk-stack" style={stripGrid}>
           <div style={halfImg(p.stripA || 'assets/photo-placeholder-cool.svg')} role="img" aria-label={L(p.t, lang)}></div>
           <div style={halfImg(p.stripB || 'assets/photo-placeholder-stone.svg')} role="img" aria-label={L(p.t, lang)}></div>
@@ -142,6 +143,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
 
   return (
     <article data-screen-label="05 Project Detail">
+      <SectionRail key={p.id} p={p} lang={lang} />
       <div className="nk-pad" style={topWrap}>
         <button type="button" className="nk-link" style={back} onClick={onClose}>{t.back}</button>
         <div className="nk-stack" style={head}>
@@ -157,7 +159,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
           <div>
             <span style={eyebrow}>{L(p.kicker, lang)}</span>
             <h1 style={big}>{L(p.t, lang)}</h1>
-            <p style={lede}>{L(p.summary, lang)}</p>
+            <p style={{ ...lede, scrollMarginTop: 84 }} data-sec={p.article ? undefined : (lang === 'de' ? 'Konzept' : 'Concept')}>{L(p.summary, lang)}</p>
             {liveLink}
           </div>
         </div>
@@ -171,7 +173,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
             <p style={para}>{p.bodyP1 ? L(p.bodyP1, lang) : t.bodyP1}</p>
             <p style={para}>{p.bodyP2 ? L(p.bodyP2, lang) : t.bodyP2}</p>
             <blockquote style={q}>{p.pull ? L(p.pull, lang) : t.pull}</blockquote>
-            <div style={procH}>{t.process}</div>
+            <div style={{ ...procH, scrollMarginTop: 84 }} data-sec={lang === 'de' ? 'Prozess' : 'Process'}>{t.process}</div>
             <ul style={procList}>
               {L(p.process, lang).map((step, i) => (
                 <li key={i} style={procLi}>
@@ -186,7 +188,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
       {embedEl}
       {imageSection}
       </React.Fragment>)}
-      <div className="nk-stack" style={navWrap}>
+      <div className="nk-stack" data-rail-stop="true" style={navWrap}>
         <div className="nk-card" style={navCard} role="button" tabIndex={0} onClick={() => onOpen(prev)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(prev); } }}>
           <span style={navK}>{t.prev}</span>
           <h3 className="nk-card-ttl" style={navTtl}>{L(prev.t, lang)}</h3>

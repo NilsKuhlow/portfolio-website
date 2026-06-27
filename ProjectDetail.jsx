@@ -53,7 +53,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
     <div className="nk-pad" style={{ maxWidth: 1440, margin: '0 auto', padding: '96px 40px 0' }}>
       <div style={{ ...procH, marginTop: 0, scrollMarginTop: 84 }} data-sec="Live">{lang === 'de' ? 'Live ausprobieren' : 'Try it live'}</div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <iframe src={p.liveUrl} title={L(p.t, lang)} loading="lazy" allow="geolocation; clipboard-write"
+        <iframe src={p.liveUrl} title={L(p.t, lang)} loading="lazy" allow="geolocation" referrerPolicy="strict-origin-when-cross-origin"
           style={{ width: '100%', maxWidth: 412, height: 800, border: '1px solid var(--hairline)', borderRadius: 22, background: 'var(--paper-2)' }}></iframe>
       </div>
       <p style={{ textAlign: 'center', marginTop: 16 }}>

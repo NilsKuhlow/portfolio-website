@@ -40,7 +40,8 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
       src: p.liveUrl,
       title: L(p.t, lang),
       loading: "lazy",
-      allow: "geolocation; clipboard-write",
+      allow: "geolocation",
+      referrerPolicy: "strict-origin-when-cross-origin",
       style: { width: "100%", maxWidth: 412, height: 800, border: "1px solid var(--hairline)", borderRadius: 22, background: "var(--paper-2)" }
     }
   )), /* @__PURE__ */ React.createElement("p", { style: { textAlign: "center", marginTop: 16 } }, /* @__PURE__ */ React.createElement("a", { href: p.liveUrl, target: "_blank", rel: "noopener noreferrer", className: "nk-link", style: { fontFamily: "var(--font-sans)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--fg-subtle)", textDecoration: "none" } }, lang === "de" ? "Im neuen Tab \xF6ffnen \u2197" : "Open in a new tab \u2197"))) : null;

@@ -33,7 +33,7 @@ const Contact = ({ lang }) => {
             </div>
             <div className="nk-stack" style={linkRow}>
               <span style={lk}>{t.lbls.phone}</span>
-              <span style={{ ...lv, fontFamily: 'var(--font-mono)', fontSize: 18, letterSpacing: '0.04em' }}>+49 176 64435873</span>
+              <span style={{ ...lv, fontFamily: 'var(--font-mono)', fontSize: 18, letterSpacing: '0.04em' }}><a className="nk-underline" style={a} href="tel:+4917664435873">+49 176 64435873</a></span>
             </div>
             <div className="nk-stack" style={linkRow}>
               <span style={lk}>{t.lbls.insta}</span>

@@ -29,12 +29,15 @@ const Home = ({ onOpen, setRoute, lang }) => {
   const NEWS = lang === "de" ? NEWS_DE : NEWS_EN;
   const Featured = () => {
     const [i, setI] = useStateH(0);
+    const [paused, setPaused] = useStateH(false);
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const item = FEATURED[i];
     const go = (d) => setI((x) => (x + d + FEATURED.length) % FEATURED.length);
     useEffectH(() => {
+      if (reduce || paused) return;
       const timer = setInterval(() => setI((x) => (x + 1) % FEATURED.length), 9e3);
       return () => clearInterval(timer);
-    }, [i]);
+    }, [paused, reduce]);
     const wrap = { padding: "64px 80px 96px", maxWidth: 1440, margin: "0 auto" };
     const grid = { display: "grid", gridTemplateColumns: "minmax(0, 1fr) 320px", gap: 64, alignItems: "end" };
     const figure = { position: "relative", aspectRatio: "16 / 9", background: `var(--paper-2) url(${item.img}) center/cover no-repeat`, cursor: "pointer" };
@@ -45,26 +48,38 @@ const Home = ({ onOpen, setRoute, lang }) => {
     const dotsRow = { display: "flex", gap: 6, alignItems: "center" };
     const ctrlRow = { display: "flex", alignItems: "center", gap: 16, marginTop: 8 };
     const navBtn = { width: 38, height: 38, display: "inline-flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--fg)", background: "transparent", color: "var(--fg)", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1, padding: 0 };
-    const dot = (active) => ({ width: active ? 28 : 8, height: 2, background: active ? "var(--accent)" : "var(--hairline-strong)", border: 0, padding: 0, cursor: "pointer", transition: "width 240ms ease, background 240ms ease" });
+    const dotBtn = { height: 22, display: "inline-flex", alignItems: "center", background: "none", border: 0, padding: "0 3px", cursor: "pointer" };
+    const dotBar = (active) => ({ display: "block", width: active ? 28 : 8, height: 2, background: active ? "var(--accent)" : "var(--hairline-strong)", transition: "width 240ms ease, background 240ms ease" });
     const cta = { alignSelf: "flex-start", display: "inline-flex", alignItems: "center", gap: 10, background: "transparent", border: 0, padding: "14px 0", color: "var(--fg)", fontFamily: "var(--font-sans)", fontSize: 12, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase", cursor: "pointer", borderTop: "1px solid var(--fg)" };
-    return /* @__PURE__ */ React.createElement("section", { className: "nk-pad", style: wrap }, /* @__PURE__ */ React.createElement("div", { className: "nk-stack", style: grid }, /* @__PURE__ */ React.createElement(
-      "div",
+    return /* @__PURE__ */ React.createElement(
+      "section",
       {
-        className: "nk-fig",
-        style: figure,
-        role: "button",
-        tabIndex: 0,
-        "aria-label": item.title,
-        onClick: () => onOpen(item.project),
-        onKeyDown: (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            onOpen(item.project);
-          }
-        }
+        className: "nk-pad",
+        style: wrap,
+        onMouseEnter: () => setPaused(true),
+        onMouseLeave: () => setPaused(false),
+        onFocus: () => setPaused(true),
+        onBlur: () => setPaused(false)
       },
-      /* @__PURE__ */ React.createElement("span", { style: number }, String(i + 1).padStart(2, "0"), " / ", String(FEATURED.length).padStart(2, "0"))
-    ), /* @__PURE__ */ React.createElement("div", { style: captionWrap }, /* @__PURE__ */ React.createElement("span", { style: kicker }, item.kicker), /* @__PURE__ */ React.createElement("h1", { style: title }, item.title), /* @__PURE__ */ React.createElement("button", { className: "nk-cta", style: cta, onClick: () => onOpen(item.project) }, t.home.readProject), /* @__PURE__ */ React.createElement("div", { style: ctrlRow }, /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-cta", style: navBtn, onClick: () => go(-1), "aria-label": lang === "de" ? "Vorheriges Projekt" : "Previous project" }, "\u2190"), /* @__PURE__ */ React.createElement("div", { style: dotsRow }, FEATURED.map((_, k) => /* @__PURE__ */ React.createElement("button", { key: k, style: dot(k === i), onClick: () => setI(k), "aria-label": (lang === "de" ? "Projekt " : "Project ") + (k + 1) }))), /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-cta", style: navBtn, onClick: () => go(1), "aria-label": lang === "de" ? "N\xE4chstes Projekt" : "Next project" }, "\u2192")))));
+      /* @__PURE__ */ React.createElement("div", { className: "nk-stack", style: grid }, /* @__PURE__ */ React.createElement(
+        "div",
+        {
+          className: "nk-fig",
+          style: figure,
+          role: "button",
+          tabIndex: 0,
+          "aria-label": item.title,
+          onClick: () => onOpen(item.project),
+          onKeyDown: (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onOpen(item.project);
+            }
+          }
+        },
+        /* @__PURE__ */ React.createElement("span", { style: number }, String(i + 1).padStart(2, "0"), " / ", String(FEATURED.length).padStart(2, "0"))
+      ), /* @__PURE__ */ React.createElement("div", { style: captionWrap }, /* @__PURE__ */ React.createElement("span", { style: kicker }, item.kicker), /* @__PURE__ */ React.createElement("h1", { style: title }, item.title), /* @__PURE__ */ React.createElement("button", { className: "nk-cta", style: cta, onClick: () => onOpen(item.project) }, t.home.readProject), /* @__PURE__ */ React.createElement("div", { style: ctrlRow }, /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-cta", style: navBtn, onClick: () => go(-1), "aria-label": lang === "de" ? "Vorheriges Projekt" : "Previous project" }, "\u2190"), /* @__PURE__ */ React.createElement("div", { style: dotsRow }, FEATURED.map((_, k) => /* @__PURE__ */ React.createElement("button", { key: k, type: "button", style: dotBtn, onClick: () => setI(k), "aria-current": k === i ? "true" : void 0, "aria-label": (lang === "de" ? "Projekt " : "Project ") + (k + 1) }, /* @__PURE__ */ React.createElement("span", { style: dotBar(k === i) })))), /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-cta", style: navBtn, onClick: () => go(1), "aria-label": lang === "de" ? "N\xE4chstes Projekt" : "Next project" }, "\u2192"))))
+    );
   };
   const NewsMosaic = () => {
     const wrap = { padding: "0 80px 120px", maxWidth: 1440, margin: "0 auto" };

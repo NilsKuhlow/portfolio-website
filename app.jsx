@@ -19,13 +19,12 @@ function App() {
     try { localStorage.setItem('nk-theme', v ? 'dark' : 'light'); } catch (e) {}
   };
 
-  // First load: follow a saved choice, otherwise the OS colour scheme.
+  // First load: follow a saved choice, otherwise default to light.
   useEffect(() => {
     let dark = false;
     try {
       const saved = localStorage.getItem('nk-theme');
-      dark = saved ? saved === 'dark'
-                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      dark = saved ? saved === 'dark' : false;
     } catch (e) {}
     if (dark !== tweaks.darkMode) setTweak('darkMode', dark);
   }, []);

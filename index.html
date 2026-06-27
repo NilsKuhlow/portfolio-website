@@ -443,13 +443,13 @@ button:focus-visible, .btn:focus-visible {
   }
 </style>
 </head>
-<body data-screen-label="01 Home" data-theme="dark">
+<body data-screen-label="01 Home" data-theme="light">
 <script>
   /* Apply saved or OS colour scheme before paint — avoids a light→dark flash. */
   (function () {
     try {
       var saved = localStorage.getItem('nk-theme');
-      var dark = saved ? saved === 'dark' : true;  /* default to dark unless the visitor chose light */
+      var dark = saved ? saved === 'dark' : false;  /* default to light unless the visitor chose dark */
       document.body.setAttribute('data-theme', dark ? 'dark' : 'light');
     } catch (e) {}
   })();

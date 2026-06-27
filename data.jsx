@@ -186,8 +186,6 @@ const PROJECTS = [
     hero: 'assets/projects/edge-hafencity/hero.jpg',
     heroRatio: '16/9',
     kicker: { de: 'Zeitgenössische Architektur · Gebäudeanalyse', en: 'Contemporary Architecture · Building analysis' },
-    liveUrl: 'assets/projects/edge-hafencity/analyse.pdf',
-    linkLabel: { de: 'Analyse als PDF lesen ↗', en: 'Read the full analysis (PDF) ↗' },
     article: [
       { p: { de: 'Das Bürogebäude EDGE HafenCity befindet sich in der Hamburger HafenCity und ist Teil eines der größten innerstädtischen Stadtentwicklungsprojekte Europas. Es steht exemplarisch für zeitgenössische Büroarchitektur, die innerhalb eines stark gesteuerten städtebaulichen Rahmens entsteht und hohe Ansprüche an Nachhaltigkeit, Flexibilität und Zukunftsfähigkeit formuliert. Gleichzeitig wirft das Projekt grundlegende Fragen auf, sowohl in Bezug auf den tatsächlichen ökologischen Mehrwert als auch auf die langfristige Relevanz klassischer Bürogebäude in einer sich verändernden Arbeitswelt.', en: 'The EDGE HafenCity office building sits in Hamburg\'s HafenCity and forms part of one of Europe\'s largest inner-city development projects. It stands as an example of contemporary office architecture that emerges within a strongly steered urban framework and makes high demands on sustainability, flexibility and future viability. At the same time the project raises fundamental questions, both about its actual ecological value and about the long-term relevance of classic office buildings in a changing world of work.' } },
       { img: 'assets/projects/edge-hafencity/g1.jpg', r: '3/2', cap: { de: 'Die HafenCity, eines der größten innerstädtischen Stadtentwicklungsprojekte Europas.', en: 'The HafenCity, one of Europe\'s largest inner-city development projects.' } },

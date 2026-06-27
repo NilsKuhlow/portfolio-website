@@ -14,28 +14,28 @@ const PROJECTS = [
     liveUrl: "https://sienastadtfuehrer.de",
     embed: true,
     summary: {
-      de: "Siena ist ein digitaler, ortsbezogener Stadtf\xFChrer f\xFCr die Altstadt von Siena, gebaut als Web-App (PWA) im Wahlpflichtmodul Stadt + Raum. Aus der Stadtanalyse wird ein begehbarer Rundgang: eine interaktive Karte, Stationen mit Text, Bild und Audio, Laufwege zwischen den Orten und eine Live-Ortung. Der Zugang l\xE4uft \xFCber eine Visitenkarte in Goldfolie auf wei\xDFem Karton mit QR-Code.",
-      en: "Siena is a digital, location-aware city guide for the old town of Siena, built as a web app (PWA) in the elective module Urban Space. The urban analysis becomes a walkable tour: an interactive map, stations with text, image and audio, walking routes between places and live positioning. Access runs through a business card in gold foil on white card stock with a QR code."
+      de: "Siena ist ein digitaler, ortsbezogener Stadtf\xFChrer f\xFCr die Altstadt von Siena, gebaut als Web-App (PWA) im Wahlpflichtmodul Stadt + Raum. Aus der Stadtanalyse wird ein begehbarer Rundgang: eine interaktive Karte, Stationen mit Text, Bild und Audio, Laufwege zwischen den Orten und eine Live-Ortung. Der Zugang l\xE4uft \xFCber eine Visitenkarte aus Siebdruckpappe mit lasergraviertem QR-Code.",
+      en: "Siena is a digital, location-aware city guide for the old town of Siena, built as a web app (PWA) in the elective module Urban Space. The urban analysis becomes a walkable tour: an interactive map, stations with text, image and audio, walking routes between places and live positioning. Access runs through a business card of screen-print board with a laser-engraved QR code."
     },
     bodyP1: {
       de: "Ausgangspunkt war eine Analyse des Stadtraums von Siena: seine Pl\xE4tze, Wege und Blickbeziehungen, von der muschelf\xF6rmigen Piazza del Campo bis zum Dom. Aus dieser Lesart der Stadt wurde ein digitaler Rundgang. Jede Station verbindet Ort und Inhalt: ein Foto, ein kurzer Text und eine Audiospur f\xFChren durch Geschichte und Raum, w\xE4hrend die Karte zeigt, wo man steht und wie weit es zur n\xE4chsten Station ist.",
       en: "The starting point was an analysis of Siena's urban space: its squares, routes and sightlines, from the shell-shaped Piazza del Campo to the cathedral. From this reading of the city grew a digital tour. Each station ties place to content: a photo, a short text and an audio track lead through history and space, while the map shows where you stand and how far it is to the next stop."
     },
     bodyP2: {
-      de: "Technisch ist Siena eine progressive Web-App: sie l\xE4uft ohne Installation im Browser, funktioniert auch offline, ist f\xFCr das Smartphone gebaut und blendet \xFCber eine Live-Ortung die eigene Position in die Karte ein. Statt einer gedruckten Brosch\xFCre \xF6ffnet eine kleine Visitenkarte in Goldfolie auf wei\xDFem Karton per QR-Code den F\xFChrer, der Eingriff bleibt leicht, der Inhalt w\xE4chst weiter. Die Seite ist unter sienastadtfuehrer.de live.",
-      en: "Technically Siena is a progressive web app: it runs in the browser without installation, works offline, is built for the phone and blends your own position into the map through live positioning. Instead of a printed brochure, a small business card in gold foil on white card stock opens the guide via a QR code; the intervention stays light, the content keeps growing. The site is live at sienastadtfuehrer.de."
+      de: "Technisch ist Siena eine progressive Web-App: sie l\xE4uft ohne Installation im Browser, funktioniert auch offline, ist f\xFCr das Smartphone gebaut und blendet \xFCber eine Live-Ortung die eigene Position in die Karte ein. Statt einer gedruckten Brosch\xFCre \xF6ffnet eine kleine Visitenkarte aus Siebdruckpappe mit lasergraviertem QR-Code den F\xFChrer, der Eingriff bleibt leicht, der Inhalt w\xE4chst weiter. Die Seite ist unter sienastadtfuehrer.de live.",
+      en: "Technically Siena is a progressive web app: it runs in the browser without installation, works offline, is built for the phone and blends your own position into the map through live positioning. Instead of a printed brochure, a small business card of screen-print board with a laser-engraved QR code opens the guide; the intervention stays light, the content keeps growing. The site is live at sienastadtfuehrer.de."
     },
     pull: {
       de: "La citt\xE0 \xE8 un libro. Leggerla \xE8 gi\xE0 viaggiare.",
       en: "La citt\xE0 \xE8 un libro. Leggerla \xE8 gi\xE0 viaggiare."
     },
     capText: {
-      de: "Die Visitenkarten in Goldfolie auf wei\xDFem Karton mit QR-Code als Zugang sowie Screens des digitalen Stadtf\xFChrers: Start, interaktive Karte, Station und Live-Ortung. Gruppenarbeit mit Philipp Tomschin.",
-      en: "The gold-foil business cards on white card stock with a QR code as the entry point, alongside screens of the digital city guide: start, interactive map, station and live positioning. A group project with Philipp Tomschin."
+      de: "Die Visitenkarten aus Siebdruckpappe mit lasergraviertem QR-Code als Zugang sowie Screens des digitalen Stadtf\xFChrers: Start, interaktive Karte, Station und Live-Ortung. Gruppenarbeit mit Philipp Tomschin.",
+      en: "The screen-print-board business cards with a laser-engraved QR code as the entry point, alongside screens of the digital city guide: start, interactive map, station and live positioning. A group project with Philipp Tomschin."
     },
     process: {
-      de: ["Stadtanalyse von Siena \xB7 R\xE4ume, Wege, Orte", "Inhalte je Station \xB7 Text, Bild und Audio", "Web-App (PWA) \xB7 Karte, Live-Ortung, Offline", "Zugang \xFCber eine QR-Visitenkarte in Goldfolie auf Karton"],
-      en: ["Urban analysis of Siena \xB7 spaces, routes, places", "Content per station \xB7 text, image and audio", "Web app (PWA) \xB7 map, live positioning, offline", "Access via a gold-foil business card with a QR code"]
+      de: ["Stadtanalyse von Siena \xB7 R\xE4ume, Wege, Orte", "Inhalte je Station \xB7 Text, Bild und Audio", "Web-App (PWA) \xB7 Karte, Live-Ortung, Offline", "Zugang \xFCber eine Visitenkarte aus Siebdruckpappe mit lasergraviertem QR-Code"],
+      en: ["Urban analysis of Siena \xB7 spaces, routes, places", "Content per station \xB7 text, image and audio", "Web app (PWA) \xB7 map, live positioning, offline", "Access via a screen-print-board card with a laser-engraved QR code"]
     },
     role: { de: "Gruppenarbeit", en: "Group project" },
     galleryDark: true,

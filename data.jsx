@@ -95,7 +95,7 @@ const PROJECTS = [
   },
   {
     id: 'spatialsound',
-    t: { de: 'Scenographic Space — Klang wird Raum', en: 'Scenographic Space — Sound Becomes Space' },
+    t: { de: 'Scenographic Space · Klang wird Raum', en: 'Scenographic Space · Sound Becomes Space' },
     location: 'Wismar', year: '2026',
     semester: { de: '2. Semester · SoSe 2026', en: '2nd semester · summer 2026' },
     tag: { de: 'Forschung · Parametrik', en: 'Research · Parametric' },
@@ -261,7 +261,7 @@ const PROJECTS = [
   },
   {
     id: 'genius-loci',
-    t: { de: 'Genius Loci — Innenräume der Stadt', en: 'Genius Loci — Interiors of the City' },
+    t: { de: 'Genius Loci · Innenräume der Stadt', en: 'Genius Loci · Interiors of the City' },
     location: 'Wismar', year: '2025',
     semester: { de: '1. Semester · WS 2025/26', en: '1st semester · winter 2025/26' },
     tag: { de: 'Forschung · Stadtraum', en: 'Research · Urban space' },
@@ -425,7 +425,7 @@ const PROJECTS = [
   },
   {
     id: 'zu-wasser-lassen',
-    t: { de: 'Zu Wasser lassen — Ein Boot aus Karton', en: 'Set Afloat — A Boat from Cardboard' },
+    t: { de: 'Zu Wasser lassen · Ein Boot aus Karton', en: 'Set Afloat · A Boat from Cardboard' },
     location: 'Wismar · Wendorf', year: '2025',
     semester: { de: '1. Semester · WS 2025/26', en: '1st semester · winter 2025/26' },
     tag: { de: 'Stegreif · Modellbau', en: 'Workshop · Model-making' },
@@ -469,7 +469,7 @@ const PROJECTS = [
   },
   {
     id: 'weitere-arbeiten',
-    t: { de: 'Grundlagen — Collage, Geometrie, Freihand', en: 'Foundations — Collage, Geometry, Freehand' },
+    t: { de: 'Grundlagen · Collage, Geometrie, Freihand', en: 'Foundations · Collage, Geometry, Freehand' },
     location: 'Wismar', year: '2025',
     semester: { de: '1. Semester · WS 2025/26', en: '1st semester · winter 2025/26' },
     tag: { de: 'Grundlagen · Darstellung', en: 'Foundations · Representation' },

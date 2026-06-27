@@ -21,7 +21,7 @@ function App() {
     let dark = false;
     try {
       const saved = localStorage.getItem("nk-theme");
-      dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      dark = saved ? saved === "dark" : false;
     } catch (e) {
     }
     if (dark !== tweaks.darkMode) setTweak("darkMode", dark);

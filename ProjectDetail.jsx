@@ -46,7 +46,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
   const liveBtn = { display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 28, padding: '12px 22px', border: '1px solid var(--fg)', borderRadius: 999, fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--fg)', textDecoration: 'none' };
   const liveLink = p.liveUrl ? (
     <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="nk-link" style={liveBtn}>
-      {lang === 'de' ? 'Website live öffnen ↗' : 'Open the live site ↗'}
+      {p.linkLabel ? L(p.linkLabel, lang) : (lang === 'de' ? 'Website live öffnen ↗' : 'Open the live site ↗')}
     </a>
   ) : null;
   const embedEl = (p.embed && p.liveUrl) ? (

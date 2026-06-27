@@ -102,6 +102,7 @@ const PROJECTS = [
     tag: { de: "Forschung \xB7 Parametrik", en: "Research \xB7 Parametric" },
     status: { de: "Studio", en: "Studio" },
     img: "assets/projects/spatial-sound/card.jpg",
+    cardWide: "assets/projects/spatial-sound/card-wide.jpg",
     hero: "assets/projects/spatial-sound/hero.jpg",
     kicker: { de: "EGD II \xB7 A02 \xB7 Architektur aus Bewegung", en: "EGD II \xB7 A02 \xB7 Architecture from Movement" },
     summary: {
@@ -313,6 +314,7 @@ const PROJECTS = [
     tag: { de: "Installation \xB7 1:1", en: "Installation \xB7 1:1" },
     status: { de: "Gebaut", en: "Built" },
     img: "assets/projects/randstadt-intervention/card.jpg",
+    cardWide: "assets/projects/randstadt-intervention/card-wide.jpg",
     hero: "assets/projects/randstadt-intervention/hero.jpg",
     kicker: { de: "EGD1 \xB7 Installation 1:1", en: "EGD1 \xB7 1:1 installation" },
     summary: {
@@ -398,6 +400,7 @@ const PROJECTS = [
     tag: { de: "Modell \xB7 Licht", en: "Model \xB7 Light" },
     status: { de: "Studio", en: "Studio" },
     img: "assets/projects/masse-und-hohlraum/card.jpg",
+    cardWide: "assets/projects/masse-und-hohlraum/card-wide.jpg",
     hero: "assets/projects/masse-und-hohlraum/hero.jpg",
     kicker: { de: "EGD1 \xB7 Raumexperiment", en: "EGD1 \xB7 Spatial experiment" },
     summary: {
@@ -486,6 +489,7 @@ const PROJECTS = [
     tag: { de: "Grundlagen \xB7 Darstellung", en: "Foundations \xB7 Representation" },
     status: { de: "Studio", en: "Studio" },
     img: "assets/projects/weitere-arbeiten/card.jpg",
+    cardWide: "assets/projects/weitere-arbeiten/card-wide.jpg",
     hero: "assets/projects/weitere-arbeiten/hero.jpg",
     heroRatio: "3/2",
     kicker: { de: "EGD1 \xB7 Digitale Grundlagen \xB7 Geometrie \xB7 Freihand", en: "EGD1 \xB7 Digital foundations \xB7 Geometry \xB7 Freehand" },

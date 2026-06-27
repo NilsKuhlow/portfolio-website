@@ -259,7 +259,7 @@ const Projects = ({ onOpen, lang }) => {
         <div className="nk-news" style={mosaic}>
           {list.map(p => {
             const shape = SHAPES[p.id] || 'tall';
-            const src = (shape === 'wide' || shape === 'pano') ? (p.hero || p.img) : p.img;
+            const src = (shape === 'wide' || shape === 'pano') ? (p.cardWide || p.hero || p.img) : p.img;
             return (
               <article key={p.id} className="nk-card" style={cardWrap} role="button" tabIndex={0} onClick={() => onOpen(p)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(p); } }}>
                 <div className="nk-card-img" role="img" aria-label={L(p.t, lang)} style={mImg(shape, src)}></div>

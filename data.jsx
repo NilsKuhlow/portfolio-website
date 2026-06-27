@@ -39,11 +39,13 @@ const PROJECTS = [
       en: ['Urban analysis of Siena · spaces, routes, places', 'Content per station · text, image and audio', 'Web app (PWA) · map, live positioning, offline', 'Access via marble NFC and QR business cards'],
     },
     role: { de: 'Gruppenarbeit', en: 'Group project' },
+    galleryDark: true,
     gallery: [
-      { src: 'assets/projects/siena/g1.jpg', r: '1170/2532', lbl: { de: 'Start · der digitale Stadtführer', en: 'Start · the digital city guide' } },
-      { src: 'assets/projects/siena/g2.jpg', r: '1170/2532', lbl: { de: 'Interaktive Karte mit allen Stationen', en: 'Interactive map with every station' } },
-      { src: 'assets/projects/siena/g3.jpg', r: '1170/2532', lbl: { de: 'Station · Duomo di Siena, Bild und Text', en: 'Station · Duomo di Siena, image and text' } },
-      { src: 'assets/projects/siena/g4.jpg', r: '1170/2532', lbl: { de: 'Smart Track · die eigene Position live auf der Karte', en: 'Smart Track · your position live on the map' } },
+      { src: 'assets/projects/siena/g1.jpg', r: '210/297', lbl: { de: 'Konzept · eine Stadt liest sich wie ein Buch', en: 'Concept · a city reads like a book' } },
+      { src: 'assets/projects/siena/g2.jpg', r: '210/297', lbl: { de: 'Karte · eine handgezeichnete Route durch Siena', en: 'Map · a hand-drawn route through Siena' } },
+      { src: 'assets/projects/siena/g3.jpg', r: '210/297', lbl: { de: 'Funktionen · Smart-Track, Inhalte, offline', en: 'Features · smart-track, content, offline' } },
+      { src: 'assets/projects/siena/g4.jpg', r: '210/297', lbl: { de: 'Stationen im Detail · Lesart der Schlüsselorte', en: 'Stations in detail · reading the key places' } },
+      { src: 'assets/projects/siena/g5.jpg', r: '210/297', lbl: { de: 'Visitenkarten · vom Stadtraum direkt zur Webseite', en: 'Business cards · from the city to the website' } },
     ],
   },
   {

@@ -38,11 +38,13 @@ const PROJECTS = [
       en: ["Urban analysis of Siena \xB7 spaces, routes, places", "Content per station \xB7 text, image and audio", "Web app (PWA) \xB7 map, live positioning, offline", "Access via marble NFC and QR business cards"]
     },
     role: { de: "Gruppenarbeit", en: "Group project" },
+    galleryDark: true,
     gallery: [
-      { src: "assets/projects/siena/g1.jpg", r: "1170/2532", lbl: { de: "Start \xB7 der digitale Stadtf\xFChrer", en: "Start \xB7 the digital city guide" } },
-      { src: "assets/projects/siena/g2.jpg", r: "1170/2532", lbl: { de: "Interaktive Karte mit allen Stationen", en: "Interactive map with every station" } },
-      { src: "assets/projects/siena/g3.jpg", r: "1170/2532", lbl: { de: "Station \xB7 Duomo di Siena, Bild und Text", en: "Station \xB7 Duomo di Siena, image and text" } },
-      { src: "assets/projects/siena/g4.jpg", r: "1170/2532", lbl: { de: "Smart Track \xB7 die eigene Position live auf der Karte", en: "Smart Track \xB7 your position live on the map" } }
+      { src: "assets/projects/siena/g1.jpg", r: "210/297", lbl: { de: "Konzept \xB7 eine Stadt liest sich wie ein Buch", en: "Concept \xB7 a city reads like a book" } },
+      { src: "assets/projects/siena/g2.jpg", r: "210/297", lbl: { de: "Karte \xB7 eine handgezeichnete Route durch Siena", en: "Map \xB7 a hand-drawn route through Siena" } },
+      { src: "assets/projects/siena/g3.jpg", r: "210/297", lbl: { de: "Funktionen \xB7 Smart-Track, Inhalte, offline", en: "Features \xB7 smart-track, content, offline" } },
+      { src: "assets/projects/siena/g4.jpg", r: "210/297", lbl: { de: "Stationen im Detail \xB7 Lesart der Schl\xFCsselorte", en: "Stations in detail \xB7 reading the key places" } },
+      { src: "assets/projects/siena/g5.jpg", r: "210/297", lbl: { de: "Visitenkarten \xB7 vom Stadtraum direkt zur Webseite", en: "Business cards \xB7 from the city to the website" } }
     ]
   },
   {

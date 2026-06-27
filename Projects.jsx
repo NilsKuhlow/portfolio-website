@@ -1,5 +1,5 @@
 // Projects.jsx — full archive, filters by year + typology only (scale removed)
-const { useState: useStateP, useMemo: useMemoP } = React;
+const { useState: useStateP, useMemo: useMemoP, useEffect: useEffectP, useRef: useRefP } = React;
 
 // Typology = grouping categories for the filter (each applies to >=2 projects);
 // a project may carry more than one. The descriptive per-project label stays in p.tag.
@@ -25,6 +25,145 @@ const TYP_LABELS = {
   digital: { de: 'Digital', en: 'Digital' },
 };
 const TYP_ORDER = ['installation', 'entwurf', 'experiment', 'analyse', 'studie', 'digital'];
+
+// ── "Der grosse Schnitt" — the whole body of work read as one architectural
+// section. Same instrument as the per-project SectionRail, one level up: each
+// project is a program band, the years are storeys, and scrolling is the cut
+// moving down through the oeuvre. Koolhaas (program in section) + Miralles (the
+// line inks itself and accumulates a poche where you dwell).
+const WORK_DWELL = {};
+
+const WorkSection = ({ projects, onOpen, lang }) => {
+  const L = window.L;
+  const wrapRef = useRefP(null);
+  const inkRef = useRefP(null);
+  const headRef = useRefP(null);
+  const rowRefs = useRefP([]);
+  const hatchRefs = useRefP([]);
+  const headLocalRef = useRefP(0);
+  const activeRef = useRefP(0);
+  const [lay, setLay] = useStateP(null);
+  const [active, setActive] = useStateP(0);
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lineX = 40, railW = 72;
+  const pad = (n) => ('0' + n).slice(-2);
+
+  useEffectP(() => {
+    const measure = () => {
+      const wrap = wrapRef.current; if (!wrap) return;
+      const wRect = wrap.getBoundingClientRect();
+      const H = wrap.offsetHeight;
+      const ticks = projects.map((p, i) => {
+        const el = rowRefs.current[i]; if (!el) return 0;
+        const r = el.getBoundingClientRect();
+        return (r.top - wRect.top) + r.height / 2;
+      });
+      setLay({ H: H, ticks: ticks });
+    };
+    measure();
+    const t1 = setTimeout(measure, 300);
+    const t2 = setTimeout(measure, 1200);
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    let ro = null;
+    if (window.ResizeObserver && wrapRef.current) { ro = new ResizeObserver(measure); ro.observe(wrapRef.current); }
+    return () => { clearTimeout(t1); clearTimeout(t2); window.removeEventListener('resize', measure); window.removeEventListener('load', measure); if (ro) ro.disconnect(); };
+  }, [projects, lang]);
+
+  useEffectP(() => {
+    if (!lay) return;
+    let ticking = false;
+    const update = () => {
+      const wrap = wrapRef.current; if (!wrap) return;
+      const innerH = window.innerHeight;
+      const rectTop = wrap.getBoundingClientRect().top;
+      const headRaw = innerH * 0.42 - rectTop;
+      const headLocal = Math.max(0, Math.min(lay.H, headRaw));
+      headLocalRef.current = headLocal;
+      if (inkRef.current) inkRef.current.setAttribute('y2', String(headLocal));
+      if (headRef.current) headRef.current.setAttribute('transform', 'translate(0,' + headLocal + ')');
+      let a = 0;
+      for (let i = 0; i < lay.ticks.length; i++) { if (lay.ticks[i] <= headRaw + 1) a = i; }
+      if (a !== activeRef.current) { activeRef.current = a; setActive(a); }
+    };
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { update(); ticking = false; }); } };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const iv = setInterval(() => {
+      if (document.hidden) return;
+      const a = activeRef.current; const p = projects[a]; if (!p) return;
+      WORK_DWELL[p.id] = (WORK_DWELL[p.id] || 0) + 0.6;
+      const g = hatchRefs.current[a]; if (g) g.style.opacity = String(Math.min(0.45, WORK_DWELL[p.id] / 8));
+    }, 600);
+    return () => { window.removeEventListener('scroll', onScroll); clearInterval(iv); };
+  }, [lay, projects]);
+
+  const acc = 'var(--accent)', sub = 'var(--fg-subtle)', fg = 'var(--fg)';
+  const H = lay ? lay.H : 0;
+  const ticks = lay ? lay.ticks : [];
+  const hLocal = headLocalRef.current || 0;
+
+  const hatches = ticks.map((y, i) => {
+    const segEnd = (i < ticks.length - 1) ? ticks[i + 1] : (y + 40);
+    const strokes = [];
+    for (let yy = y + 8; yy < segEnd - 4; yy += 10) {
+      strokes.push(<line key={yy} x1={lineX - 10} y1={yy + 5} x2={lineX - 1} y2={yy - 5} stroke={acc} strokeWidth="1" />);
+    }
+    const pid = projects[i] && projects[i].id;
+    const op = Math.min(0.45, (WORK_DWELL[pid] || 0) / 8);
+    return <g key={i} ref={(el) => (hatchRefs.current[i] = el)} style={{ opacity: op }}>{strokes}</g>;
+  });
+
+  const enter = (e, p) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(p); } };
+
+  const rows = [];
+  let lastYear = null;
+  projects.forEach((p, i) => {
+    if (p.year !== lastYear) {
+      lastYear = p.year;
+      rows.push(
+        <div key={'storey-' + p.year} style={{ display: 'flex', alignItems: 'center', gap: 14, margin: (rows.length ? '52px 0 4px' : '0 0 4px'), paddingTop: 12, borderTop: '1px solid var(--hairline-strong)' }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: sub }}>{lang === 'de' ? 'Geschoss' : 'Storey'}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.2em', color: 'var(--fg)' }}>{p.year}</span>
+        </div>
+      );
+    }
+    const isA = active === i, passed = i <= active;
+    rows.push(
+      <div key={p.id} ref={(el) => (rowRefs.current[i] = el)} className="nk-row" role="button" tabIndex={0}
+        onClick={() => onOpen(p)} onKeyDown={(e) => enter(e, p)}
+        style={{ display: 'grid', gridTemplateColumns: '46px 1fr auto', gap: 24, alignItems: 'baseline', padding: '26px 16px 26px 0', borderBottom: '1px solid var(--hairline)', cursor: 'pointer' }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: isA ? acc : (passed ? fg : sub) }}>{pad(i + 1)}</span>
+        <div>
+          <div style={{ fontFamily: 'var(--font-serif)', fontWeight: 300, fontSize: 'clamp(1.5rem, 3.2vw, 2.3rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: isA ? acc : fg, transition: reduce ? 'none' : 'color 200ms cubic-bezier(0.2,0,0,1)' }}>{L(p.t, lang)}</div>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: sub, marginTop: 10 }}>{L(p.tag, lang)} · {L(p.location, lang)}</div>
+        </div>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: sub, alignSelf: 'center' }}>{p.year}</span>
+      </div>
+    );
+  });
+
+  return (
+    <div ref={wrapRef} style={{ position: 'relative', paddingLeft: railW }}>
+      <svg width={railW} height={H} viewBox={'0 0 ' + railW + ' ' + H} style={{ position: 'absolute', left: 0, top: 0, overflow: 'visible', pointerEvents: 'none' }} aria-hidden="true">
+        <line x1={lineX} y1={0} x2={lineX} y2={H} stroke="var(--hairline-strong)" strokeWidth="1" />
+        {hatches}
+        <line ref={inkRef} x1={lineX} y1={0} x2={lineX} y2={hLocal} stroke={acc} strokeWidth="1.6" />
+        {ticks.map((y, i) => (
+          <g key={i}>
+            <line x1={lineX} y1={y} x2={railW - 6} y2={y} stroke={i <= active ? acc : 'var(--hairline)'} strokeWidth="1" opacity={i <= active ? 0.5 : 0.4} />
+            <circle cx={lineX} cy={y} r="3" fill={i <= active ? acc : 'transparent'} stroke={i <= active ? acc : 'var(--hairline-strong)'} strokeWidth="1" />
+          </g>
+        ))}
+        <g ref={headRef} transform={'translate(0,' + hLocal + ')'}>
+          <line x1={lineX} y1="0" x2={railW - 4} y2="0" stroke={acc} strokeWidth="1" />
+          <path d={'M' + (lineX - 6) + ',-5 L' + (lineX + 5) + ',0 L' + (lineX - 6) + ',5 Z'} fill={acc} />
+        </g>
+      </svg>
+      <div>{rows}</div>
+    </div>
+  );
+};
 
 const Projects = ({ onOpen, lang }) => {
   const PROJECTS = window.PROJECTS;
@@ -112,6 +251,7 @@ const Projects = ({ onOpen, lang }) => {
         <div style={viewToggle}>
           <button style={vBtn(view === 'grid')} onClick={() => setView('grid')}>{t.grid}</button>
           <button style={vBtn(view === 'index')} onClick={() => setView('index')}>{t.index}</button>
+          <button style={vBtn(view === 'section')} onClick={() => setView('section')}>{lang === 'de' ? 'Schnitt' : 'Section'}</button>
         </div>
       </div>
 
@@ -145,6 +285,10 @@ const Projects = ({ onOpen, lang }) => {
             </div>
           ))}
         </div>
+      )}
+
+      {view === 'section' && list.length > 0 && (
+        <WorkSection projects={list} onOpen={onOpen} lang={lang} />
       )}
 
       {list.length === 0 && (

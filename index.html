@@ -71,7 +71,7 @@
   --fg:           var(--ink-1);
   --fg-muted:     var(--ink-2);
   --fg-subtle:    #5E5E5E;   /* darkened from #737373 to clear WCAG AA on white for the 11px labels */
-  --hairline:     rgba(10, 10, 10, 0.12);
+  --hairline:     rgba(10, 10, 10, 0.15);
   --hairline-strong: rgba(10, 10, 10, 0.24);
   --accent:       #7C3AED;  /* light mode: purple — the complement of yellow */
   --accent-fg:    #FFFFFF;  /* white text on the purple accent */
@@ -406,6 +406,7 @@ button:focus-visible, .btn:focus-visible {
   /* ── Responsive ─────────────────────────────────────────────────────────────────────
      Inline styles can't carry @media, so layout grids get a className and are overridden
      here with !important. Two-column layouts stack; wide grids drop columns. */
+  .nk-irow-meta { display: none; }
   @media (max-width: 820px) {
     nav { padding-left: 16px !important; padding-right: 16px !important;
       height: auto !important; min-height: var(--nav-h); flex-wrap: wrap; row-gap: 6px; }
@@ -417,6 +418,7 @@ button:focus-visible, .btn:focus-visible {
     .nk-grid { grid-template-columns: 1fr 1fr !important; }
     .nk-irow { grid-template-columns: 28px 1fr !important; gap: 12px !important; }
     .nk-irow > :nth-child(n+3) { display: none !important; }
+    .nk-irow-meta { display: block !important; font-family: var(--font-mono); font-size: 11px; color: var(--fg-subtle); letter-spacing: 0.04em; margin-top: 6px; }
   }
   @media (max-width: 520px) {
     .nk-grid { grid-template-columns: 1fr !important; }
@@ -470,7 +472,6 @@ button:focus-visible, .btn:focus-visible {
 <script src="build/Footer.js"></script>
 <script src="build/Home.js"></script>
 <script src="build/Projects.js"></script>
-<script src="build/SectionRail.js"></script>
 <script src="build/ProjectDetail.js"></script>
 <script src="build/About.js"></script>
 <script src="build/Contact.js"></script>

@@ -6,8 +6,8 @@ const About = ({ lang }) => {
   const head = { display: "grid", gridTemplateColumns: "200px 1fr", gap: 80, alignItems: "flex-start", marginBottom: 96 };
   const eyebrow = { fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--fg-subtle)" };
   const big = { fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1, letterSpacing: "-0.025em", margin: "24px 0 0", textWrap: "balance" };
-  const lede = { fontFamily: "var(--font-sans)", fontSize: 18, lineHeight: 1.65, color: "var(--fg)", margin: "40px 0 0", maxWidth: "34em" };
-  const body = { fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: "var(--fg)", maxWidth: "34em", margin: "0 0 24px" };
+  const lede = { fontFamily: "var(--font-sans)", fontSize: 18, lineHeight: 1.65, color: "var(--fg)", margin: "40px 0 0", maxWidth: "32em" };
+  const body = { fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: "var(--fg)", maxWidth: "32em", margin: "0 0 24px" };
   const lblK = { fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--fg-subtle)", marginBottom: 6 };
   const lblV = { fontFamily: "var(--font-sans)", fontSize: 14, color: "var(--fg)", marginBottom: 22, lineHeight: 1.5 };
   const cvSection = { padding: "64px 0", borderTop: "1px solid var(--hairline)" };

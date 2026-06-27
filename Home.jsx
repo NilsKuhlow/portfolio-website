@@ -126,7 +126,7 @@ const Home = ({ onOpen, setRoute, lang }) => {
     const top = { borderTop: '1px solid var(--hairline)', paddingTop: 56, display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 320px', gap: 64, alignItems: 'start' };
     const eyebrow = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)' };
     const statement = { fontFamily: 'var(--font-serif)', fontWeight: 300, fontSize: 'clamp(1.75rem, 3vw, 2.6rem)', lineHeight: 1.1, letterSpacing: '-0.02em', color: 'var(--fg)', margin: '20px 0 28px', textWrap: 'balance', maxWidth: '14em' };
-    const lede = { fontFamily: 'var(--font-sans)', fontSize: 16, lineHeight: 1.65, color: 'var(--fg-muted)', margin: 0, maxWidth: '38em' };
+    const lede = { fontFamily: 'var(--font-sans)', fontSize: 16, lineHeight: 1.65, color: 'var(--fg-muted)', margin: 0, maxWidth: '34em' };
     const cta = { display: 'inline-flex', alignItems: 'center', gap: 10, marginTop: 28, background: 'transparent', border: 0, borderTop: '1px solid var(--fg)', padding: '14px 0', color: 'var(--fg)', fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', cursor: 'pointer' };
     const facts = { display: 'flex', flexDirection: 'column', gap: 22 };
     const fLbl = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)', display: 'block', marginBottom: 6 };

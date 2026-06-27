@@ -15,28 +15,28 @@ const PROJECTS = [
     liveUrl: 'https://sienastadtfuehrer.de',
     embed: true,
     summary: {
-      de: 'Siena ist ein digitaler, ortsbezogener Stadtführer für die Altstadt von Siena, gebaut als Web-App (PWA) im Wahlpflichtmodul Stadt + Raum. Aus der Stadtanalyse wird ein begehbarer Rundgang: eine interaktive Karte, Stationen mit Text, Bild und Audio, Laufwege zwischen den Orten und eine Live-Ortung. Der Zugang läuft über marmorne Visitenkarten mit NFC und QR-Code.',
-      en: 'Siena is a digital, location-aware city guide for the old town of Siena, built as a web app (PWA) in the elective module Urban Space. The urban analysis becomes a walkable tour: an interactive map, stations with text, image and audio, walking routes between places and live positioning. Access runs through marble business cards with NFC and a QR code.',
+      de: 'Siena ist ein digitaler, ortsbezogener Stadtführer für die Altstadt von Siena, gebaut als Web-App (PWA) im Wahlpflichtmodul Stadt + Raum. Aus der Stadtanalyse wird ein begehbarer Rundgang: eine interaktive Karte, Stationen mit Text, Bild und Audio, Laufwege zwischen den Orten und eine Live-Ortung. Der Zugang läuft über eine Visitenkarte in Goldfolie auf weißem Karton mit QR-Code.',
+      en: 'Siena is a digital, location-aware city guide for the old town of Siena, built as a web app (PWA) in the elective module Urban Space. The urban analysis becomes a walkable tour: an interactive map, stations with text, image and audio, walking routes between places and live positioning. Access runs through a business card in gold foil on white card stock with a QR code.',
     },
     bodyP1: {
       de: 'Ausgangspunkt war eine Analyse des Stadtraums von Siena: seine Plätze, Wege und Blickbeziehungen, von der muschelförmigen Piazza del Campo bis zum Dom. Aus dieser Lesart der Stadt wurde ein digitaler Rundgang. Jede Station verbindet Ort und Inhalt: ein Foto, ein kurzer Text und eine Audiospur führen durch Geschichte und Raum, während die Karte zeigt, wo man steht und wie weit es zur nächsten Station ist.',
       en: 'The starting point was an analysis of Siena\'s urban space: its squares, routes and sightlines, from the shell-shaped Piazza del Campo to the cathedral. From this reading of the city grew a digital tour. Each station ties place to content: a photo, a short text and an audio track lead through history and space, while the map shows where you stand and how far it is to the next stop.',
     },
     bodyP2: {
-      de: 'Technisch ist Siena eine progressive Web-App: sie läuft ohne Installation im Browser, funktioniert auch offline, ist für das Smartphone gebaut und blendet über eine Live-Ortung die eigene Position in die Karte ein. Statt einer gedruckten Broschüre öffnet eine kleine Karte aus Marmor per NFC oder QR den Führer, der Eingriff bleibt leicht, der Inhalt wächst weiter. Die Seite ist unter sienastadtfuehrer.de live.',
-      en: 'Technically Siena is a progressive web app: it runs in the browser without installation, works offline, is built for the phone and blends your own position into the map through live positioning. Instead of a printed brochure, a small marble card opens the guide via NFC or QR; the intervention stays light, the content keeps growing. The site is live at sienastadtfuehrer.de.',
+      de: 'Technisch ist Siena eine progressive Web-App: sie läuft ohne Installation im Browser, funktioniert auch offline, ist für das Smartphone gebaut und blendet über eine Live-Ortung die eigene Position in die Karte ein. Statt einer gedruckten Broschüre öffnet eine kleine Visitenkarte in Goldfolie auf weißem Karton per QR-Code den Führer, der Eingriff bleibt leicht, der Inhalt wächst weiter. Die Seite ist unter sienastadtfuehrer.de live.',
+      en: 'Technically Siena is a progressive web app: it runs in the browser without installation, works offline, is built for the phone and blends your own position into the map through live positioning. Instead of a printed brochure, a small business card in gold foil on white card stock opens the guide via a QR code; the intervention stays light, the content keeps growing. The site is live at sienastadtfuehrer.de.',
     },
     pull: {
       de: 'La città è un libro. Leggerla è già viaggiare.',
       en: 'La città è un libro. Leggerla è già viaggiare.',
     },
     capText: {
-      de: 'Die marmornen NFC- und QR-Visitenkarten als Zugang sowie Screens des digitalen Stadtführers: Start, interaktive Karte, Station und Live-Ortung. Gruppenarbeit mit Philipp Tomschin.',
-      en: 'The marble NFC and QR business cards as the entry point, alongside screens of the digital city guide: start, interactive map, station and live positioning. A group project with Philipp Tomschin.',
+      de: 'Die Visitenkarten in Goldfolie auf weißem Karton mit QR-Code als Zugang sowie Screens des digitalen Stadtführers: Start, interaktive Karte, Station und Live-Ortung. Gruppenarbeit mit Philipp Tomschin.',
+      en: 'The gold-foil business cards on white card stock with a QR code as the entry point, alongside screens of the digital city guide: start, interactive map, station and live positioning. A group project with Philipp Tomschin.',
     },
     process: {
-      de: ['Stadtanalyse von Siena · Räume, Wege, Orte', 'Inhalte je Station · Text, Bild und Audio', 'Web-App (PWA) · Karte, Live-Ortung, Offline', 'Zugang über NFC- und QR-Visitenkarten aus Marmor'],
-      en: ['Urban analysis of Siena · spaces, routes, places', 'Content per station · text, image and audio', 'Web app (PWA) · map, live positioning, offline', 'Access via marble NFC and QR business cards'],
+      de: ['Stadtanalyse von Siena · Räume, Wege, Orte', 'Inhalte je Station · Text, Bild und Audio', 'Web-App (PWA) · Karte, Live-Ortung, Offline', 'Zugang über eine QR-Visitenkarte in Goldfolie auf Karton'],
+      en: ['Urban analysis of Siena · spaces, routes, places', 'Content per station · text, image and audio', 'Web app (PWA) · map, live positioning, offline', 'Access via a gold-foil business card with a QR code'],
     },
     role: { de: 'Gruppenarbeit', en: 'Group project' },
     galleryDark: true,

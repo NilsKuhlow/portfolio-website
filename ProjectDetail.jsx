@@ -143,7 +143,6 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
 
   return (
     <article data-screen-label="05 Project Detail">
-      <SectionRail key={p.id} p={p} lang={lang} />
       <div className="nk-pad" style={topWrap}>
         <button type="button" className="nk-link" style={back} onClick={onClose}>{t.back}</button>
         <div className="nk-stack" style={head}>

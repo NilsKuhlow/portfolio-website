@@ -2,6 +2,51 @@
 
 const PROJECTS = [
   {
+    id: 'siena',
+    t: { de: 'Siena · Digitaler Stadtführer', en: 'Siena · Digital City Guide' },
+    location: 'Siena, Italien', year: '2026',
+    semester: { de: '2. Semester · SoSe 2026', en: '2nd semester · summer 2026' },
+    tag: { de: 'Web-App · Stadtführer', en: 'Web app · City guide' },
+    status: { de: 'Live', en: 'Live' },
+    img: 'assets/projects/siena/card.jpg',
+    hero: 'assets/projects/siena/hero.jpg',
+    heroRatio: '3/2',
+    kicker: { de: 'WPM Stadt + Raum · Digitale Stadtanalyse', en: 'Elective Urban Space · Digital city analysis' },
+    liveUrl: 'https://sienastadtfuehrer.de',
+    embed: true,
+    summary: {
+      de: 'Siena ist ein digitaler, ortsbezogener Stadtführer für die Altstadt von Siena, gebaut als Web-App (PWA) im Wahlpflichtmodul Stadt + Raum. Aus der Stadtanalyse wird ein begehbarer Rundgang: eine interaktive Karte, Stationen mit Text, Bild und Audio, Laufwege zwischen den Orten und eine Live-Ortung. Der Zugang läuft über marmorne Visitenkarten mit NFC und QR-Code.',
+      en: 'Siena is a digital, location-aware city guide for the old town of Siena, built as a web app (PWA) in the elective module Urban Space. The urban analysis becomes a walkable tour: an interactive map, stations with text, image and audio, walking routes between places and live positioning. Access runs through marble business cards with NFC and a QR code.',
+    },
+    bodyP1: {
+      de: 'Ausgangspunkt war eine Analyse des Stadtraums von Siena: seine Plätze, Wege und Blickbeziehungen, von der muschelförmigen Piazza del Campo bis zum Dom. Aus dieser Lesart der Stadt wurde ein digitaler Rundgang. Jede Station verbindet Ort und Inhalt: ein Foto, ein kurzer Text und eine Audiospur führen durch Geschichte und Raum, während die Karte zeigt, wo man steht und wie weit es zur nächsten Station ist.',
+      en: 'The starting point was an analysis of Siena\'s urban space: its squares, routes and sightlines, from the shell-shaped Piazza del Campo to the cathedral. From this reading of the city grew a digital tour. Each station ties place to content: a photo, a short text and an audio track lead through history and space, while the map shows where you stand and how far it is to the next stop.',
+    },
+    bodyP2: {
+      de: 'Technisch ist Siena eine progressive Web-App: sie läuft ohne Installation im Browser, funktioniert auch offline, ist für das Smartphone gebaut und blendet über eine Live-Ortung die eigene Position in die Karte ein. Statt einer gedruckten Broschüre öffnet eine kleine Karte aus Marmor per NFC oder QR den Führer, der Eingriff bleibt leicht, der Inhalt wächst weiter. Die Seite ist unter sienastadtfuehrer.de live.',
+      en: 'Technically Siena is a progressive web app: it runs in the browser without installation, works offline, is built for the phone and blends your own position into the map through live positioning. Instead of a printed brochure, a small marble card opens the guide via NFC or QR; the intervention stays light, the content keeps growing. The site is live at sienastadtfuehrer.de.',
+    },
+    pull: {
+      de: 'La città è un libro. Leggerla è già viaggiare.',
+      en: 'La città è un libro. Leggerla è già viaggiare.',
+    },
+    capText: {
+      de: 'Die marmornen NFC- und QR-Visitenkarten als Zugang sowie Screens des digitalen Stadtführers: Start, interaktive Karte, Station und Live-Ortung. Gruppenarbeit mit Philipp Tomschin.',
+      en: 'The marble NFC and QR business cards as the entry point, alongside screens of the digital city guide: start, interactive map, station and live positioning. A group project with Philipp Tomschin.',
+    },
+    process: {
+      de: ['Stadtanalyse von Siena · Räume, Wege, Orte', 'Inhalte je Station · Text, Bild und Audio', 'Web-App (PWA) · Karte, Live-Ortung, Offline', 'Zugang über NFC- und QR-Visitenkarten aus Marmor'],
+      en: ['Urban analysis of Siena · spaces, routes, places', 'Content per station · text, image and audio', 'Web app (PWA) · map, live positioning, offline', 'Access via marble NFC and QR business cards'],
+    },
+    role: { de: 'Gruppenarbeit', en: 'Group project' },
+    gallery: [
+      { src: 'assets/projects/siena/g1.jpg', r: '1170/2532', lbl: { de: 'Start · der digitale Stadtführer', en: 'Start · the digital city guide' } },
+      { src: 'assets/projects/siena/g2.jpg', r: '1170/2532', lbl: { de: 'Interaktive Karte mit allen Stationen', en: 'Interactive map with every station' } },
+      { src: 'assets/projects/siena/g3.jpg', r: '1170/2532', lbl: { de: 'Station · Duomo di Siena, Bild und Text', en: 'Station · Duomo di Siena, image and text' } },
+      { src: 'assets/projects/siena/g4.jpg', r: '1170/2532', lbl: { de: 'Smart Track · die eigene Position live auf der Karte', en: 'Smart Track · your position live on the map' } },
+    ],
+  },
+  {
     id: 'lichtfaenger',
     t: { de: 'Lichtfänger', en: 'Lichtfänger' },
     location: 'Wismar · Dachterrasse Haus 7', year: '2026',

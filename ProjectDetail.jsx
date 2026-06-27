@@ -42,6 +42,28 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
     ? <div className="nk-bleed" style={heroImg} role="img" aria-label={L(p.t, lang)}></div>
     : <div style={padWrap}><div style={heroImg} role="img" aria-label={L(p.t, lang)}></div></div>;
 
+  // ── Live site: external link + embedded iframe (p.liveUrl / p.embed) ──────────
+  const liveBtn = { display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 28, padding: '12px 22px', border: '1px solid var(--fg)', borderRadius: 999, fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--fg)', textDecoration: 'none' };
+  const liveLink = p.liveUrl ? (
+    <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="nk-link" style={liveBtn}>
+      {lang === 'de' ? 'Website live öffnen ↗' : 'Open the live site ↗'}
+    </a>
+  ) : null;
+  const embedEl = (p.embed && p.liveUrl) ? (
+    <div className="nk-pad" style={{ maxWidth: 1440, margin: '0 auto', padding: '96px 40px 0' }}>
+      <div style={{ ...procH, marginTop: 0 }}>{lang === 'de' ? 'Live ausprobieren' : 'Try it live'}</div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <iframe src={p.liveUrl} title={L(p.t, lang)} loading="lazy" allow="geolocation; clipboard-write"
+          style={{ width: '100%', maxWidth: 412, height: 800, border: '1px solid var(--hairline)', borderRadius: 22, background: 'var(--paper-2)' }}></iframe>
+      </div>
+      <p style={{ textAlign: 'center', marginTop: 16 }}>
+        <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="nk-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--fg-subtle)', textDecoration: 'none' }}>
+          {lang === 'de' ? 'Im neuen Tab öffnen ↗' : 'Open in a new tab ↗'}
+        </a>
+      </p>
+    </div>
+  ) : null;
+
   // ── Gallery (flexible) or classic strip fallback ─────────────────────────────
   const galleryGrid = p.gallery ? (
     <div className="nk-gallery">
@@ -113,6 +135,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
             <span style={eyebrow}>{L(p.kicker, lang)}</span>
             <h1 style={big}>{L(p.t, lang)}</h1>
             <p style={lede}>{L(p.summary, lang)}</p>
+            {liveLink}
           </div>
         </div>
       </div>
@@ -136,6 +159,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
           </div>
         </div>
       </div>
+      {embedEl}
       {imageSection}
       <div className="nk-stack" style={navWrap}>
         <div className="nk-card" style={navCard} role="button" tabIndex={0} onClick={() => onOpen(prev)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(prev); } }}>

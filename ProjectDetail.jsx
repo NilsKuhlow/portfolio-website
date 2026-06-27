@@ -88,6 +88,29 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
     </div>
   ) : null);
 
+  // Long-form article (blog mode) — used when a project defines p.article
+  const aColMax = 720;
+  const aH = { fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(1.5rem, 3vw, 2rem)', lineHeight: 1.25, letterSpacing: '-0.01em', color: 'var(--fg)', maxWidth: aColMax, margin: '64px auto 18px' };
+  const aP = { fontFamily: 'var(--font-sans)', fontSize: 17, lineHeight: 1.8, color: 'var(--fg)', maxWidth: aColMax, margin: '0 auto 22px' };
+  const aQ = { fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 300, fontSize: 'clamp(1.4rem, 2.6vw, 1.9rem)', lineHeight: 1.3, color: 'var(--fg)', maxWidth: aColMax, margin: '52px auto', paddingLeft: 22, borderLeft: '2px solid var(--fg)' };
+  const aFig = { margin: '52px 0' };
+  const aCap = { fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--fg-subtle)', lineHeight: 1.5, margin: '12px auto 0', maxWidth: aColMax };
+  const articleEl = p.article ? (
+    <div className="nk-pad" style={{ maxWidth: 1080, margin: '0 auto', padding: '8px 40px 0' }}>
+      {p.article.map((b, i) => {
+        if (b.h) return <h2 key={i} style={aH}>{L(b.h, lang)}</h2>;
+        if (b.q) return <blockquote key={i} style={aQ}>{L(b.q, lang)}</blockquote>;
+        if (b.img) return (
+          <figure key={i} style={aFig}>
+            <div style={{ aspectRatio: b.r || '3/2', backgroundImage: `url(${b.img})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'var(--paper-2)' }} role="img" aria-label={b.cap ? L(b.cap, lang) : L(p.t, lang)}></div>
+            {b.cap && <figcaption style={aCap}>{L(b.cap, lang)}</figcaption>}
+          </figure>
+        );
+        return <p key={i} style={aP}>{L(b.p, lang)}</p>;
+      })}
+    </div>
+  ) : null;
+
   let imageSection;
   if (p.gallery && p.galleryDark) {
     imageSection = (
@@ -140,6 +163,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
         </div>
       </div>
       {heroEl}
+      {p.article ? articleEl : (<React.Fragment>
       <div className="nk-pad" style={padWrap}>
         <div className="nk-stack" style={body}>
           <div></div>
@@ -161,6 +185,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
       </div>
       {embedEl}
       {imageSection}
+      </React.Fragment>)}
       <div className="nk-stack" style={navWrap}>
         <div className="nk-card" style={navCard} role="button" tabIndex={0} onClick={() => onOpen(prev)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(prev); } }}>
           <span style={navK}>{t.prev}</span>

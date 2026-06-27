@@ -1,6 +1,30 @@
 // Projects.jsx — full archive, filters by year + typology only (scale removed)
 const { useState: useStateP, useMemo: useMemoP } = React;
 
+// Typology = grouping categories for the filter (each applies to >=2 projects);
+// a project may carry more than one. The descriptive per-project label stays in p.tag.
+const TYPOLOGY = {
+  siena: ['digital', 'analyse'],
+  lichtfaenger: ['installation', 'entwurf'],
+  spatialsound: ['experiment', 'digital'],
+  avatar: ['studie'],
+  'genius-loci': ['analyse', 'studie'],
+  'randstadt-intervention': ['installation'],
+  'raum-struktur-huelle': ['entwurf'],
+  'masse-und-hohlraum': ['experiment'],
+  'zu-wasser-lassen': ['installation'],
+  'weitere-arbeiten': ['studie'],
+};
+const TYP_LABELS = {
+  installation: { de: 'Installation', en: 'Installation' },
+  entwurf: { de: 'Entwurf', en: 'Design' },
+  experiment: { de: 'Experiment', en: 'Experiment' },
+  analyse: { de: 'Stadtanalyse', en: 'Urban analysis' },
+  studie: { de: 'Studie', en: 'Study' },
+  digital: { de: 'Digital', en: 'Digital' },
+};
+const TYP_ORDER = ['installation', 'entwurf', 'experiment', 'analyse', 'studie', 'digital'];
+
 const Projects = ({ onOpen, lang }) => {
   const PROJECTS = window.PROJECTS;
   const L = window.L;
@@ -13,11 +37,15 @@ const Projects = ({ onOpen, lang }) => {
   React.useEffect(() => { setYear(t.all); setTypology(t.all); }, [lang]);
 
   const years = useMemoP(() => [t.all, ...Array.from(new Set(PROJECTS.map(p => p.year)))], [PROJECTS, lang]);
-  const typologies = useMemoP(() => [t.all, ...Array.from(new Set(PROJECTS.map(p => L(p.tag, lang))))], [PROJECTS, lang]);
+  const typologies = useMemoP(() => {
+    const used = new Set();
+    PROJECTS.forEach(p => (TYPOLOGY[p.id] || []).forEach(k => used.add(k)));
+    return [t.all, ...TYP_ORDER.filter(k => used.has(k)).map(k => TYP_LABELS[k][lang])];
+  }, [PROJECTS, lang]);
 
   const list = PROJECTS.filter(p =>
     (year === t.all || p.year === year) &&
-    (typology === t.all || L(p.tag, lang) === typology)
+    (typology === t.all || (TYPOLOGY[p.id] || []).some(k => TYP_LABELS[k][lang] === typology))
   );
 
   const wrap = { padding: '80px 40px 120px', maxWidth: 1440, margin: '0 auto' };

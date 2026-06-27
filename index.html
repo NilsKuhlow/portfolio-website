@@ -28,13 +28,9 @@
    Drop this file into any HTML page that consumes the system.
    ============================================================ */
 
-/* Helvetica Neue LT Std — bundled locally in fonts/, no external request */
-@font-face { font-family: "Helvetica Neue LT Std"; src: url("fonts/HelveticaNeueLTStd-Lt.otf")    format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Helvetica Neue LT Std"; src: url("fonts/HelveticaNeueLTStd-Roman.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Helvetica Neue LT Std"; src: url("fonts/HelveticaNeueLTStd-Md.otf")    format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Helvetica Neue LT Std"; src: url("fonts/HelveticaNeueLTStd-Bd.otf")    format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Helvetica Neue LT Std"; src: url("fonts/HelveticaNeueLTStd-It.otf")    format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: "Helvetica Neue LT Std"; src: url("fonts/HelveticaNeueLTStd-LtIt.otf")  format("opentype"); font-weight: 300; font-style: italic; font-display: swap; }
+/* Helvetica Neue is loaded from the visitor's own system (real Helvetica Neue on
+   Apple devices, Arial as the close fallback elsewhere). No font files are bundled
+   or redistributed, so the repository carries no font-licence obligations. */
 
 :root {
   /* ────────────────────────────────────────────────────────
@@ -85,10 +81,10 @@
   /* ────────────────────────────────────────────────────────
      TYPE — families
      ──────────────────────────────────────────────────────── */
-  /* Single typeface across the whole site — Helvetica Neue everywhere. */
-  --font-sans:   "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-serif:  "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-mono:   "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Single typeface across the whole site — system Helvetica Neue, no bundled files. */
+  --font-sans:   "Helvetica Neue", "Helvetica Neue LT Std", Helvetica, Arial, sans-serif;
+  --font-serif:  "Helvetica Neue", "Helvetica Neue LT Std", Helvetica, Arial, sans-serif;
+  --font-mono:   "Helvetica Neue", "Helvetica Neue LT Std", Helvetica, Arial, sans-serif;
 
   /* TYPE — scale (1.250 minor third, slightly slowed at the top) */
   --t-12: 0.75rem;     /* 12 — micro labels */

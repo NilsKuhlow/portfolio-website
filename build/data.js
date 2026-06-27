@@ -1,5 +1,51 @@
 const PROJECTS = [
   {
+    id: "lichtfaenger",
+    t: { de: "Lichtf\xE4nger", en: "Lichtf\xE4nger" },
+    location: "Wismar \xB7 Dachterrasse Haus 7",
+    year: "2026",
+    semester: { de: "2. Semester \xB7 SoSe 2026", en: "2nd semester \xB7 summer 2026" },
+    tag: { de: "Installation \xB7 Licht", en: "Installation \xB7 Light" },
+    status: { de: "Gebaut", en: "Built" },
+    img: "assets/projects/lichtfaenger/card.jpg",
+    hero: "assets/projects/lichtfaenger/hero.jpg",
+    heroRatio: "3/2",
+    kicker: { de: "EGD II \xB7 A03 \xB7 Szenografische Atmosph\xE4re", en: "EGD II \xB7 A03 \xB7 Scenographic Atmosphere" },
+    summary: {
+      de: "Lichtf\xE4nger ist ein leichter, r\xFCckbaubarer Eingriff auf der Dachterrasse von Haus 7. Aus zwei textilen Ideen, einem gewebten Lichtdach (VELUM) und einem Vorhang (VORTEX), fiel der Fokus auf die Terrasse, der Vorhang wurde verworfen. In der Umsetzung ersetzten schmale Reflektoren die T\xFCcher: an Spannseilen aufgeh\xE4ngt, fangen sie Himmel und Sonne ein und werfen ein wanderndes, sich st\xE4ndig ver\xE4nderndes Licht \xFCber den Ort.",
+      en: "Lichtf\xE4nger is a light, reversible intervention on the roof terrace of Haus 7. From two textile ideas, a woven canopy of light (VELUM) and a curtain (VORTEX), the focus fell on the terrace and the curtain was discarded. In realisation, slender reflectors replaced the cloths: hung on tensioned cables, they catch sky and sun and cast a wandering, ever-changing light across the place."
+    },
+    bodyP1: {
+      de: "Zu Beginn standen zwei Ideen aus textilem Material: VELUM, ein gewebtes Lichtdach \xFCber der Dachterrasse, und VORTEX, ein Vorhang, der die Bewegung zwischen den Geb\xE4uden fasst. Wir entschieden uns f\xFCr die Dachterrasse und verwarfen den Vorhang. Die Anordnung der Elemente leitet sich aus einer Heatmap der Bewegung ab: Wo sich die Menschen am meisten aufhalten, verdichtet sich der Eingriff.",
+      en: "At the outset stood two ideas in textile material: VELUM, a woven canopy of light above the roof terrace, and VORTEX, a curtain gathering the movement between the buildings. We focused on the roof terrace and discarded the curtain. The arrangement of the elements is derived from a heatmap of movement: where people gather most, the intervention grows denser."
+    },
+    bodyP2: {
+      de: "In der Umsetzung ersetzten wir die T\xFCcher schlie\xDFlich durch schmale Reflektoren. An Spannseilen aufgeh\xE4ngt, fangen sie Himmel und Sonnenlicht ein und werfen es als wanderndes Licht \xFCber die Terrasse. Aus einem gewebten Lichtdach wurde so ein Feld aus beweglichen Spiegeln, ein Eingriff, der nichts hinzuf\xFCgt au\xDFer Licht und es mit jeder Tageszeit neu erz\xE4hlt.",
+      en: "In realisation we finally replaced the cloths with slender reflectors. Hung on tensioned cables, they catch sky and sunlight and cast it as a wandering light across the terrace. The woven canopy of light became a field of moving mirrors, an intervention that adds nothing but light and retells it with every hour of the day."
+    },
+    pull: {
+      de: "Ein Eingriff, der nichts hinzuf\xFCgt au\xDFer Licht.",
+      en: "An intervention that adds nothing but light."
+    },
+    capText: {
+      de: "Von der Vision eines gewebten Lichtdachs \xFCber die Herleitung aus der Bewegung bis zu den fertigen Reflektoren, die Himmel und Sonne \xFCber die Dachterrasse werfen. Gruppenarbeit mit Philipp Tomschin, Kai-Lars Ehrich und Richard Muth.",
+      en: "From the vision of a woven canopy of light, through the derivation from movement, to the finished reflectors casting sky and sun across the roof terrace. A group project with Philipp Tomschin, Kai-Lars Ehrich and Richard Muth."
+    },
+    process: {
+      de: ["Zwei Ideen aus Textil \xB7 VELUM (Lichtdach) und VORTEX (Vorhang)", "Fokus auf die Dachterrasse, der Vorhang wird verworfen", "Anordnung aus einer Heatmap der Bewegung", "T\xFCcher werden zu Reflektoren \xB7 Probeh\xE4ngung \xFCber der Terrasse"],
+      en: ["Two textile ideas \xB7 VELUM (canopy) and VORTEX (curtain)", "Focus on the roof terrace, the curtain is discarded", "Layout derived from a heatmap of movement", "Cloths become reflectors \xB7 trial hanging above the terrace"]
+    },
+    role: { de: "Gruppenarbeit", en: "Group project" },
+    gallery: [
+      { src: "assets/projects/lichtfaenger/g2.jpg", r: "4/3", lbl: { de: "Die Dachterrasse von Haus 7 \xB7 der reale Ort des Eingriffs", en: "The roof terrace of Haus 7 \xB7 the real site of the intervention" } },
+      { src: "assets/projects/lichtfaenger/g1.jpg", r: "4/3", lbl: { de: "Erste Versuche \xB7 Licht durch lichtdurchl\xE4ssiges, textiles Material", en: "First trials \xB7 light through translucent textile material" } },
+      { src: "assets/projects/lichtfaenger/g3.jpg", r: "3/2", wide: true, fit: "contain", bg: "#ffffff", lbl: { de: "Grundriss und Herleitung \xB7 die Anordnung folgt einer Heatmap der Bewegung", en: "Plan and derivation \xB7 the layout follows a heatmap of movement" } },
+      { src: "assets/projects/lichtfaenger/g4.jpg", r: "16/9", wide: true, fit: "contain", bg: "#0b0b0b", lbl: { de: "Aus den T\xFCchern werden schmale Reflektoren \xB7 eine wandernde Linie", en: "The cloths become slender reflectors \xB7 a wandering line" } },
+      { src: "assets/projects/lichtfaenger/g5.jpg", r: "2/3", lbl: { de: "Der Reflektor f\xE4ngt Himmel und Sonne", en: "The reflector catches sky and sun" } },
+      { src: "assets/projects/lichtfaenger/g6.jpg", r: "2/3", lbl: { de: "Die Reflektoren \xFCber der Terrasse", en: "The reflectors above the terrace" } }
+    ]
+  },
+  {
     id: "spatialsound",
     t: { de: "Scenographic Space \u2014 Klang wird Raum", en: "Scenographic Space \u2014 Sound Becomes Space" },
     location: "Wismar",
@@ -27,8 +73,8 @@ const PROJECTS = [
       en: "Sound is not illustrated but becomes the material of space."
     },
     capText: {
-      de: "Modelle der klanggenerierten R\xE4ume mit Ma\xDFstabsfigur: aus Frequenz, Rhythmus und Dichte werden Schwellen, Engstellen und \xD6ffnungen. Gruppenarbeit mit Kai-Lars Ehrich, Richard Muth und Philipp Tomschin.",
-      en: "Models of the sound-generated spaces with scale figure: frequency, rhythm and density become thresholds, narrows and openings. A group project with Kai-Lars Ehrich, Richard Muth and Philipp Tomschin."
+      de: "Modelle der klanggenerierten R\xE4ume mit Ma\xDFstabsfigur: aus Frequenz, Rhythmus und Dichte werden Schwellen, Engstellen und \xD6ffnungen. Gruppenarbeit mit Philipp Tomschin, Kai-Lars Ehrich und Richard Muth.",
+      en: "Models of the sound-generated spaces with scale figure: frequency, rhythm and density become thresholds, narrows and openings. A group project with Philipp Tomschin, Kai-Lars Ehrich and Richard Muth."
     },
     process: {
       de: ["Feldaufnahmen \xB7 Klang im Raum", "Spektrogramm-Analyse (Python)", "Psychoakustisches Mapping in Geometrie", "Parametrische Raumgenerierung & Akustiksimulation"],
@@ -197,8 +243,8 @@ const PROJECTS = [
       en: "The structure is path, meeting point and skin at once; it connects what merely stood side by side."
     },
     capText: {
-      de: "Leichtes Stabwerk \xFCber dem Plattenbau-Bestand: das stochastische Stabfeld und die geordneten Module, Br\xFCcken erschlie\xDFen die D\xE4cher zur gemeinschaftlichen Fl\xE4che. Modell und Photomontage.",
-      en: "A light rod structure above the prefab ensemble: the stochastic rod field and the ordered modules; bridges open the roofs into a shared surface. Model and photomontage."
+      de: "Leichtes Stabwerk \xFCber dem Plattenbau-Bestand: das stochastische Stabfeld und die geordneten Module, Br\xFCcken erschlie\xDFen die D\xE4cher zur gemeinschaftlichen Fl\xE4che. Modell und Photomontage. Gruppenarbeit mit Philipp Tomschin, Kai-Lars Ehrich und Richard Muth.",
+      en: "A light rod structure above the prefab ensemble: the stochastic rod field and the ordered modules; bridges open the roofs into a shared surface. Model and photomontage. A group project with Philipp Tomschin, Kai-Lars Ehrich and Richard Muth."
     },
     process: {
       de: ["Analyse der Plattenbau-Geometrie und Randstadtsituation", "Additive, parasit\xE4re Leichtstruktur", "Verspannte Br\xFCcken erschlie\xDFen die D\xE4cher", "Modell und Photomontage \xFCber dem Bestandsfoto"],
@@ -240,8 +286,8 @@ const PROJECTS = [
       en: "The subject was never the mass, but what it encloses."
     },
     capText: {
-      de: "Negativr\xE4ume in Wachs und Beton gegossen, im Verfahren des Glockengusses; Oberlicht und \xD6ffnungen f\xFChren das Licht durch den Innenraum.",
-      en: "Voids cast in wax and concrete, after the technique of bell-casting; a skylight and openings draw light through the interior."
+      de: "Negativr\xE4ume in Wachs und Beton gegossen, im Verfahren des Glockengusses; Oberlicht und \xD6ffnungen f\xFChren das Licht durch den Innenraum. Gruppenarbeit mit Philipp Tomschin, Kai-Lars Ehrich und Richard Muth.",
+      en: "Voids cast in wax and concrete, after the technique of bell-casting; a skylight and openings draw light through the interior. A group project with Philipp Tomschin, Kai-Lars Ehrich and Richard Muth."
     },
     process: {
       de: ["Buchk\xF6rper als Material \xB7 Ausschneiden r\xE4umlicher Abfolgen", "Negativr\xE4ume in Wachs ausgegossen", "Betonguss in Erde (analog Glockenguss)", "Belichtung \xFCber Oberlicht und gesetzte \xD6ffnungen"],

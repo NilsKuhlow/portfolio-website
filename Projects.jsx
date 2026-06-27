@@ -198,7 +198,7 @@ const Projects = ({ onOpen, lang }) => {
   const filterCol = { display: 'flex', flexDirection: 'column', gap: 8 };
   const fLabel = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)' };
   const chips = { display: 'flex', gap: 6, flexWrap: 'wrap' };
-  const chip = (active) => ({ padding: '6px 12px', border: '1px solid', borderColor: active ? 'var(--fg)' : 'var(--hairline-strong)', background: active ? 'var(--fg)' : 'transparent', color: active ? 'var(--bg)' : 'var(--fg)', fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'pointer' });
+  const chip = (active) => ({ padding: '6px 12px', border: '1px solid', borderColor: active ? 'var(--accent)' : 'var(--hairline-strong)', background: active ? 'var(--accent)' : 'transparent', color: active ? 'var(--accent-fg)' : 'var(--fg)', fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'pointer' });
   const filterGroup = { display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 };
   const viewToggle = { display: 'flex', border: '1px solid var(--hairline-strong)' };
   const vBtn = (active) => ({ padding: '8px 14px', background: active ? 'var(--fg)' : 'transparent', color: active ? 'var(--bg)' : 'var(--fg)', fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'pointer', border: 0 });
@@ -277,7 +277,10 @@ const Projects = ({ onOpen, lang }) => {
           {list.map((p, i) => (
             <div key={p.id} className="nk-row nk-irow" style={row} role="button" tabIndex={0} onClick={() => onOpen(p)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(p); } }}>
               <span style={num}>{String(i + 1).padStart(2, '0')}</span>
-              <span style={rowT}>{L(p.t, lang)}</span>
+              <div style={{ minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+                <span style={rowT}>{L(p.t, lang)}</span>
+                <span className="nk-irow-meta">{p.year} · {L(p.tag, lang).toUpperCase()}</span>
+              </div>
               <span style={rowM}>{L(p.location, lang)}</span>
               <span style={rowMono}>{p.year}</span>
               <span style={rowMono}>{L(p.tag, lang).toUpperCase()}</span>

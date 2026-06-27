@@ -1,3 +1,12 @@
+function shortSec(s) {
+  if (!s) return "";
+  let x = String(s).split(/[:–—]/)[0].trim().replace(/\s+/g, " ");
+  if (x.length <= 20) return x;
+  const stop = { und: 1, and: 1, im: 1, in: 1, der: 1, die: 1, das: 1, den: 1, of: 1, the: 1, zur: 1, zum: 1, mit: 1, "f\xFCr": 1, nach: 1, vor: 1, als: 1, am: 1, ein: 1, eine: 1 };
+  let w = x.split(" ").slice(0, 2);
+  if (w.length > 1 && stop[w[1].toLowerCase()]) w = w.slice(0, 1);
+  return w.join(" ");
+}
 const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
   if (!p) return null;
   const PROJECTS = window.PROJECTS;
@@ -14,11 +23,11 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
   const lblV = { fontFamily: "var(--font-sans)", fontSize: 14, color: "var(--fg)", marginBottom: 22, lineHeight: 1.5 };
   const eyebrow = { fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--fg-subtle)" };
   const big = { fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1, letterSpacing: "-0.025em", margin: "24px 0 0", textWrap: "balance" };
-  const lede = { fontFamily: "var(--font-sans)", fontSize: 18, lineHeight: 1.65, color: "var(--fg)", margin: "40px 0 0", maxWidth: "34em" };
+  const lede = { fontFamily: "var(--font-sans)", fontSize: 18, lineHeight: 1.65, color: "var(--fg)", margin: "40px 0 0", maxWidth: "32em" };
   const heroRatio = p.heroRatio || "16/9";
   const heroImg = { width: "100%", aspectRatio: heroRatio, backgroundImage: `url(${p.hero || p.img})`, backgroundSize: "cover", backgroundPosition: p.heroPos || "center", backgroundColor: "var(--paper-2)", marginBottom: 64 };
   const body = { display: "grid", gridTemplateColumns: "200px 1fr", gap: 80, paddingBottom: 96, borderBottom: "1px solid var(--hairline)" };
-  const para = { fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: "var(--fg)", maxWidth: "34em", margin: "0 0 24px" };
+  const para = { fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: "var(--fg)", maxWidth: "32em", margin: "0 0 24px" };
   const procH = { fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--fg-subtle)", marginTop: 56, marginBottom: 16 };
   const procList = { listStyle: "none", padding: 0, margin: 0, borderTop: "1px solid var(--hairline)" };
   const procLi = { padding: "14px 0", borderBottom: "1px solid var(--hairline)", display: "flex", alignItems: "baseline", gap: 16, fontFamily: "var(--font-sans)", fontSize: 14, color: "var(--fg)" };
@@ -47,7 +56,7 @@ const ProjectDetail = ({ p, onClose, onOpen, lang }) => {
   )), /* @__PURE__ */ React.createElement("p", { style: { textAlign: "center", marginTop: 16 } }, /* @__PURE__ */ React.createElement("a", { href: p.liveUrl, target: "_blank", rel: "noopener noreferrer", className: "nk-link", style: { fontFamily: "var(--font-sans)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--fg-subtle)", textDecoration: "none" } }, lang === "de" ? "Im neuen Tab \xF6ffnen \u2197" : "Open in a new tab \u2197"))) : null;
   const galleryGrid = p.gallery ? /* @__PURE__ */ React.createElement("div", { className: "nk-gallery" }, p.gallery.map((g, i) => /* @__PURE__ */ React.createElement("figure", { key: i, className: "nk-gitem" + (g.wide ? " nk-gitem-wide" : "") }, /* @__PURE__ */ React.createElement("div", { className: "nk-fig", style: { aspectRatio: g.r || "4/3", backgroundImage: `url(${g.src})`, backgroundSize: g.fit || "cover", backgroundPosition: g.pos || "center", backgroundRepeat: "no-repeat", backgroundColor: g.bg || "var(--paper-2)" }, role: "img", "aria-label": g.cap && L(g.cap, lang) || L(p.t, lang) }), (g.lbl || g.cap) && /* @__PURE__ */ React.createElement("figcaption", { className: "nk-gcap" }, g.lbl && /* @__PURE__ */ React.createElement("span", { className: "nk-gcap-k" }, L(g.lbl, lang), g.cap ? " \xB7 " : ""), g.cap && L(g.cap, lang))))) : null;
   const capRow = (dark) => p.capText ? /* @__PURE__ */ React.createElement("div", { className: "nk-stack", style: { display: "grid", gridTemplateColumns: "200px 1fr", gap: 80, paddingTop: 32, paddingBottom: 32 } }, /* @__PURE__ */ React.createElement("div", { style: { ...lblK, marginTop: 4, color: dark ? "#B3B3B3" : "var(--fg-subtle)" } }, t.caption), /* @__PURE__ */ React.createElement("p", { style: { fontFamily: "var(--font-sans)", fontSize: 14, color: dark ? "#D9D9D9" : "var(--fg-muted)", lineHeight: 1.6, maxWidth: "34em", margin: 0 } }, L(p.capText, lang))) : null;
-  const aColMax = 720;
+  const aColMax = 640;
   const aH = { fontFamily: "var(--font-serif)", fontWeight: 400, fontSize: "clamp(1.5rem, 3vw, 2rem)", lineHeight: 1.25, letterSpacing: "-0.01em", color: "var(--fg)", maxWidth: aColMax, margin: "64px auto 18px" };
   const aP = { fontFamily: "var(--font-sans)", fontSize: 17, lineHeight: 1.8, color: "var(--fg)", maxWidth: aColMax, margin: "0 auto 22px" };
   const aQ = { fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.4rem, 2.6vw, 1.9rem)", lineHeight: 1.3, color: "var(--fg)", maxWidth: aColMax, margin: "52px auto", paddingLeft: 22, borderLeft: "2px solid var(--fg)" };

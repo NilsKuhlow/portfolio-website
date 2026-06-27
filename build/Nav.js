@@ -33,7 +33,7 @@ const Nav = ({ route, setRoute, lang, setLang, dark, setDark }) => {
     textDecoration: "none",
     paddingBottom: 4,
     borderBottom: "1px solid",
-    borderBottomColor: active ? "var(--fg)" : "transparent",
+    borderBottomColor: active ? "var(--accent)" : "transparent",
     transition: "border-color 160ms cubic-bezier(0.2,0,0,1)"
   });
   const items = [

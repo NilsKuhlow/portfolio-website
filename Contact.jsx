@@ -5,7 +5,7 @@ const Contact = ({ lang }) => {
   const grid = { display: 'grid', gridTemplateColumns: '200px 1fr', gap: 80 };
   const eyebrow = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)' };
   const big = { fontFamily: 'var(--font-serif)', fontWeight: 300, fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: 1.0, letterSpacing: '-0.025em', margin: '24px 0 0', textWrap: 'balance' };
-  const lede = { fontFamily: 'var(--font-sans)', fontSize: 18, lineHeight: 1.65, color: 'var(--fg)', margin: '40px 0 56px', maxWidth: '34em' };
+  const lede = { fontFamily: 'var(--font-sans)', fontSize: 18, lineHeight: 1.65, color: 'var(--fg)', margin: '40px 0 56px', maxWidth: '32em' };
   const linkRow = { display: 'grid', gridTemplateColumns: '160px 1fr', gap: 24, padding: '20px 0', borderBottom: '1px solid var(--hairline)', alignItems: 'baseline' };
   const linkFirst = { ...linkRow, borderTop: '1px solid var(--fg)' };
   const lk = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)' };

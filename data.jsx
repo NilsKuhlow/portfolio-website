@@ -101,6 +101,7 @@ const PROJECTS = [
     tag: { de: 'Forschung · Parametrik', en: 'Research · Parametric' },
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/spatial-sound/card.jpg',
+    cardWide: 'assets/projects/spatial-sound/card-wide.jpg',
     hero: 'assets/projects/spatial-sound/hero.jpg',
     kicker: { de: 'EGD II · A02 · Architektur aus Bewegung', en: 'EGD II · A02 · Architecture from Movement' },
     summary: {
@@ -307,6 +308,7 @@ const PROJECTS = [
     tag: { de: 'Installation · 1:1', en: 'Installation · 1:1' },
     status: { de: 'Gebaut', en: 'Built' },
     img: 'assets/projects/randstadt-intervention/card.jpg',
+    cardWide: 'assets/projects/randstadt-intervention/card-wide.jpg',
     hero: 'assets/projects/randstadt-intervention/hero.jpg',    kicker: { de: 'EGD1 · Installation 1:1', en: 'EGD1 · 1:1 installation' },
     summary: {
       de: 'Eine ortsspezifische, performative Rauminstallation im Maßstab 1:1. Mit einfachen Mitteln wird ein bestehender Weg in der Randstadt von Wismar verdichtet und neu gelesen: Ein Folientunnel bündelt Bewegung und Wahrnehmung, führt von der Weite in die Enge und öffnet sich am Ende in einen natürlich gewachsenen Raum.',
@@ -388,6 +390,7 @@ const PROJECTS = [
     tag: { de: 'Modell · Licht', en: 'Model · Light' },
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/masse-und-hohlraum/card.jpg',
+    cardWide: 'assets/projects/masse-und-hohlraum/card-wide.jpg',
     hero: 'assets/projects/masse-und-hohlraum/hero.jpg',    kicker: { de: 'EGD1 · Raumexperiment', en: 'EGD1 · Spatial experiment' },
     summary: {
       de: 'Eine Untersuchung über das Verhältnis von Volumen und Leere. Raum wird nicht als Nebenprodukt verstanden, sondern als aktives Element, das durch Masse gefasst und erlebbar wird. Über Wachs- und Betongüsse entstehen Modelle, die ausschließlich den Hohlraum sichtbar machen und das Licht zum eigentlichen Baustoff erklären.',
@@ -473,6 +476,7 @@ const PROJECTS = [
     tag: { de: 'Grundlagen · Darstellung', en: 'Foundations · Representation' },
     status: { de: 'Studio', en: 'Studio' },
     img: 'assets/projects/weitere-arbeiten/card.jpg',
+    cardWide: 'assets/projects/weitere-arbeiten/card-wide.jpg',
     hero: 'assets/projects/weitere-arbeiten/hero.jpg',
     heroRatio: '3/2',
     kicker: { de: 'EGD1 · Digitale Grundlagen · Geometrie · Freihand', en: 'EGD1 · Digital foundations · Geometry · Freehand' },

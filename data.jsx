@@ -509,7 +509,6 @@ const PROJECTS = [
       { src: 'assets/projects/weitere-arbeiten/g1.jpg', r: '1/1', lbl: { de: 'Freihand · Muschelstudie', en: 'Freehand · Shell study' } },
       { src: 'assets/projects/weitere-arbeiten/g2.jpg', r: '1/1', lbl: { de: 'Freihand · Barockes Ornament', en: 'Freehand · Baroque ornament' } },
       { src: 'assets/projects/weitere-arbeiten/g3.jpg', r: '2/1', wide: true, lbl: { de: 'Geometrisches Darstellen · Innenraumperspektive', en: 'Descriptive geometry · Interior perspective' } },
-      { src: 'assets/projects/weitere-arbeiten/g4.jpg', r: '2/1', wide: true, lbl: { de: 'Geometrisches Darstellen · Membrankonstruktion', en: 'Descriptive geometry · Membrane construction' } },
     ],
   },
 ];

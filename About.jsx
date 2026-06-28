@@ -73,13 +73,6 @@ const About = ({ lang }) => {
         </div></div>
 
         <div style={cvSection}><div className="nk-stack" style={cvGrid}>
-          <div style={cvHead}>{t.sec.interests}</div>
-          <ul style={tokenWrap}>{L(CV.interests, lang).map((s, i) => (
-            <li key={i} style={token}><span style={dot}>▪</span>{s}</li>
-          ))}</ul>
-        </div></div>
-
-        <div style={cvSection}><div className="nk-stack" style={cvGrid}>
           <div style={cvHead}>{t.sec.languages}</div>
           <div style={{ borderTop: '1px solid var(--fg)' }}>{CV.languages.map((l, i) => (
             <div key={i} style={langRow}>

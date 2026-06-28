@@ -538,8 +538,8 @@ const CV = {
     {
       y: "2023\u20132025",
       what: { de: "Ausbildung zum Zimmerer", en: "Apprenticeship as a carpenter (Zimmerer)" },
-      where: { de: "Hamburg", en: "Hamburg, Germany" },
-      detail: { de: "Dreij\xE4hrige Ausbildung im Holzbau, Gesellenabschluss im Juli 2025, die Grundlage meines materialnahen Zugangs zur Architektur.", en: "Three-year training in timber construction, journeyman qualification in July 2025, the foundation of my material-led approach to architecture." }
+      where: { de: "Vechta, Niedersachsen", en: "Vechta, Lower Saxony" },
+      detail: { de: "Zweij\xE4hrige Ausbildung im Holzbau, Gesellenabschluss im Juli 2025, die Grundlage meines materialnahen Zugangs zur Architektur.", en: "Two-year training in timber construction, journeyman qualification in July 2025, the foundation of my material-led approach to architecture." }
     },
     {
       y: "2015\u20132023",

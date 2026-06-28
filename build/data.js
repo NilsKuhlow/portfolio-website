@@ -521,8 +521,7 @@ const PROJECTS = [
     gallery: [
       { src: "assets/projects/weitere-arbeiten/g1.jpg", r: "1/1", lbl: { de: "Freihand \xB7 Muschelstudie", en: "Freehand \xB7 Shell study" } },
       { src: "assets/projects/weitere-arbeiten/g2.jpg", r: "1/1", lbl: { de: "Freihand \xB7 Barockes Ornament", en: "Freehand \xB7 Baroque ornament" } },
-      { src: "assets/projects/weitere-arbeiten/g3.jpg", r: "2/1", wide: true, lbl: { de: "Geometrisches Darstellen \xB7 Innenraumperspektive", en: "Descriptive geometry \xB7 Interior perspective" } },
-      { src: "assets/projects/weitere-arbeiten/g4.jpg", r: "2/1", wide: true, lbl: { de: "Geometrisches Darstellen \xB7 Membrankonstruktion", en: "Descriptive geometry \xB7 Membrane construction" } }
+      { src: "assets/projects/weitere-arbeiten/g3.jpg", r: "2/1", wide: true, lbl: { de: "Geometrisches Darstellen \xB7 Innenraumperspektive", en: "Descriptive geometry \xB7 Interior perspective" } }
     ]
   }
 ];

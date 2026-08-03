@@ -23,6 +23,7 @@
 <meta name="twitter:description" content="Architekturstudent (HS Wismar) und ausgebildeter Zimmerer. Projekte und Studien zwischen Handwerk und Atmosphäre.">
 <meta name="twitter:image" content="https://nilskuhlow.com/assets/projects/spatial-sound/hero.jpg">
 <style>
+@font-face { font-family: 'Reenie Beanie'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/fonts/reenie-beanie.woff2') format('woff2'); }
 /* ============================================================
    Nils Kuhlow — Quiet Precision
    colors_and_type.css
@@ -73,9 +74,9 @@
   --fg-subtle:    #5E5E5E;   /* darkened from #737373 to clear WCAG AA on white for the 11px labels */
   --hairline:     rgba(10, 10, 10, 0.15);
   --hairline-strong: rgba(10, 10, 10, 0.24);
-  --accent:       #7C3AED;  /* light mode: purple — the complement of yellow */
-  --accent-fg:    #FFFFFF;  /* white text on the purple accent */
-  --accent-strong: #6D28D9; /* accent hover/press */
+  --accent:       var(--fg);   /* monochrome redesign: accent = ink, no colour */
+  --accent-fg:    var(--bg);
+  --accent-strong: var(--fg-muted);
   --link:         var(--ink-1);
   --link-hover:   var(--ink-1);
 
@@ -86,6 +87,8 @@
   --font-sans:   "Helvetica Neue", "Helvetica Neue LT Std", Helvetica, Arial, sans-serif;
   --font-serif:  "Helvetica Neue", "Helvetica Neue LT Std", Helvetica, Arial, sans-serif;
   --font-mono:   "Helvetica Neue", "Helvetica Neue LT Std", Helvetica, Arial, sans-serif;
+  /* Handwritten accent — the single expressive voice (menu + section labels) */
+  --font-hand:   "Reenie Beanie", "Bradley Hand", "Segoe Script", cursive;
 
   /* TYPE — scale (1.250 minor third, slightly slowed at the top) */
   --t-12: 0.75rem;     /* 12 — micro labels */
@@ -179,7 +182,7 @@ body {
 }
 
 ::selection {
-  background: #E9DDFF;
+  background: rgba(10, 10, 10, 0.10);
   color: var(--ink-1);
 }
 
@@ -367,11 +370,11 @@ button:focus-visible, .btn:focus-visible {
     --hairline-strong: rgba(245, 245, 245, 0.28);
     --paper-2: #1F1F1F;
     --link: #F5F5F5;
-    --accent: var(--yellow-500);   /* dark mode keeps the bright-yellow accent */
-    --accent-fg: var(--ink-1);
-    --accent-strong: var(--yellow-700);
+    --accent: var(--fg);
+    --accent-fg: var(--bg);
+    --accent-strong: var(--fg-muted);
   }
-  body[data-theme="dark"] ::selection { background: var(--yellow-500); color: #0A0A0A; }
+  body[data-theme="dark"] ::selection { background: rgba(245, 245, 245, 0.18); color: #F5F5F5; }
   body[data-theme="dark"] .btn--primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
   body[data-theme="dark"] .btn--primary:hover { background: var(--fg-muted); }
   body[data-theme="dark"] .btn { border-color: var(--fg); color: var(--fg); }
@@ -402,6 +405,8 @@ button:focus-visible, .btn:focus-visible {
   /* ── Button reset (a11y) — clickable <a>/<div> become real <button> without chrome ── */
   .nk-unbtn { background: none; border: 0; margin: 0; padding: 0; font: inherit; color: inherit;
     text-align: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
+  .nk-hand-link { transition: opacity 160ms cubic-bezier(0.2,0,0,1); }
+  .nk-hand-link:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; opacity: 1 !important; }
 
   /* ── Responsive ─────────────────────────────────────────────────────────────────────
      Inline styles can't carry @media, so layout grids get a className and are overridden

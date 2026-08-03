@@ -51,7 +51,6 @@ function App() {
       {route === 'home' && (
         <main data-screen-label="01 Home">
           <Home onOpen={openProject} setRoute={goto} lang={lang} />
-          <Footer setRoute={goto} lang={lang} />
         </main>
       )}
       {route === 'projects' && (

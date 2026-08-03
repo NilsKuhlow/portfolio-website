@@ -1,15 +1,15 @@
 const Footer = ({ setRoute, lang }) => {
-  const t = window.I18N[lang].footer;
-  const wrap = { padding: "80px 40px 40px", background: "var(--bg-elevated)", borderTop: "1px solid var(--hairline)" };
-  const grid = { display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 56, alignItems: "flex-start" };
-  const mark = { fontFamily: "var(--font-serif)", fontWeight: 500, fontSize: 32, letterSpacing: "-0.01em", color: "var(--fg)", margin: "0 0 16px" };
-  const blurb = { fontFamily: "var(--font-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--fg-muted)", margin: 0, maxWidth: 360 };
-  const lblK = { fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--fg-subtle)", marginBottom: 16 };
-  const linkList = { display: "flex", flexDirection: "column", gap: 10, listStyle: "none", padding: 0, margin: 0 };
-  const linkA = { fontFamily: "var(--font-sans)", fontSize: 14, color: "var(--fg)", cursor: "pointer", textDecoration: "none" };
-  const addr = { fontFamily: "var(--font-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--fg)", margin: 0, whiteSpace: "pre-line" };
-  const bottom = { display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 64, paddingTop: 24, borderTop: "1px solid var(--hairline)", flexWrap: "wrap", gap: 16 };
-  const small = { fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--fg-subtle)", letterSpacing: "0.04em" };
-  return /* @__PURE__ */ React.createElement("footer", { className: "nk-pad", style: wrap }, /* @__PURE__ */ React.createElement("div", { className: "nk-footer", style: grid }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { style: mark }, "Nils Kuhlow"), /* @__PURE__ */ React.createElement("p", { style: blurb }, t.blurb)), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { style: lblK }, t.site), /* @__PURE__ */ React.createElement("ul", { style: linkList }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-link nk-unbtn", style: linkA, onClick: () => setRoute("home") }, t.siteLinks.home)), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-link nk-unbtn", style: linkA, onClick: () => setRoute("projects") }, t.siteLinks.projects)), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-link nk-unbtn", style: linkA, onClick: () => setRoute("about") }, t.siteLinks.about)), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("button", { type: "button", className: "nk-link nk-unbtn", style: linkA, onClick: () => setRoute("contact") }, t.siteLinks.contact)))), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { style: lblK }, t.elsewhere), /* @__PURE__ */ React.createElement("ul", { style: linkList }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", { className: "nk-link", style: linkA, href: "https://www.instagram.com/nils_klw/", target: "_blank", rel: "noopener noreferrer" }, "Instagram")))), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { style: lblK }, t.address), /* @__PURE__ */ React.createElement("p", { style: addr }, "Hochschule Wismar", "\n", "Philipp-M\xFCller-Stra\xDFe 14", "\n", "23966 Wismar \xB7 DE"))), /* @__PURE__ */ React.createElement("div", { style: bottom }, /* @__PURE__ */ React.createElement("div", { style: small }, t.copyright), /* @__PURE__ */ React.createElement("div", { style: small }, t.colophon)));
+  const wrap = {
+    maxWidth: 1440,
+    margin: "0 auto",
+    padding: "28px 40px 40px",
+    display: "flex",
+    justifyContent: "space-between",
+    gap: 16,
+    flexWrap: "wrap"
+  };
+  const txt = { fontFamily: "var(--font-sans)", fontSize: 11, letterSpacing: "0.04em", color: "var(--fg-subtle)" };
+  const year = (/* @__PURE__ */ new Date()).getFullYear();
+  return /* @__PURE__ */ React.createElement("footer", { style: { borderTop: "1px solid var(--hairline)", marginTop: "clamp(64px, 14vh, 140px)" } }, /* @__PURE__ */ React.createElement("div", { style: wrap }, /* @__PURE__ */ React.createElement("span", { style: txt }, "\xA9 ", year, " Nils Kuhlow"), /* @__PURE__ */ React.createElement("span", { style: txt }, lang === "de" ? "Architektur \xB7 Hochschule Wismar" : "Architecture \xB7 Hochschule Wismar")));
 };
 window.Footer = Footer;

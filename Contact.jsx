@@ -1,53 +1,28 @@
-// Contact.jsx — bilingual
+// Contact.jsx — a handwritten label and a short quiet column of ways to reach me.
 const Contact = ({ lang }) => {
   const t = window.I18N[lang].contact;
-  const wrap = { padding: '120px 40px', maxWidth: 1440, margin: '0 auto', minHeight: '60vh' };
-  const grid = { display: 'grid', gridTemplateColumns: '200px 1fr', gap: 80 };
-  const eyebrow = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)' };
-  const big = { fontFamily: 'var(--font-serif)', fontWeight: 300, fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: 1.0, letterSpacing: '-0.025em', margin: '24px 0 0', textWrap: 'balance' };
-  const lede = { fontFamily: 'var(--font-sans)', fontSize: 18, lineHeight: 1.65, color: 'var(--fg)', margin: '40px 0 56px', maxWidth: '32em' };
-  const linkRow = { display: 'grid', gridTemplateColumns: '160px 1fr', gap: 24, padding: '20px 0', borderBottom: '1px solid var(--hairline)', alignItems: 'baseline' };
-  const linkFirst = { ...linkRow, borderTop: '1px solid var(--fg)' };
-  const lk = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)' };
-  const lv = { fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--fg)', letterSpacing: '-0.005em' };
-  const a = { color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--hairline-strong)', paddingBottom: 2 };
-  const lblK = { fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-subtle)', marginBottom: 6 };
-  const lblV = { fontFamily: 'var(--font-sans)', fontSize: 14, color: 'var(--fg)', marginBottom: 22, lineHeight: 1.5 };
+
+  const wrap = { maxWidth: 1440, margin: '0 auto', padding: '0 40px 160px', minHeight: '60vh' };
+  const inner = { paddingLeft: 'clamp(10px, 5vw, 72px)', paddingTop: 'clamp(60px, 16vh, 160px)' };
+  const col = 'min(30em, 100%)';
+  const hand = { fontFamily: 'var(--font-hand)', fontSize: 28, lineHeight: 1, color: 'var(--fg)', marginBottom: 26 };
+  const lede = { fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.65, color: 'var(--fg-muted)', maxWidth: col, margin: '0 0 34px' };
+  const row = { fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.5, color: 'var(--fg)', margin: '0 0 12px', display: 'flex', gap: 10, flexWrap: 'wrap' };
+  const key = { color: 'var(--fg-subtle)', minWidth: 84 };
+  const a = { color: 'var(--fg)', textDecoration: 'none', borderBottom: '1px solid var(--hairline-strong)', paddingBottom: 1 };
 
   return (
-    <section className="nk-pad" style={wrap} data-screen-label="06 Contact">
-      <div className="nk-stack" style={grid}>
-        <aside>
-          <div style={lblK}>{t.replyL}</div><div style={lblV}>{t.replyV}</div>
-          <div style={lblK}>{t.langsL}</div><div style={lblV}>{t.langsV}</div>
-          <div style={lblK}>{t.bestL}</div><div style={lblV}>{t.bestV}</div>
-        </aside>
-        <div>
-          <span style={eyebrow}>{t.eyebrow}</span>
-          <h1 style={big}>{t.title}</h1>
-          <p style={lede}>{t.lede}</p>
-          <div>
-            <div className="nk-stack" style={linkFirst}>
-              <span style={lk}>{t.lbls.email}</span>
-              <span style={lv}><a className="nk-underline" style={a} href="mailto:nils@kuhlow.eu">nils@kuhlow.eu</a></span>
-            </div>
-            <div className="nk-stack" style={linkRow}>
-              <span style={lk}>{t.lbls.phone}</span>
-              <span style={{ ...lv, fontFamily: 'var(--font-mono)', fontSize: 18, letterSpacing: '0.04em' }}><a className="nk-underline" style={a} href="tel:+4917664435873">+49 176 64435873</a></span>
-            </div>
-            <div className="nk-stack" style={linkRow}>
-              <span style={lk}>{t.lbls.insta}</span>
-              <span style={lv}><a className="nk-underline" style={a} href="https://www.instagram.com/nils_klw/" target="_blank" rel="noopener noreferrer">@nils_klw</a></span>
-            </div>
-            <div className="nk-stack" style={linkRow}>
-              <span style={lk}>{t.lbls.person}</span>
-              <span style={lv}>{t.personV}</span>
-            </div>
-          </div>
-        </div>
+    <section data-screen-label="06 Contact" style={wrap}>
+      <div style={inner}>
+        <div style={hand}>{lang === 'de' ? 'Kontakt' : 'Contact'}</div>
+        <p style={lede}>{t.lede}</p>
+        <div style={row}><span style={key}>{lang === 'de' ? 'E-Mail' : 'Email'}</span><a className="nk-underline" style={a} href="mailto:nils@kuhlow.eu">nils@kuhlow.eu</a></div>
+        <div style={row}><span style={key}>{lang === 'de' ? 'Telefon' : 'Phone'}</span><a className="nk-underline" style={a} href="tel:+4917664435873">+49 176 64435873</a></div>
+        <div style={row}><span style={key}>Instagram</span><a className="nk-underline" style={a} href="https://www.instagram.com/nils_klw/" target="_blank" rel="noopener noreferrer">@nils_klw</a></div>
+        <div style={row}><span style={key}>{lang === 'de' ? 'Lebenslauf' : 'CV'}</span><a className="nk-underline" style={a} href="cv.pdf" download="Nils_Kuhlow_Lebenslauf.pdf">{lang === 'de' ? 'als PDF' : 'as PDF'} ↓</a></div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 window.Contact = Contact;

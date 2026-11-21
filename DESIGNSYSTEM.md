@@ -4,7 +4,7 @@ Die Seite folgt den *Prinzipien* von Mlak Elbuzidis Portfolio: viel Leere, wenig
 
 ## Prinzipien
 
-1. **Weniger Seiten:** Start, arbeiten, texte, über, kontakt. Dazu eine kurze Seite pro Projekt und pro Text (lyrischer Essay, 120–300 Wörter, ein Bild).
+1. **Weniger Seiten:** Start, arbeiten, über, kontakt. Dazu eine kurze Seite pro Projekt. Geplant, aber noch nicht online: texte (lyrische Essays, 120–300 Wörter, je ein Bild). Die Rubrik kommt erst, wenn eigene Texte da sind.
 2. **Weiß ist das Material:** Inhalte schweben in der Fläche. Leere wird nicht aufgefüllt.
 3. **Eine Farbe pro Seite:** Nur der Name und der aktive Menüpunkt tragen die Seitenfarbe. Alles andere ist Graustufe, Farbe kommt allein aus den Bildern.
 4. **Harte Typo, leise Texte:** Der Name steht in fetter Grotesk und Versalien. Alles andere ist klein, ruhig und kleingeschrieben.
@@ -22,7 +22,7 @@ Die Seite folgt den *Prinzipien* von Mlak Elbuzidis Portfolio: viel Leere, wenig
 | `--backstein` | `#D0806A` | Seitenfarbe **arbeiten** und alle Projektseiten |
 | `--ostsee` | `#86A9BE` | Seitenfarbe **über** |
 | `--holz` | `#C4A86C` | Seitenfarbe **kontakt** |
-| `--schilf` | `#9AA27A` | Seitenfarbe **texte** und alle Textseiten |
+| `--schilf` | `#9AA27A` | reserviert für **texte** (noch nicht online) |
 
 Die drei Seitenfarben kommen aus deinem eigenen Kontext: Wismarer Backstein, Ostsee und Holz (Zimmerer).
 Sie werden über `<body class="s-arbeiten">` usw. gesetzt und landen in `--accent`.

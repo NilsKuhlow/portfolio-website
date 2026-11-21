@@ -45,7 +45,7 @@ Sie werden über `<body class="s-arbeiten">` usw. gesetzt und landen in `--accen
 
 ## Komponenten
 
-- **Liste (arbeiten, Werdegang):** `Jahr, Titel` in der ersten Zeile, darunter eingerückt die Zeile in Grau, ohne Linien
+- **Liste (arbeiten, Werdegang):** `Jahr, Titel` in der ersten Zeile, darunter eingerückt die Zeile in Grau, ohne Linien. Die graue Zeile nennt nur die Kategorie (z. B. „Kunst und Architektur“, „Installation“): kein Medium, kein Ort, kein „·“
 - **Projektseite:** Titel, Meta-Zeile, kurzer Text (höchstens 3 Sätze), dann Bilder untereinander. Jedes zweite Bild ist versetzt und schmaler. Unter jedem Bild steht eine winzige graue Unterschrift
 - **Weiterblättern:** am Ende „← arbeiten“ und „nächstes →“
 - **Links im Text:** `--ink` mit 1 px Unterstreichung in `--line`. Beim Hover wechselt die Unterstreichung zur Seitenfarbe

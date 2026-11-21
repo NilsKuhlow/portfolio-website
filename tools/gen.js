@@ -3,6 +3,8 @@
 // Danach die geänderten HTML-Dateien prüfen und committen. Seiten nie von Hand ändern, sonst überschreibt der nächste Lauf das.
 const fs = require('fs'), path = require('path');
 const ROOT = process.argv[2] || path.join(__dirname, '..');
+// Versionsnummer für style.css: ändert sich mit jedem Inhalt, damit Browser nie eine alte Fassung aus dem Cache zeigen
+const CSS_V = require('crypto').createHash('md5').update(fs.readFileSync(path.join(ROOT, 'style.css'))).digest('hex').slice(0, 8);
 
 function dims(file) {
   const b = fs.readFileSync(path.join(ROOT, file));
@@ -90,7 +92,7 @@ function page({ title, desc, section, body, home }) {
     '<title>' + esc(title) + '</title>',
     '<meta name="description" content="' + esc(desc) + '">',
     '<link rel="icon" href="/favicon.svg" type="image/svg+xml">',
-    '<link rel="stylesheet" href="/style.css">',
+    '<link rel="stylesheet" href="/style.css?v=' + CSS_V + '">',
     '</head>',
     '<body class="' + (home ? 'home' : 's-' + section) + '">',
     '<div class="page">',

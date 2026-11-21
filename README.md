@@ -1,31 +1,32 @@
-# Portfolio — Nils Kuhlow
+# Portfolio – Nils Kuhlow
 
-Persönliche Portfolio-Website (Architekturstudium, Hochschule Wismar). Statische
-Single-Page-App mit React, zweisprachig (DE/EN), Hell-/Dunkelmodus, Helvetica-Neue-Designsystem.
-
-## Entwicklung
-
-Die Oberfläche liegt als `*.jsx` vor und wird mit **esbuild vorkompiliert** (kein Babel im Browser).
-
-```bash
-npm install      # einmalig – installiert esbuild
-npm run build    # kompiliert *.jsx -> build/
-npm run watch    # Build im Watch-Modus
-npm run serve    # statischer Server auf http://localhost:8000
-```
-
-> Nach jeder Änderung an einer `.jsx`-Datei `npm run build` ausführen, sonst zeigt sich nichts.
+nilskuhlow.com ist eine statische Seite aus reinem HTML und einer CSS-Datei. Es gibt kein Framework, keinen Build-Schritt und kein JavaScript.
+Das Designsystem steht in [DESIGNSYSTEM.md](DESIGNSYSTEM.md).
 
 ## Struktur
 
-- `index.html` — Einstieg, Designsystem (inline `<style>`), Skript-Reihenfolge
-- `*.jsx` — Quellkomponenten (`Nav`, `Home`, `Projects`, `ProjectDetail`, `About`, `Contact`, `Footer`, `app`)
-- `i18n.jsx`, `data.jsx` — Texte/Inhalte (DE/EN); `tweaks-panel.jsx`
-- `build/` — kompilierte Komponenten (Ausgabe von `npm run build`)
-- `vendor/` — React/ReactDOM (Production-UMD, lokal gehostet)
-- `assets/`, `fonts/`, `favicon.svg`
+```
+index.html                 Start: Name + Menü
+arbeiten/index.html        Projektliste
+arbeiten/<projekt>/        eine Seite pro Projekt
+ueber/index.html
+kontakt/index.html
+404.html
+style.css                  das gesamte Design
+assets/projects/<projekt>/ Bilder (hero.jpg, g1.jpg …)
+cv.pdf, favicon.svg, CNAME
+```
 
-## Deployment
+## Projekt hinzufügen
 
-Statisch hostbar. Benötigt werden: `index.html`, `build/`, `vendor/`, `assets/`, `fonts/`, `favicon.svg`.
-Offene Aufgaben siehe `TODO.md`.
+1. Bilder nach `assets/projects/<projekt>/` legen. Breite höchstens etwa 2000 px, JPG.
+2. Einen bestehenden Ordner unter `arbeiten/` kopieren und Titel, Meta-Zeile, Text und Bilder anpassen.
+3. Das Projekt in `arbeiten/index.html` in die Liste eintragen und den „nächstes →“-Link der Nachbarseite anpassen.
+
+## Lokal ansehen
+
+Weil alle Pfade mit `/` beginnen, muss die Seite über einen Server laufen und nicht als Datei geöffnet werden:
+
+```
+python -m http.server 8000
+```

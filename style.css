@@ -1,0 +1,165 @@
+/* nilskuhlow.com — Designsystem siehe DESIGNSYSTEM.md */
+
+:root {
+  --ink: #1e1e1e;
+  --grey: #9b9b9b;
+  --line: #e6e6e6;
+  --paper: #ffffff;
+  --backstein: #d0806a;
+  --ostsee: #86a9be;
+  --holz: #c4a86c;
+  --accent: var(--ink);
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --side: 220px;
+  --gutter: 32px;
+}
+
+.s-arbeiten { --accent: var(--backstein); }
+.s-ueber    { --accent: var(--ostsee); }
+.s-kontakt  { --accent: var(--holz); }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 13px;
+  line-height: 1.55;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+p { margin: 0 0 1em; }
+
+/* ── Grundraster: links Name + Menü, rechts Inhalt ─────────── */
+
+.page {
+  display: grid;
+  grid-template-columns: var(--side) minmax(0, 1fr);
+  gap: var(--gutter);
+  padding: var(--gutter);
+  min-height: 100vh;
+}
+
+.side {
+  position: sticky;
+  top: var(--gutter);
+  align-self: start;
+}
+
+.name {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.menu {
+  list-style: none;
+  margin: 64px 0 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1;
+}
+.menu li + li { margin-top: 16px; }
+.menu a { transition: color 120ms ease; }
+.menu a:hover,
+.menu a[aria-current="page"] { color: var(--accent); }
+
+.main { padding-top: 128px; max-width: 900px; }
+
+/* ── Startseite: nur Name und Menü in der Fläche ───────────── */
+
+.home .page { grid-template-columns: 1fr; }
+.home .side { position: static; padding-top: 18vh; }
+.home .menu { margin-left: 48px; }
+.home .menu li + li { margin-top: 32px; }
+
+/* ── Text ──────────────────────────────────────────────────── */
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.meta { margin: 8px 0 0; font-size: 11px; color: var(--grey); }
+
+.text { max-width: 34em; margin-top: 32px; }
+.text.first { margin-top: 0; }
+
+.label { margin: 64px 0 16px; font-size: 11px; color: var(--grey); }
+.label:first-child { margin-top: 0; }
+
+.text a, .link {
+  border-bottom: 1px solid var(--line);
+  transition: border-color 120ms ease;
+}
+.text a:hover, .link:hover { border-color: var(--accent); }
+
+/* ── Liste (arbeiten, Werdegang) ───────────────────────────── */
+
+.list { list-style: none; margin: 0; padding: 0; max-width: 34em; }
+.list li + li { margin-top: 16px; }
+.list .row { display: grid; grid-template-columns: 5em 1fr; }
+.list .row > :first-child { white-space: nowrap; }
+.list .sub { grid-column: 2; color: var(--grey); font-size: 11px; }
+.list a .head { transition: color 120ms ease; }
+.list a:hover .head { color: var(--accent); }
+
+/* ── Projektseite: Bilder frei und asymmetrisch ────────────── */
+
+.figures { margin-top: 64px; }
+.fig { margin: 0 0 64px; width: 78%; }
+.fig:first-child { width: 100%; }
+.fig:nth-child(even) { width: 60%; margin-left: auto; }
+.fig.tall { width: 46%; }
+.fig.tall:nth-child(even) { width: 40%; }
+.fig.tall:first-child { width: 60%; }
+.fig figcaption { margin-top: 8px; font-size: 11px; color: var(--grey); }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 128px;
+  font-size: 13px;
+}
+.pager a:hover { color: var(--accent); }
+
+/* ── Kontakt ───────────────────────────────────────────────── */
+
+.contact { list-style: none; margin: 0; padding: 0; }
+.contact li { display: grid; grid-template-columns: 7em 1fr; }
+.contact li + li { margin-top: 8px; }
+.contact .k { color: var(--grey); }
+
+/* ── Mobil ─────────────────────────────────────────────────── */
+
+@media (max-width: 760px) {
+  :root { --gutter: 16px; }
+  .page { grid-template-columns: 1fr; gap: 0; }
+  .side { position: static; }
+  .menu { display: flex; gap: 24px; margin-top: 32px; }
+  .menu li + li { margin-top: 0; }
+  .main { padding-top: 64px; }
+  .home .menu { display: block; margin-left: 24px; }
+  .fig, .fig:nth-child(even) { width: 100%; }
+  .fig.tall, .fig.tall:nth-child(even) { width: 78%; }
+  .fig.tall:nth-child(even) { margin-left: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

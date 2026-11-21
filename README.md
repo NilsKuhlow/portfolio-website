@@ -14,7 +14,7 @@ kontakt/index.html
 404.html
 style.css                  das gesamte Design
 assets/projects/<projekt>/ Bilder (hero.jpg, g1.jpg …)
-cv.pdf, favicon.svg, CNAME
+favicon.svg, CNAME         (kein Lebenslauf online: auf Anfrage über kontakt)
 ```
 
 ## Projekt hinzufügen

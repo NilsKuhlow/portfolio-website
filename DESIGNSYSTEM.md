@@ -30,7 +30,7 @@ Sie werden über `<body class="s-arbeiten">` usw. gesetzt und landen in `--accen
 ## Typografie
 
 - Schrift: `"Helvetica Neue", Helvetica, Arial, sans-serif`. Systemschrift für alles außer längeren Texten
-- **Leseschrift:** EB Garamond (400, 400 kursiv, 600), lokal in `assets/fonts/` (SIL OFL), nicht über Google Fonts eingebunden (DSGVO). Nur für eigene Texte (`.read`), 17 px, Zeilenhöhe 1.5. Auf einer Projektseite mit Text steht das Hauptbild links und bleibt beim Lesen stehen (`.spread`), der Text rechts
+- **Leseschrift:** EB Garamond (400, 400 kursiv, 600), lokal in `assets/fonts/` (SIL OFL), nicht über Google Fonts eingebunden (DSGVO). Nur für eigene Texte (`.read`), 17 px, Zeilenhöhe 1.5. Eine Projektseite mit Text hat ein freies Layout (`.free`, 12-Spalten-Raster): Der Text bleibt ein zusammenhängender Block links (Spalten 1–7). Die Bilder sind nicht an einzelne Absätze gebunden, sondern frei und versetzt verteilt: das Hauptbild oben rechts, zwei Bilder rechts neben dem Text, zwei darunter versetzt. Auf dem Handy steht alles untereinander
 - **Name:** 15 px, Gewicht 700, Versalien, Zeilenhöhe 1.0, zweizeilig gestapelt (NILS / KUHLOW)
 - **Menü:** 15 px, Gewicht 400, kleingeschrieben. Aktiv: Seitenfarbe. Inaktiv: `--ink`, beim Hover Seitenfarbe
 - **Projekttitel:** 15 px, 700, Versalien

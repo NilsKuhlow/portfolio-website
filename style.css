@@ -1,5 +1,10 @@
 /* nilskuhlow.com — Designsystem siehe DESIGNSYSTEM.md */
 
+/* Leseschrift für längere Texte: EB Garamond, lokal (SIL OFL, assets/fonts/OFL.txt) */
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/eb-garamond-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("/assets/fonts/eb-garamond-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/eb-garamond-latin-600-normal.woff2") format("woff2"); }
+
 :root {
   --ink: #1e1e1e;
   --grey: #9b9b9b;
@@ -11,6 +16,7 @@
   --schilf: #9aa27a;
   --accent: var(--ink);
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: "EB Garamond", Garamond, Georgia, serif;
   --side: 220px;
   --gutter: 32px;
 }
@@ -135,6 +141,29 @@ p { margin: 0 0 1em; }
 .fig.tall:first-child { width: 60%; }
 .fig figcaption { margin-top: 8px; font-size: 11px; color: var(--grey); }
 
+/* ── Projektseite mit Text: Bild links (bleibt stehen), Text rechts ── */
+
+.spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  margin-top: 64px;
+  align-items: start;
+}
+.spread .fig:first-child { width: 100%; margin: 0; position: sticky; top: var(--gutter); }
+.read {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.5;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.read p { margin: 0 0 0.9em; }
+.read .q { font-weight: 600; }
+.refs { margin-top: 32px; font-size: 11px; color: var(--grey); }
+.refs p { margin: 0; }
+.refs .k { margin-bottom: 4px; }
+
 .pager {
   display: flex;
   justify-content: space-between;
@@ -165,6 +194,8 @@ p { margin: 0 0 1em; }
   .fig, .fig:nth-child(even) { width: 100%; }
   .fig.tall, .fig.tall:nth-child(even) { width: 78%; }
   .fig.tall:nth-child(even) { margin-left: auto; }
+  .spread { grid-template-columns: 1fr; gap: 32px; }
+  .spread .fig:first-child { position: static; width: 78%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -28,7 +28,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; } /* Platz für die Scrollleiste immer reservieren: kein Seitensprung unter Windows */
 
 body {
   margin: 0;
@@ -87,10 +87,8 @@ p { margin: 0 0 1em; }
 
 /* ── Startseite: nur Name und Menü in der Fläche ───────────── */
 
+/* Name und Menü stehen auf jeder Seite exakt gleich, damit beim Klicken nichts springt */
 .home .page { grid-template-columns: 1fr; }
-.home .side { position: static; padding-top: 18vh; }
-.home .menu { margin-left: 48px; }
-.home .menu li + li { margin-top: 32px; }
 
 /* ── Text ──────────────────────────────────────────────────── */
 
@@ -211,7 +209,6 @@ p { margin: 0 0 1em; }
   .menu { display: flex; gap: 24px; margin-top: 32px; }
   .menu li + li { margin-top: 0; }
   .main { padding-top: 64px; }
-  .home .menu { display: block; margin-left: 24px; }
   .fig, .fig:nth-child(even) { width: 100%; }
   .fig.tall, .fig.tall:nth-child(even) { width: 78%; }
   .fig.tall:nth-child(even) { margin-left: auto; }

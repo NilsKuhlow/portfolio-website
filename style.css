@@ -105,9 +105,10 @@ p { margin: 0 0 1em; }
 
 .text { max-width: 34em; margin-top: 32px; }
 .text.first { margin-top: 0; }
-.essay { max-width: 30em; }
-.essay p:first-child { font-weight: 700; }
-.essay p:last-child { color: var(--grey); }
+/* Textseite (texte/…): Text links in Garamond, ein Bild klein oben rechts */
+.tx { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 48px; align-items: start; margin-top: 48px; }
+.tx .read { max-width: 30em; }
+.tx .pic { margin: 0; margin-top: 96px; }
 .meta .link { color: var(--grey); }
 
 .label { margin: 64px 0 16px; font-size: 11px; color: var(--grey); }
@@ -218,6 +219,8 @@ p { margin: 0 0 1em; }
   .pair.cover { margin-top: 48px; }
   .pair .pic { width: 86%; }
   .pair .read { padding-bottom: 0; }
+  .tx { grid-template-columns: 1fr; gap: 32px; margin-top: 32px; }
+  .tx .pic { order: -1; margin-top: 0; width: 70%; }
   .free { display: block; margin-top: 48px; }
   .free .pic, .f-text, .f-side { margin-top: 48px; }
   .free > .pic:first-child { margin-top: 0; }

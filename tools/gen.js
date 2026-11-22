@@ -18,7 +18,7 @@ function dims(file) {
   throw new Error('no dims ' + file);
 }
 
-const SHOW_TEXTE = false;
+const SHOW_TEXTE = true;
 const TEAM ='mit Philipp Tomschin, Kai-Lars Ehrich und Richard Muth';
 const KUA = 'Lehrgebiet Gunda Förster';
 const P = [
@@ -134,8 +134,11 @@ write('arbeiten/index.html', page({
 }));
 
 // ── texte: kurze lyrische Essays, je mit einem Bild ──────────────
-// Ausgeschaltet, bis Nils eigene Texte geschrieben hat. Dann T mit seinen Texten füllen und auf true setzen.
-const T = [];
+// Neue Texte oben in T eintragen (neuester zuerst). body: Absätze, der erste ist die Frage, *wort* wird kursiv.
+const T = [
+  { id: 'loslassen', t: 'Loslassen', date: '11/2026', project: 'loslassen', img: ['loslassen', 'g1.jpg', 'Loslassen III'],
+    body: P.find((p) => p.id === 'loslassen').essay },
+];
 
 if (SHOW_TEXTE) write('texte/index.html', page({
   title: 'texte · Nils Kuhlow', desc: 'Kurze Texte über Räume, Material und Zeit.', section: 'texte',
@@ -154,15 +157,15 @@ T.forEach((x, i) => {
   const d = dims(src.slice(1));
   const tall = d.h > d.w * 1.05 ? ' tall' : '';
   write('texte/' + x.id + '/index.html', page({
-    title: x.t + ' · Nils Kuhlow', desc: x.body[0], section: 'texte',
+    title: x.t + ' · Nils Kuhlow', desc: x.body[0].replace(/\*/g, ''), section: 'texte',
     body: [
       '    <h1 class="title">' + esc(x.t) + '</h1>',
       '    <p class="meta">' + x.date + ' · zum Projekt <a class="link" href="/arbeiten/' + proj.id + '/">' + esc(proj.t) + '</a></p>',
-      '    <div class="text essay">',
-      ...x.body.map((t) => '      <p>' + esc(t) + '</p>'),
-      '    </div>',
-      '    <div class="figures">',
-      '      <figure class="fig' + tall + '"><img src="' + src + '" width="' + d.w + '" height="' + d.h + '" alt="' + esc(x.img[2]) + '" loading="lazy"><figcaption>' + esc(x.img[2]) + '</figcaption></figure>',
+      '    <div class="tx">',
+      '      <div class="read">',
+      ...x.body.map((t, k) => '        <p' + (k === 0 ? ' class="q"' : '') + '>' + esc(t).replace(/\*([^*]+)\*/g, '<em>$1</em>') + '</p>'),
+      '      </div>',
+      '      <figure class="pic' + tall + '"><img src="' + src + '" width="' + d.w + '" height="' + d.h + '" alt="' + esc(x.img[2]) + '" fetchpriority="high"><figcaption>' + esc(x.img[2]) + '</figcaption></figure>',
       '    </div>',
       '    <nav class="pager">',
       '      <a href="/texte/">← texte</a>',
